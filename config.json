@@ -1,4 +1,7 @@
 {
     "token":"MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.JD3QeYmzOgwuAMsmSqi7XgOCLTeVQA9n1mD4M4",
-    "clientId":"1085612939773485190"
+    "clientId":"1085612939773485190",
+    "version":"0.0.9",
+    "database_name": "northern_lights",
+    "issuer": "Northern Lights Development"
 }

@@ -1,0 +1,62 @@
+[WARNING] 18:12:54 | The command at C:\Users\richa\OneDrive - w6l3y\northern-lights-development-bot\commands\fun\ping2.js is missing a required "data" or "execute" property.
+[INFO] 18:12:55 | Started refreshing 7 application (/) commands.
+[INFO] 18:12:55 | Successfully reloaded 7 application (/) commands.
+[DEBUG] 18:12:55 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:12:55 | Preparing to connect to the gateway...
+[DEBUG] 18:12:56 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:12:56 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 958
+[DEBUG] 18:12:56 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:12:56 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:12:56 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.15584412320640495; waiting 6428ms
+[DEBUG] 18:12:56 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:12:56 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 1
+	compression: none
+[DEBUG] 18:12:56 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:12:56 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:13:02 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:13:02 | [WS => Shard 0] Heartbeat acknowledged, latency of 122ms.
+[DEBUG] 18:13:44 | [WS => Shard 0] Heartbeat acknowledged, latency of 121ms.
+[DEBUG] 18:14:25 | [WS => Shard 0] Heartbeat acknowledged, latency of 121ms.
+[DEBUG] 18:15:06 | [WS => Shard 0] Heartbeat acknowledged, latency of 123ms.
+[INFO] 18:15:15 | Command: 2FA | megurre (324856872987262996) connected to the database.
+[DEBUG] 18:15:16 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:15:16 | Preparing to connect to the gateway...
+[DEBUG] 18:15:16 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:15:16 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 957
+[DEBUG] 18:15:16 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:15:16 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:15:16 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.2273408460425561; waiting 9377ms
+[DEBUG] 18:15:16 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:15:16 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 1
+	compression: none
+[DEBUG] 18:15:16 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:15:17 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:15:26 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:15:26 | [WS => Shard 0] Heartbeat acknowledged, latency of 123ms.
+[COMMAND] 18:15:49 | Command: Reload | megurre (324856872987262996) reloaded 2fa.
+[INFO] 18:15:58 | Command: 2FA | megurre (324856872987262996) connected to the database.
+[COMMAND] 18:15:58 | Command: 2FA | megurre (324856872987262996) ran 2FA setup.
+[DEBUG] 18:16:07 | [WS => Shard 0] Heartbeat acknowledged, latency of 128ms.
+[INFO] 18:16:39 | megurre (324856872987262996) connected to the database.
+[INFO] 18:16:39 | Command: Validate | megurre (324856872987262996) successfully validated their reqyest.
+[INFO] 18:16:39 | Command: Validate | megurre (324856872987262996) updated their user data.
+[COMMAND] 18:16:39 | Command: 2FA | megurre (324856872987262996) successfully set up 2FA.
+[DEBUG] 18:16:48 | [WS => Shard 0] Heartbeat acknowledged, latency of 122ms.
+[DEBUG] 18:17:30 | [WS => Shard 0] Heartbeat acknowledged, latency of 123ms.
+[INFO] 18:17:50 | Command: 2FA | megurre (324856872987262996) connected to the database.
+[DEBUG] 18:18:11 | [WS => Shard 0] Heartbeat acknowledged, latency of 122ms.
+[DEBUG] 18:18:52 | [WS => Shard 0] Heartbeat acknowledged, latency of 126ms.

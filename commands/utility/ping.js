@@ -4,8 +4,9 @@ module.exports = {
 	category: 'utility',
 	data: new SlashCommandBuilder()
 		.setName('ping')
-		.setDescription('Replies with Pong!'),
+		.setDescription('Replies with the bots current ping!'),
 	async execute(interaction) {
-		await interaction.reply({content:`I currently have a ping of ${interaction.client.ws.ping}ms`, ephemeral: true});
+		await interaction.reply({content:`I currently have a ping of ${interaction.client.ws.ping}ms ${afafaf}`, ephemeral: true});
+		
 	},
 };
