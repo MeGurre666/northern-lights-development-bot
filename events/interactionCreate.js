@@ -1,6 +1,7 @@
 const { Events, Collection } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
+const {all_logs } = require('../config.json');
 
 
 module.exports = {

@@ -49,7 +49,6 @@ module.exports = {
                     return interaction.reply({ embeds: [embed], ephemeral: true });
                 } else {
                     const secret = speakeasy.generateSecret({ length: 20, name: `${issuer}` });
-
                     const insertQuery = 'INSERT INTO users (id, secret, validate, setup_time) VALUES (?, ?, ?, ?)';
                     connection.query(insertQuery, [userId, secret.base32, false, currentTime], (insertError, insertResults, insertFields) => {
                         if (insertError) {

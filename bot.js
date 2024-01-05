@@ -1,9 +1,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const { Client, Collection, GatewayIntentBits, Events } = require('discord.js');
-const { token } = require('./config.json');
-
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const { Client, Collection, GatewayIntentBits, Events} = require('discord.js');
+const { token, all_logs } = require('./config.json');
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages] });
 
 client.commands = new Collection();
 client.cooldowns = new Collection();
@@ -53,6 +52,12 @@ setInterval(() => {
 	var newdateStr = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
 	if (dateStr !== newdateStr) {
 		logFilePath = path.join(logPath, `${newdateStr}.log`);
+		const channel01 = client.channels.cache.get(all_logs);
+		if (channel01) {
+			channel01.send({files: [logFilePath]});
+		} else {
+			console.error(`The channel with ID ${all_logs} was not found.`);
+		}
 		dateStr = newdateStr;
 		logFilePath = path.join(logPath, `${dateStr}.log`);
 		fs.writeFileSync(logFilePath, '');
@@ -73,7 +78,6 @@ function formatUptime(uptime) {
     const hours = Math.floor((uptime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((uptime % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((uptime % (1000 * 60)) / 1000);
-
     return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 setInterval(() => {
@@ -91,6 +95,7 @@ setInterval(() => {
 	uptime = formatUptime(uptime);
 	fs.appendFileSync(logFilePath, `[UPTIME] ${currentTime} | ${uptime}\n`);
 }, 600000);
+
 
 
 client.login(token);

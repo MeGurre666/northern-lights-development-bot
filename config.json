@@ -3,5 +3,10 @@
     "clientId":"1085612939773485190",
     "version":"0.0.9",
     "database_name": "northern_lights",
-    "issuer": "Northern Lights Development"
+    "issuer": "Northern Lights Development",
+    "all_logs": "1191501717389459456",
+    "activity": "Northern Lights Development",
+    "type": "Watching",
+    "status": "online",
+    "_comment": "The different types of status are: online, idle, dnd, invisible and for type it is: Playing, Listening, Watching, Streaming"
 }

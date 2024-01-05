@@ -42,7 +42,7 @@ module.exports = {
                 }
                 if (results.length === 0) {
                     fs.appendFileSync(logFilePath, `[WARN] ${new Date().toLocaleTimeString()} | Command: Validate | ${interaction.user.tag} (${interaction.user.id}) tried to validate their 2FA code, but they don't have an account.\n`);
-                    interaction.reply({ content: 'You don\'t have an account! Please create one first.', ephemeral: true });
+                    interaction.reply({ content: 'You don\'t have an account! Please create one first using /2fa.', ephemeral: true });
                     return;
                 }
                 const secret = results[0].secret;

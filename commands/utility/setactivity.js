@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, Application } = require('discord.js');
+const { SlashCommandBuilder, Application} = require('discord.js');
 const { ActivityType } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
@@ -26,6 +26,16 @@ module.exports = {
                     {name: 'Listening', value: 'Listening'},
                     {name: 'Watching', value: 'Watching'},
                     {name: 'Competing', value: 'Competing'},
+                ))
+        .addStringOption(option =>
+            option.setName('status')
+                .setDescription('The status of the bot.')
+                .setRequired(true)
+                .addChoices(
+                    {name: 'Online', value: 'online'},
+                    {name: 'Idle', value: 'idle'},
+                    {name: 'Do Not Disturb', value: 'dnd'},
+                    {name: 'Invisible', value: 'invisible'},
                 )),
     async execute(interaction) {
         application = await interaction.client.application?.fetch();
@@ -33,11 +43,13 @@ module.exports = {
         if (teamMember.has(interaction.user.id)) {
             const activity = interaction.options.getString('activity', true);
             var activitytype = interaction.options.getString('activitytype', true).toLowerCase();
+            const status = interaction.options.getString('status', true);
             activitytype = activitytype.charAt(0).toUpperCase() + activitytype.slice(1);
             try {
                 await interaction.client.user.setActivity(activity, { type: ActivityType[activitytype] });
-                await interaction.reply({ content: `Activity set to \`${activitytype} ${activity}\`!`, ephemeral: true });
-                fs.appendFileSync(logFilePath, `[COMMAND] ${new Date().toLocaleTimeString()} | ${interaction.user.tag} (${interaction.user.id}) set the activity to ${activitytype} ${activity}.\n`); 
+                await interaction.client.user.setStatus(status);
+                fs.appendFileSync(logFilePath, `[COMMAND] ${new Date().toLocaleTimeString()} | ${interaction.user.tag} (${interaction.user.id}) set the activity to ${activitytype} ${activity}. with the status ${status}\n`);
+                await interaction.reply({ content: `Activity set to \`${activitytype} ${activity}\` with the status ${status} !`, ephemeral: true });
             } catch (error) {
                 console.error(error);
                 await interaction.reply({
