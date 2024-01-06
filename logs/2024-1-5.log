@@ -1538,3 +1538,14 @@
 [DEBUG] 03:16:27 | [WS => Shard 0] Tried to destroy a shard that was idle
 [DEBUG] 03:16:27 | [WS => Shard 0] Connecting to wss://gateway-us-east1-b.discord.gg?v=10&encoding=json
 [DEBUG] 03:16:27 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 03:16:38 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 03:16:38 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 03:16:38 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 03:16:38 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 03:16:39 | [WS => Shard 0] Connecting to wss://gateway-us-east1-b.discord.gg?v=10&encoding=json
+[DEBUG] 03:16:39 | [WS => Shard 0] Waiting for event hello for 60000ms

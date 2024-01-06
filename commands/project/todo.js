@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder} = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const mysql = require('mysql2');
 const { database_name} = require('../../config.json');
 const path = require('path');
@@ -21,7 +21,7 @@ module.exports = {
                 .addIntegerOption(option =>
                     option
                         .setName('priority')
-                        .setDescription('The priority of the To Do!')
+                        .setDescription('The priority of the To Do! (1-5)')
                         .setRequired(true)))
         .addSubcommand(subcommand =>
             subcommand
@@ -73,6 +73,24 @@ module.exports = {
                     if (!priorityOption || isNaN(priorityOption.value)) {
                         return interaction.reply({ content: 'Please provide an integer value for the priority option.', ephemeral: true });
                     }
+                    if (priorityOption.value < 1 || priorityOption.value > 5) {
+                        return interaction.reply({ content: 'Please provide an integer value between 1 and 5 for the priority option.', ephemeral: true });
+                    }
+                    const checkTodoQuery = `
+                        SELECT todo
+                        FROM todo_list
+                        WHERE user_id = '${userId}' AND todo = '${todo}'
+                    `;
+                    connection.query(checkTodoQuery, (err, results) => {
+                        if (err) {
+                            console.error('Error checking todo in the database:', err);
+                            fs.appendFileSync(logFilePath, `[ERROR] ${new Date().toLocaleTimeString()} | Command: Todo | ${interaction.user.tag} (${interaction.user.id}) received an error while checking a todo in the database | ${err.stack}\n`);
+                            return;
+                        }
+                        if (results.length > 0) {
+                            return interaction.reply({ content: 'That todo already exists!', ephemeral: true });
+                        }
+                    });
                     const addTodoQuery = `
                         INSERT INTO todo_list (user_id, todo, time, priority)
                         VALUES ('${userId}', '${todo}', '${currentTime}', '${priorityOption.value}')
@@ -130,36 +148,80 @@ module.exports = {
                         fs.appendFileSync(logFilePath, `[INFO] ${new Date().toLocaleTimeString()} | ${interaction.user.tag} (${interaction.user.id}) listed a todo from the database.\n`);
                         const embed = new EmbedBuilder()
                             .setTitle('To Do List!')
-                            .setDescription(`Here is the team's to do list!`)
+                            .setDescription(`Here is the team's to-do list!`)
                             .setColor('#037bfc')
-                            .setFooter({text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true })});
-                        //if there is more than 25 results create a second page which you can go to with buttons
-                    
+                            .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+
+                        if (results.length > 25) {
+                            const embed2 = new EmbedBuilder()
+                                .setTitle('To Do List!')
+                                .setDescription(`Here is the team's to-do list!`)
+                                .setColor('#037bfc')
+                                .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+
+                            for (let i = 0; i < results.length; i++) {
+                                if (i < 25) {
+                                    embed.addFields({ name: `To Do ${i + 1}`, value: `**To Do:** ${results[i].todo}\n**Time Added:** ${new Date(results[i].time * 1000).toLocaleString()}\n**Priority:** ${results[i].priority}` });
+                                } else {
+                                    embed2.addFields({ name: `To Do ${i + 1}`, value: `**To Do:** ${results[i].todo}\n**Time Added:** ${new Date(results[i].time * 1000).toLocaleString()}\n**Priority:** ${results[i].priority}` });
+                                }
+                            }
+                            const button1 = new ButtonBuilder()
+                                .setCustomId('todo_list_1')
+                                .setLabel('Page 1')
+                                .setStyle(ButtonStyle.Primary);
+
+                            const button2 = new ButtonBuilder()
+                                .setCustomId('todo_list_2')
+                                .setLabel('Page 2')
+                                .setStyle(ButtonStyle.Primary);
+
+                            const buttonRow = new ActionRowBuilder()
+                                .addComponents(button1, button2);
+
+                            interaction.reply({ embeds: [embed], components: [buttonRow], ephemeral: true });
+
+                            const filter = i => i.customId === 'todo_list_1' || i.customId === 'todo_list_2';
+                            const collector = interaction.channel.createMessageComponentCollector({ filter, time: 60000 });
+
+                            collector.on('collect', async i => {
+                                if (i.customId === 'todo_list_1') {
+                                    i.update({ embeds: [embed], components: [buttonRow], ephemeral: true });
+                                } else if (i.customId === 'todo_list_2') {
+                                    i.update({ embeds: [embed2], components: [buttonRow], ephemeral: true });
+                                }
+                            });
+                            collector.on('end', collected => {
+                            });
+                        } else {
+                            for (let i = 0; i < results.length; i++) {
+                                embed.addFields({ name: `To Do ${i + 1}`, value: `**To Do:** ${results[i].todo}\n**Time Added:** ${new Date(results[i].time * 1000).toLocaleString()}\n**Priority:** ${results[i].priority}` });
+                            }
+                            interaction.reply({ embeds: [embed], ephemeral: true });
+                        }
+                    });
+                } else if (subCommand === 'clear'){
+                    const clearTodoQuery = `
+                        DELETE FROM todo_list
+                        WHERE user_id = '${userId}'
+                    `;
+                    connection.query(clearTodoQuery, (err, results) => {
+                        if (err) {
+                            console.error('Error clearing todo from the database:', err);
+                            fs.appendFileSync(logFilePath, `[ERROR] ${new Date().toLocaleTimeString()} | Command: Todo | ${interaction.user.tag} (${interaction.user.id}) received an error while clearing a todo from the database | ${err.stack}\n`);
+                            return;
+                        }
+
+                        fs.appendFileSync(logFilePath, `[INFO] ${new Date().toLocaleTimeString()} | ${interaction.user.tag} (${interaction.user.id}) cleared a todo from the database.\n`);
+                        const embed = new EmbedBuilder()
+                            .setTitle('To Do List Cleared!')
+                            .setDescription(`You have cleared the team's to-do list!`)
+                            .setColor('#037bfc')
+                            .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                         interaction.reply({ embeds: [embed], ephemeral: true });
                     });
-                } else if (subCommand === 'clear') {
-
-                    //clears all to dos
                 }
-            })
+        });
         }
     }
-}
-
-
-
-
-
-
-    
-
-
-
-
-    function formatUptime(uptime) {
-        const days = Math.floor(uptime / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((uptime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((uptime % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((uptime % (1000 * 60)) / 1000);
-        return `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }
+};
