@@ -40,7 +40,6 @@ module.exports = {
 
                 if (now < expirationTime) {
                     const expiredTimestamp = Math.round(expirationTime / 1000);
-                    fs.appendFileSync(logFilePath, `[INFO] ${new Date().toLocaleTimeString()} | ${interaction.user.tag} (${interaction.user.id}) tried to use ${command.data.name} but is on cooldown until ${expiredTimestamp}.\n`);
                     return interaction.reply({ content: `Please wait, you are on a cooldown for \`${command.data.name}\`. You can use it again <t:${expiredTimestamp}:R>.`, ephemeral: true });
                 }
             }

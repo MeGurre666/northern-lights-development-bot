@@ -26,7 +26,6 @@ module.exports = {
         await interaction.reply({ embeds: [embed], ephemeral: true });
     },
 };
-
 function formatUptime(uptime) {
     const days = Math.floor(uptime / (1000 * 60 * 60 * 24));
     const hours = Math.floor((uptime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

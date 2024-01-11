@@ -24,20 +24,20 @@ connection.connect((err) => {
 
   const createTableQuery2 = `
   CREATE TABLE IF NOT EXISTS guilds (
-    guild_id BIGINT PRIMARY KEY,
+    guild_id BIGINT,
+    fa_req BOOLEAN,
     raid_channels TEXT,
-    advanced_moderation_roles TEXT,
-    ban_perm_roles TEXT,
-    basic_moderation_roles TEXT,
+    advanced_mod TEXT,
+    basic_mod TEXT,
     log_channel BIGINT,
     raid_mode BOOLEAN,
     raid_mode_time TIMESTAMP NULL DEFAULT NULL,
-    raid_mode_expiration_time TIMESTAMP NULL DEFAULT NULL,
-    raid_mode_threshold INT,
-    raid_mode_ignored_channels TEXT
+    ban_perms TEXT,
+    tickets TEXT,
+    dev TEXT,
+    PRIMARY KEY (guild_id)
   )
 `;
-
 const createTableQuery3 = `
   CREATE TABLE IF NOT EXISTS guilds_bans (
     guild_id BIGINT,
@@ -48,9 +48,9 @@ const createTableQuery3 = `
     PRIMARY KEY (guild_id, user_id)
   )
 `;
-
 const createTableQuery4 = `
   CREATE TABLE IF NOT EXISTS todo_list (
+    guild_id BIGINT,
     user_id BIGINT,
     todo VARCHAR(255),
     time VARCHAR(255),
@@ -59,6 +59,23 @@ const createTableQuery4 = `
   )
 `;
 
+const createTableQuery5 = `
+  CREATE TABLE IF NOT EXISTS tickets (
+    guild_id BIGINT,
+    user_id BIGINT,
+    ticket_id BIGINT,
+    PRIMARY KEY (guild_id, user_id)
+  )
+`;
+const createTableQuery6 = `
+  CREATE TABLE IF NOT EXISTS ticket_presets (
+    guild_id BIGINT,
+    preset_id BIGINT,
+    channel_id BIGINT,
+    message_id TEXT,
+    PRIMARY KEY (guild_id, preset_id)
+  )
+`;
   connection.query(createTableQuery, (err, results) => {
     if (err) {
       console.error('Error creating Users Table:', err);
@@ -86,9 +103,20 @@ const createTableQuery4 = `
             return;
           }
           console.log('Todo List Table created successfully');
-
-          // Only end the connection after all queries have been executed
-          connection.end();
+          connection.query(createTableQuery5, (err, results) => {
+            if (err) {
+              console.error('Error creating Current Projects Table:', err);
+              return;
+            }
+            console.log('Current Tickets created successfully');
+            connection.query(createTableQuery6, (err, rows) => {
+              if (err) throw err;
+              console.log('Data received from MySQL:\n');
+              console.log(rows);
+            });
+            connection.end();
+          });
+            
         });
       });
     });

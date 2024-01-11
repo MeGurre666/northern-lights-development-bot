@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder, IntegrationExpireBehavior } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, IntegrationExpireBehavior, ActionRowBuilder, ButtonBuilder, ButtonStyle  } = require('discord.js');
 const speakeasy = require('speakeasy');
 const mysql = require('mysql2');
 const { database_name, issuer } = require('../../config.json');
@@ -31,7 +31,6 @@ module.exports = {
                 fs.appendFileSync(logFilePath, `[ERROR] ${new Date().toLocaleTimeString()} | Command: 2FA | ${interaction.user.tag} (${interaction.user.id}) received an error while connecting to the database | ${err.stack}\n`);
                 return;
             }
-            fs.appendFileSync(logFilePath, `[INFO] ${new Date().toLocaleTimeString()} | Command: 2FA | ${interaction.user.tag} (${interaction.user.id}) connected to the database.\n`);
             const userId = interaction.user.id.toString();
             const query = `SELECT * FROM users WHERE id = ?`;
             connection.query(query, [userId], (queryError, results, fields) => {
@@ -44,9 +43,17 @@ module.exports = {
                     const embed = new EmbedBuilder()
                         .setTitle('2FA Setup')
                         .setDescription('You already have 2FA set up!')
+                        .addFields({name: 'Disable 2FA', value: 'To disable 2FA, press the button below'})
                         .setColor('#037bfc')
                         .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
-                    return interaction.reply({ embeds: [embed], ephemeral: true });
+                    const row = new ActionRowBuilder()
+                        .addComponents(
+                            new ButtonBuilder()
+                                .setCustomId('disable-2fa')
+                                .setLabel('Disable 2FA')
+                                .setStyle(ButtonStyle.DANGER),
+                        );
+                    interaction.reply({ embeds: [embed], components: [row], ephemeral: true });
                 } else {
                     const secret = speakeasy.generateSecret({ length: 20, name: `${issuer}` });
                     const insertQuery = 'INSERT INTO users (id, secret, validate, setup_time) VALUES (?, ?, ?, ?)';
@@ -72,13 +79,11 @@ module.exports = {
                                 .addFields({ name: 'Validate', value: `Validate your 2FA setup using /validate`, inline: false })
                                 .addFields({ name: 'Secret Key', value: secret.base32, inline: false })
                                 .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
-
                             const initialResponse = await interaction.reply({
                                 embeds: [embed],
                                 files: [{ attachment: Buffer.from(qrCodeImageUrl.split(',')[1], 'base64'), name: '2fa-qrcode.png ' }],
                                 ephemeral: true,
                             });
-                            fs.appendFileSync(logFilePath, `[COMMAND] ${new Date().toLocaleTimeString()} | Command: 2FA | ${interaction.user.tag} (${interaction.user.id}) ran 2FA setup.\n`);
                             const intervalId = setInterval(async () => {
                                 const connectionStatus = await checkValidationStatus(userId, connection);
                                 if (connectionStatus === null) {
@@ -92,7 +97,6 @@ module.exports = {
                                         .setColor('#037bfc')
                                         .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                                     initialResponse.edit({ embeds: [embed4], files: [], components: [] });
-                                    fs.appendFileSync(logFilePath, `[COMMAND] ${new Date().toLocaleTimeString()} | Command: 2FA | ${interaction.user.tag} (${interaction.user.id}) successfully set up 2FA.\n`);
                                     clearInterval(intervalId);
                                 } else {
                                     const elapsedTime = (new Date().getTime() - currentTime) / 1000;
@@ -112,7 +116,6 @@ module.exports = {
                                             .setTimestamp()
                                             .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                                         initialResponse.edit({ embeds: [embed2], files: [], components: [] });
-                                        fs.appendFileSync(logFilePath, `[COMMAND] ${new Date().toLocaleTimeString()} | Command: 2FA | ${interaction.user.tag} (${interaction.user.id}) 2FA setup expired.\n`);
                                         clearInterval(intervalId);
                                     }
                                 }

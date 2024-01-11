@@ -35,7 +35,6 @@ module.exports = {
 				const newCommand = require(commandPath);
 				interaction.client.commands.set(newCommand.data.name, newCommand);
 				await interaction.reply({ content: `Command \`${newCommand.data.name}\` was reloaded!`, ephemeral: true });
-				fs.appendFileSync(logFilePath, `[COMMAND] ${new Date().toLocaleTimeString()} | Command: Reload | ${interaction.user.tag} (${interaction.user.id}) reloaded ${commandName}.\n`);
 			} catch (error) {
 				console.error(error);
 				await interaction.reply({
