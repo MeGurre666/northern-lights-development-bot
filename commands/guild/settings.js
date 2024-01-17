@@ -1,5 +1,5 @@
-const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const mysql = require('mysql2');
+const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelSelectMenuBuilder } = require('discord.js');
+const mysql = require('mysql2/promise');
 const { database_name } = require('../../config.json');
 const path = require('path');
 const fs = require('fs');
@@ -142,7 +142,7 @@ module.exports = {
                                 });
                             }
                         });
-                    } else{
+                    } else {
                         const embed = new EmbedBuilder()
                             .setTitle('2FA Settings')
                             .setDescription('2FA is currently not required for this server!')
@@ -241,7 +241,34 @@ module.exports = {
                             }
                         })
                     }
-                }
+                } else if (category === 'logging') {
+                    const logChannel = results[0].log_channel;
+                    if (logChannel === 0) {
+                        const channeselect = new ChannelSelectMenuBuilder()
+                            .setCustomId('logchannel')
+                            .setPlaceholder('Select a channel')
+                            .setMinValues(1)
+                            .setMaxValues(1)
+                        const embed = new EmbedBuilder()
+                        .setTitle('Logging Settings')
+                        .setDescription('No logging channel has been set for this server!')
+                        .addFields({ name: 'Set Logging Channel', value: 'To set a logging channel, select a channel from the dropdown below!' })
+                        .setColor('#037bfc')
+                        .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                        const row = new ActionRowBuilder()
+                            .addComponents(
+                                channeselect
+                            );
+                        interaction.reply({ embeds: [embed], components: [row], ephemeral: true });
+                        const collection = interaction.channel.createMessageComponentCollector({ time: 15000 });
+                        collection.on('collect', async i => {
+                            if (results[0].fa_req === 1){
+                            }
+                            })
+                        }
+                    }
+
+
             })
         })
     }

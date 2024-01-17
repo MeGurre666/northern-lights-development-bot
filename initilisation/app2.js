@@ -73,6 +73,7 @@ const createTableQuery6 = `
     preset_id BIGINT,
     channel_id BIGINT,
     message_id TEXT,
+    roles TEXt,
     PRIMARY KEY (guild_id, preset_id)
   )
 `;
