@@ -121,7 +121,7 @@ module.exports = {
                                         if (elapsedTime >= 5 * 60) {
                                             const embed2 = new EmbedBuilder()
                                                 .setTitle('2FA Settings')
-                                                .setDescription('The action has expired. Please run the command again.')
+                                                .setDescription('The action has expiaaared. Please run the command again.')
                                                 .setColor('#037bfc')
                                                 .setTimestamp()
                                                 .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
