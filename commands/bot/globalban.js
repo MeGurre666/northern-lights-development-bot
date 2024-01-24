@@ -14,7 +14,7 @@ module.exports = {
             option.setName('reason')
                 .setDescription('The reason for the ban.')
                 .setRequired(true))
-        .default_member_permissions(PermissionFlagsBits.ManageGuild),
+        .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild),
     async execute(interaction) {
         const application = await interaction.client.application?.fetch();
         const teamMember = application.owner.members;

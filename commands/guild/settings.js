@@ -209,6 +209,33 @@ module.exports = {
                 }
             });
         }
+    } else if (category === 'logging') {
+        if (results[0].log_channel === 0) {
+            const embed = new EmbedBuilder()
+                .setTitle('Logging Settings')
+                .setDescription('Logging is currently not setup for this server!')
+                .addFields({ name: 'Setup Logging', value: 'To setup logging please select a channel from the list below' })
+                .setColor('#037bfc')
+                .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+            const channelSelect = new ChannelSelectMenuBuilder()
+                .setCustomId('logging')
+                .setPlaceholder('Select a channel')
+                .setMinValues(1)
+                .setMaxValues(1)
+            const row = new ActionRowBuilder()
+                .addComponents(channelSelect);
+            interaction.reply({ embeds: [embed], components: [row], ephemeral:true });
+            const collection = interaction.channel.createMessageComponentCollector({ time: 15000 });
+            collection.on('collect', async i => {
+                if (i.customId === 'logging' && i.user.id === userId) {
+                    if (results[0].fa_req === 1) {
+                        if (results2.length > 0) {
+
+                        }
+                    }
+                }
+            });
+        }
     }
         } catch (error) {
             console.error('Error:', error);
