@@ -170,3 +170,5 @@
 [UPTIME] 22:23:06 | 0d 1h 0m 0s
 [DEBUG] 22:23:17 | [WS => Shard 0] Heartbeat acknowledged, latency of 151ms.
 [DEBUG] 22:23:58 | [WS => Shard 0] Heartbeat acknowledged, latency of 125ms.
+[DEBUG] 22:24:39 | [WS => Shard 0] Heartbeat acknowledged, latency of 128ms.
+[DEBUG] 22:25:21 | [WS => Shard 0] Heartbeat acknowledged, latency of 128ms.
