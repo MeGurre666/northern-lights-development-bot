@@ -60,7 +60,6 @@ module.exports = {
             const query2 = 'SELECT * FROM users WHERE id = ?';
             const [results] = await connection.execute(query, [guildId]);
             const [results2] = await connection.execute(query2, [userId]);
-
             if (category === '2fa'){
                 if (results[0].fa_req === 1) {
                     const embed = new EmbedBuilder()
@@ -160,7 +159,6 @@ module.exports = {
                             .setColor('#037bfc')
                             .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                         interaction.editReply({ embeds: [embed2], components: [], ephemeral: true })
-                        //change the database for the guild to have 2fa enabled
                         query3 = 'UPDATE guilds SET fa_req = 1 WHERE guild_id = ?';
                         await connection.execute(query3, [guildId]);
                     } else{

@@ -1,4 +1,4 @@
-const { SlashCommandBuilder } = require('discord.js');
+const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     cooldown: 5,
@@ -13,7 +13,8 @@ module.exports = {
         .addStringOption(option =>
             option.setName('reason')
                 .setDescription('The reason for the ban.')
-                .setRequired(true)),
+                .setRequired(true))
+        .default_member_permissions(PermissionFlagsBits.ManageGuild),
     async execute(interaction) {
         const application = await interaction.client.application?.fetch();
         const teamMember = application.owner.members;
@@ -24,7 +25,7 @@ module.exports = {
             const bannedGuilds = [];
             for (const [guildId, guild] of guilds) {
                 try {
-                    await guild.members.ban(user.id, { reason: `Global Ban by ${interaction.user.username} for the reason: ${reason}` });
+                    await guild.members.ban(user.id, { reason: `Global Ban Executed by ${interaction.user.username} for the reason: ${reason}` });
                     bannedGuilds.push(guild.name);
                 } catch (error) {
                     console.error(`Failed to ban user ${user.tag} from guild ${guild.name}: ${error.message}`);
