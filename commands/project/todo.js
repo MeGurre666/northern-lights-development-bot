@@ -48,7 +48,6 @@ module.exports = {
         const logFilePath = path.join(logPath, `${dateStr}.log`);
 		const application = await interaction.client.application?.fetch();
         const guildId = interaction.guild.id;
-		const teamMember = application.owner.members;
         const connection = mysql.createConnection({
             host: 'localhost',
             user: 'root',

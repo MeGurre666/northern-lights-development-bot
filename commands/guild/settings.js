@@ -3,6 +3,7 @@ const { createPool } = require('mysql2/promise');
 const { database_name } = require('../../config.json');
 const path = require('path');
 const fs = require('fs');
+const { error } = require('console');
 
 const pool = createPool({
     host: 'localhost',
@@ -14,11 +15,17 @@ const pool = createPool({
 
 async function checkValidationStatus(userId, connection) {
     try {
-        const [results3] = await connection.execute('SELECT validate FROM users WHERE id = ?', [userId]);
+        const [results3] = await connection.execute('SELECT validate FROM users WHERE id = ?', [userId], error => {
+            if (error) {
+                console.error(`Error happened in ${guildId}, check logs for error code`);
+                fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Validation | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                return null;
+            }
+        });
         const isValidateTrue = results3.length > 0 && results3[0].validate;
         return isValidateTrue;
     } catch (error) {
-        console.error('Error:', error);
+        console.error(`Error happened in ${guildId}, check logs for error code`);
         return null;
     }
 }
@@ -58,8 +65,18 @@ module.exports = {
             const guildId = interaction.guild.id;
             const query = 'SELECT * FROM guilds WHERE guild_id = ?';
             const query2 = 'SELECT * FROM users WHERE id = ?';
-            const [results] = await connection.execute(query, [guildId]);
-            const [results2] = await connection.execute(query2, [userId]);
+            const [results] = await connection.execute(query, [guildId], error => {
+                if (error) {
+                    console.error(`Error happened in ${guildId}, check logs for error code`);
+                    fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Guild Loading | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                }
+            })
+            const [results2] = await connection.execute(query2, [userId], error => {
+                if (error) {
+                    console.error(`Error happened in ${guildId}, check logs for error code`);
+                    fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: User Loading | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                }
+            })
             if (category === '2fa'){
                 if (results[0].fa_req === 1) {
                     const embed = new EmbedBuilder()
@@ -100,7 +117,13 @@ module.exports = {
                                     .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                                 interaction.editReply({ embeds: [embed2], components: [], ephemeral: true });
                                 const query3 = 'UPDATE users SET validate = ? WHERE id = ?';
-                                await connection.execute(query3, [false, userId]);
+                                await connection.execute(query3, [false, userId], error => {
+                                    if (error){
+                                        console.error('Error :', error);
+                                        fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: 2FA | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                        return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                                    }
+                                });
                                 const intervalId = setInterval(async () => {
                                     const connectionStatus = await checkValidationStatus(userId, connection);
                                     if (connectionStatus === null) {
@@ -115,7 +138,13 @@ module.exports = {
                                             .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                                         interaction.editReply({ embeds: [embed4], components: [], ephemeral: true });
                                         clearInterval(intervalId);
-                                        await connection.execute(`UPDATE guilds SET fa_req = 0 WHERE guild_id = ?`, [guildId]);
+                                        await connection.execute(`UPDATE guilds SET fa_req = 0 WHERE guild_id = ?`, [guildId], error => {
+                                            if (error) {
+                                                console.error(`Error happened in ${guildId}, check logs for error code`);
+                                                fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: 2FA | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                                return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                                            }
+                                        })
                                     } else {
                                         const elapsedTime = (new Date().getTime() - currentTime) / 1000;
                                         if (elapsedTime >= 5 * 60) {
@@ -160,7 +189,13 @@ module.exports = {
                             .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                         interaction.editReply({ embeds: [embed2], components: [], ephemeral: true })
                         query3 = 'UPDATE guilds SET fa_req = 1 WHERE guild_id = ?';
-                        await connection.execute(query3, [guildId]);
+                        await connection.execute(query3, [guildId], error => {
+                            if (error){
+                                console.error('Error :', error);
+                                fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: 2FA | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                            }
+                        });
                     } else{
                         const currentTime = date.getTime();
                         const expirationTime = Math.floor(currentTime / 1000) + 300;
@@ -175,7 +210,13 @@ module.exports = {
                             .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                         interaction.editReply({ embeds: [embed2], components: [], ephemeral: true });
                         const query3 = 'UPDATE users SET validate = ? WHERE id = ?';
-                        await connection.execute(query3, [false, userId]);
+                        await connection.execute(query3, [false, userId], error => {
+                            if (error) {
+                                console.error(`Error happened in ${guildId}, check logs for error code`);
+                                fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: 2FA | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                            }
+                        });
                         const intervalId = setInterval(async () => {
                             const connectionStatus = await checkValidationStatus(userId, connection);
                             if (connectionStatus === null) {
@@ -190,7 +231,13 @@ module.exports = {
                                     .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                                 interaction.editReply({ embeds: [embed4], components: [], ephemeral: true });
                                 clearInterval(intervalId);
-                                connection.execute(`UPDATE guilds SET fa_req = 1 WHERE guild_id = ?`, [guildId]);
+                                connection.execute(`UPDATE guilds SET fa_req = 1 WHERE guild_id = ?`, [guildId], error => {
+                                    if (error) {
+                                        console.error(`Error happened in ${guildId}, check logs for error code`);
+                                        fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: 2FA | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                        return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                                    }
+                                })
                             } else {
                                 const elapsedTime = (new Date().getTime() - currentTime) / 1000;
                                 if (elapsedTime >= 5 * 60) {
@@ -228,18 +275,174 @@ module.exports = {
             const collection = interaction.channel.createMessageComponentCollector({ time: 15000 });
             collection.on('collect', async i => {
                 if (i.customId === 'logging' && i.user.id === userId) {
-                    if (results[0].fa_req === 1) {
+                    if (results[0].fa_req === 1 || results2.length > 0) {
                         if (results2.length > 0) {
-
+                            const currentTime = date.getTime();
+                            const expirationTime = Math.floor(currentTime / 1000) + 300;
+                            const embed2 = new EmbedBuilder()
+                                .setTitle('Logging Setup')
+                                .setDescription('To setup logging you must validate your action')
+                                .addFields({ name: '2FA Code', value: 'Please use the /validate command to validate your action!' })
+                                .addFields({ name: '2FA Code', value: 'If you have lost your 2FA code, please join the support server and ask for help!' })
+                                .addFields({ name: 'Support Server', value: 'https://megurre666.zip' })
+                                .addFields({ name: 'Expiration', value: `This interaction will expire in <t:${expirationTime}:R>` })
+                                .setColor('#037bfc')
+                                .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                            interaction.editReply({ embeds: [embed2], components: [], ephemeral: true });
+                            const query3 = 'UPDATE users SET validate = ? WHERE id = ?';
+                            await connection.execute(query3, [false, userId], error => {
+                                if (error) {
+                                    console.error(`Error happened in ${guildId}, check logs for error code`);
+                                    fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                    return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                                }
+                            });
+                            const intervalId = setInterval(async () => {
+                                const connectionStatus = await checkValidationStatus(userId, connection);
+                                if (connectionStatus === null) {
+                                    clearInterval(intervalId);
+                                    return;
+                                }
+                                if (connectionStatus) {
+                                    const embed4 = new EmbedBuilder()
+                                        .setTitle('Logging Setup')
+                                        .setDescription('You have successfully setup logging for channel !')
+                                        .setColor('#037bfc')
+                                        .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                                    interaction.editReply({ embeds: [embed4], components: [], ephemeral: true });
+                                    clearInterval(intervalId);
+                                    await connection.execute(`UPDATE guilds SET log_channel = ? WHERE guild_id = ?`, [i.values[0], guildId], error => {
+                                        if (error) {
+                                            console.error(`Error happened in ${guildId}, check logs for error code`);
+                                            fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                            return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                                        }
+                                    })
+                                } else {
+                                    const elapsedTime = (new Date().getTime() - currentTime) / 1000;
+                                    if (elapsedTime >= 5 * 60) {
+                                        const embed2 = new EmbedBuilder()
+                                            .setTitle('Logging Setup')
+                                            .setDescription('The action has expired. Please run the command again.')
+                                            .setColor('#037bfc')
+                                            .setTimestamp()
+                                            .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                                        interaction.editReply({ embeds: [embed2], components: [], ephemeral: true });
+                                        clearInterval(intervalId);
+                                    }
+                                }
+                            }, 1000);
+                        } else {
+                            const embed2 = new EmbedBuilder()
+                                .setTitle('Logging Setup')
+                                .setDescription('You need to have 2FA setup for your account due to it being required to make changes to the server!')
+                                .setColor('#037bfc')
+                                .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                            interaction.editReply({ embeds: [embed2], components: [], ephemeral: true });
                         }
+
+                    } else {
+                        const embed2 = new EmbedBuilder()
+                            .setTitle('Logging Setup')
+                            .setDescription('You have successfully setup logging for channel !')
+                            .setColor('#037bfc')
+                            .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                        interaction.editReply({ embeds: [embed2], components: [], ephemeral: true });
+                        await connection.execute(`UPDATE guilds SET log_channel = ? WHERE guild_id = ?`, [i.values[0], guildId], error => {
+                            if (error) {
+                                console.error(`Error happened in ${guildId}, check logs for error code`);
+                                fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                            }
+                        })
                     }
                 }
             });
+        } else {
+            const embed = new EmbedBuilder()
+                .setTitle('Logging Settings')
+                .setDescription(`Logging is currently setup for this server for the channel <#${results[0].log_channel}>!`)
+                .addFields({ name: 'Update Logging', value: 'To update logging please select a channel from the list below'})
+                .addFields({ name: 'Disable Logging', value: 'To disable logging please click the button below' })
+                .setColor('#037bfc')
+                .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+            const channelSelect = new ChannelSelectMenuBuilder()
+                .setCustomId('logging')
+                .setPlaceholder('Select a channel')
+                .setMinValues(1)
+                .setMaxValues(1)
+            const row = new ActionRowBuilder()
+                .addComponents(channelSelect)
+            interaction.reply({ embeds: [embed], components: [row], ephemeral:true });
+            const collection = interaction.channel.createMessageComponentCollector({ time: 15000 });
+            collection.on('collect', async i => {
+                if (i.customId === 'logging' && i.user.id === userId) {
+                    if (results[0].fa_req === 1 || results2.length > 0) {
+                        if (results2.length > 0) {
+                            const currentTime = date.getTime();
+                            const expirationTime = Math.floor(currentTime / 1000) + 300;
+                            const embed2 = new EmbedBuilder()
+                                .setTitle('Logging Setup')
+                                .setDescription('To update logging you must validate your action')
+                                .addFields({ name: '2FA Code', value: 'Please use the /validate command to validate your action!' })
+                                .addFields({ name: '2FA Code', value: 'If you have lost your 2FA code, please join the support server and ask for help!' })
+                                .addFields({ name: 'Support Server', value: 'https://megurre666.zip' })
+                                .addFields({ name: 'Expiration', value: `This interaction will expire in <t:${expirationTime}:R>` })
+                                .setColor('#037bfc')
+                                .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                            interaction.editReply({ embeds: [embed2], components: [], ephemeral: true });
+                            const query3 = 'UPDATE users SET validate = ? WHERE id = ?';
+                            await connection.execute(query3, [false, userId], error => {
+                                if (error) {
+                                    console.error(`Error happened in ${guildId}, check logs for error code`);
+                                    fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                    return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                                }
+                            });
+                            const intervalId = setInterval(async () => {
+                                const connectionStatus = await checkValidationStatus(userId, connection);
+                                if (connectionStatus === null) {
+                                    clearInterval(intervalId);
+                                    return;
+                                }
+                                if (connectionStatus) {
+                                    const embed4 = new EmbedBuilder()
+                                        .setTitle('Logging Setup')
+                                        .setDescription('You have successfully updated logging for channel !')
+                                        .setColor('#037bfc')
+                                        .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                                    interaction.editReply({ embeds: [embed4], components: [], ephemeral: true });
+                                    clearInterval(intervalId);
+                                    await connection.execute(`UPDATE guilds SET log_channel = ? WHERE guild_id = ?`, [i.values[0], guildId], error => {
+                                        if (error) {
+                                            console.error(`Error happened in ${guildId}, check logs for error code`);
+                                            fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                            return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                                        }
+                                    })
+                                } else {
+                                    const elapsedTime = (new Date().getTime() - currentTime) / 1000;
+                                    if (elapsedTime >= 5 * 60) {
+                                        const embed2 = new EmbedBuilder()
+                                            .setTitle('Logging Setup')
+                                            .setDescription('The action has expired. Please run the command again.')
+                                            .setColor('#037bfc')
+                                            .setTimestamp()
+                                            .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                                        interaction.editReply({ embeds: [embed2], components: [], ephemeral: true });
+                                        clearInterval(intervalId);
+                                    }
+                                }
+                            }, 1000)
+                        }
+                    }
+                }
+            })
         }
     }
-        } catch (error) {
-            console.error('Error:', error);
-            return null;
-        }
+} catch (error) {
+        console.error(`Error happened in ${guildId}, check logs for error code`);
+        return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
     }
-};
+}
+}
