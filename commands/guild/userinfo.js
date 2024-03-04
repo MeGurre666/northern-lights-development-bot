@@ -4,17 +4,12 @@ module.exports = {
     cooldown: 5,
     category: 'guild',
     data: new SlashCommandBuilder()
-        .setName('globalban')
-        .setDescription('Bans a user from all servers the bot is in.')
+        .setName('userinfo')
+        .setDescription('Displays information about a user.')
         .addUserOption(option =>
             option.setName('user')
-                .setDescription('The user to ban.')
-                .setRequired(true))
-        .addStringOption(option =>
-            option.setName('reason')
-                .setDescription('The reason for the ban.')
-                .setRequired(true))
-        .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild),
+                .setDescription('The user to check.')
+                .setRequired(true)),
     async execute(interaction) {
         const application = await interaction.client.application?.fetch();
         const teamMember = application.owner.members;

@@ -77,6 +77,15 @@ const createTableQuery6 = `
     PRIMARY KEY (guild_id, preset_id)
   )
 `;
+const createTableQuery7 = `
+  CREATE TABLE IF NOT EXISTS global_ban (
+    user_id BIGINT,
+    banned_by BIGINT,
+    ban_time TIMESTAMP NULL DEFAULT NULL,
+    reason VARCHAR(255),
+    PRIMARY KEY (user_id)
+  )
+`;
   connection.query(createTableQuery, (err, results) => {
     if (err) {
       console.error('Error creating Users Table:', err);
@@ -115,7 +124,14 @@ const createTableQuery6 = `
               console.log('Data received from MySQL:\n');
               console.log(rows);
             });
-            connection.end();
+            connection.query(createTableQuery7, (err, results) => {
+              if (err) {
+                console.error('Error creating Global Ban Table:', err);
+                return;
+              }
+              console.log('Global Ban Table created successfully');
+            });
+              connection.end();
           });
             
         });

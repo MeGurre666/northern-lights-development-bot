@@ -10,7 +10,7 @@ module.exports = {
 	category: 'utility',
 	data: new SlashCommandBuilder()
 		.setName('restart')
-		.setDescription('Restart the bot! (For development purposes only)'),
+		.setDescription('Restart the bot! (We recommend not using this command as unforeseen issues may occur.)'),
 	async execute(interaction) {
         const application = await interaction.client.application?.fetch();
 		const teamMember = application.owner.members;

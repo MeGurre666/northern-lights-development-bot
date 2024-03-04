@@ -1,16 +1,16 @@
 const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelSelectMenuBuilder } = require('discord.js');
 const { createPool } = require('mysql2/promise');
-const { database_name } = require('../../config.json');
+const { database_name, database_host, database_password, database_user, connection_limit } = require('../../config.json');
 const path = require('path');
 const fs = require('fs');
-const { error } = require('console');
+
 
 const pool = createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '',
+    host: database_host,
+    user: database_user,
+    password: database_password,
     database: database_name,
-    connectionLimit: 100,
+    connectionLimit: connection_limit,
 });
 
 async function checkValidationStatus(userId, connection) {
