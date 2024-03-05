@@ -17,7 +17,24 @@ module.exports = {
 		if (teamMember.has(interaction.user.id)) {
             await interaction.reply({content:`Restarting...`, ephemeral: true});
             fs.appendFileSync(logFilePath, `[COMMAND] ${new Date().toLocaleTimeString()} | Command: Restart | ${interaction.user.tag} (${interaction.user.id}) restarted the bot.\n`);
-            process.exit();
+            //reloads all the commands
+            const commandFolders = fs.readdirSync(path.join(__dirname, '../..', 'commands'));
+            for (const folder of commandFolders) {
+                const commandsPath = path.join(__dirname, '../..', 'commands', folder);
+                const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
+                for (const file of commandFiles) {
+                    const filePath = path.join(commandsPath, file);
+                    const command = require(filePath);
+                    if ('data' in command && 'execute' in command) {
+                        interaction.client.commands.set(command.data.name, command);
+                    } else {
+                        console.log(`[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`);
+                        fs.appendFileSync(logFilePath, `[WARNING] ${new Date().toLocaleTimeString()} | The command at ${filePath} is missing a required "data" or "execute" property.\n`);
+                    }
+                }
+            }
+
+
         } else {
             await interaction.reply({content:`You do not have permission to use this command!`, ephemeral: true});
             fs.appendFileSync(logFilePath, `[WARNING] ${new Date().toLocaleTimeString()} | Command: Restart | ${interaction.user.tag} (${interaction.user.id}) tried to use restart but does not have permission.\n`);

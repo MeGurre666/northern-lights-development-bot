@@ -40,12 +40,13 @@ connection.connect((err) => {
 `;
 const createTableQuery3 = `
   CREATE TABLE IF NOT EXISTS guilds_bans (
+    unique_id BIGINT AUTO_INCREMENT,
     guild_id BIGINT,
     user_id BIGINT,
     ban_time TIMESTAMP NULL DEFAULT NULL,
     unban_time TIMESTAMP NULL DEFAULT NULL,
     reason VARCHAR(255),
-    PRIMARY KEY (guild_id, user_id)
+    PRIMARY KEY (unique_id)
   )
 `;
 const createTableQuery4 = `
@@ -73,7 +74,7 @@ const createTableQuery6 = `
     preset_id BIGINT,
     channel_id BIGINT,
     message_id TEXT,
-    roles TEXt,
+    roles TEXT,
     PRIMARY KEY (guild_id, preset_id)
   )
 `;

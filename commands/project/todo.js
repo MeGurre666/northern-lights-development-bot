@@ -13,34 +13,34 @@ module.exports = {
         .addSubcommand(subcommand =>
             subcommand
                 .setName('add')
-                .setDescription('Add a To Do!')
+                .setDescription('Add a Todo!')
                 .addStringOption(option =>
                     option
                         .setName('todo')
-                        .setDescription('The To Do to add!')
+                        .setDescription('The Todo to add!')
                         .setRequired(true))
                 .addIntegerOption(option =>
                     option
                         .setName('priority')
-                        .setDescription('The priority of the To Do! (1-5)')
+                        .setDescription('The priority of the Todo! (1-5)')
                         .setRequired(true)))
         .addSubcommand(subcommand =>
             subcommand
                 .setName('remove')
-                .setDescription('Remove a To Do!')
+                .setDescription('Remove a Todo!')
                 .addStringOption(option =>
                     option
                         .setName('todo')
-                        .setDescription('The To Do to remove!')
+                        .setDescription('The Todo to remove!')
                         .setRequired(true)))
         .addSubcommand(subcommand =>
             subcommand
                 .setName('list')
-                .setDescription('List all To Do!'))
+                .setDescription('List all Todo!'))
         .addSubcommand(subcommand =>
             subcommand
                 .setName('clear')
-                .setDescription('Clear all To Do!')),
+                .setDescription('Clear all Todo!')),
 	async execute(interaction) {
         const logPath = path.join(__dirname, '../../logs');
         const date = new Date();
@@ -62,8 +62,12 @@ module.exports = {
                 return;
             }
             const dev = results[0].dev
+            if (dev === null) {
+                interaction.reply({ content: 'You need to set a developer role before using this command!', ephemeral: true });
+                return;
+            }
             const devsplit = dev.split(',')
-            if (devsplit.includes(interaction.user.id)) {
+            if (interaction.member.roles.cache.some(role => devsplit.includes(role.id))) {
                 const subCommand = interaction.options.getSubcommand();
                 connection.connect((err) => {
                     if (err) {
@@ -109,30 +113,49 @@ module.exports = {
                             }
                             const embed = new EmbedBuilder()
                                 .setTitle('Todo Added!')
-                                .setDescription(`You have added the todo \`${todo}\` to the team to do list!`)
+                                .setDescription(`You have added the todo \`${todo}\` to the team todo list!`)
                                 .setColor('#037bfc')
                                 .setFooter({text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true })});
                             interaction.reply({ embeds: [embed], ephemeral: true });
                         });
                     } else if (subCommand === 'remove') {
-                        const removeTodoQuery = `
-                            DELETE FROM todo_list
+                        const checkTodoQuery = `
+                            SELECT todo
+                            FROM todo_list
                             WHERE user_id = '${userId}' AND todo = '${todo}' and guild_id = '${guildId}'
                         `;
-                        connection.query(removeTodoQuery, (err, results) => {
+                        connection.query(checkTodoQuery, (err, results) => {
                             if (err) {
-                                console.error('Error removing todo from the database:', err);
-                                fs.appendFileSync(logFilePath, `[ERROR] ${new Date().toLocaleTimeString()} | Command: Todo | ${interaction.user.tag} (${interaction.user.id}) received an error while removing a todo from the database | ${err.stack}\n`);
+                                console.error('Error checking todo in the database:', err);
+                                fs.appendFileSync(logFilePath, `[ERROR] ${new Date().toLocaleTimeString()} | Command: Todo | ${interaction.user.tag} (${interaction.user.id}) received an error while checking a todo in the database | ${err.stack}\n`);
                                 return;
                             }
-                            const embed = new EmbedBuilder()
-                                .setTitle('Todo Removed!')
-                                .setDescription(`You have removed the todo \`${todo}\` from the teams to do list!`)
-                                .setColor('#037bfc')
-                                .setFooter({text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true })});
-                            interaction.reply({ embeds: [embed], ephemeral: true });
+                            if (results.length === 0) {
+                                return interaction.reply({ content: 'That todo does not exist!', ephemeral: true });
+                            } else{
+
+                            
+                        
+                            const removeTodoQuery = `
+                                DELETE FROM todo_list
+                                WHERE user_id = '${userId}' AND todo = '${todo}' AND guild_id = '${guildId}'
+                            `;
+                            connection.query(removeTodoQuery, (err, results) => {
+                                if (err) {
+                                    console.error('Error removing todo from the database:', err);
+                                    fs.appendFileSync(logFilePath, `[ERROR] ${new Date().toLocaleTimeString()} | Command: Todo | ${interaction.user.tag} (${interaction.user.id}) received an error while removing a todo from the database | ${err.stack}\n`);
+                                    return;
+                                }
+                                const embed = new EmbedBuilder()
+                                    .setTitle('Todo Removed!')
+                                    .setDescription(`You have removed the todo \`${todo}\` from the teams todo list!`)
+                                    .setColor('#037bfc')
+                                    .setFooter({text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true })});
+                                interaction.reply({ embeds: [embed], ephemeral: true });
+                            });
+                        }
                         });
-                    }
+                        }
                     else if (subCommand === 'list') {
                         const listTodoQuery = `
                             SELECT todo, time, priority
@@ -148,21 +171,21 @@ module.exports = {
                             }
                             fs.appendFileSync(logFilePath, `[INFO] ${new Date().toLocaleTimeString()} | ${interaction.user.tag} (${interaction.user.id}) listed a todo from the database.\n`);
                             const embed = new EmbedBuilder()
-                                .setTitle('To Do List!')
-                                .setDescription(`Here is the team's to-do list!`)
+                                .setTitle('Todo List!')
+                                .setDescription(`Here is the team's todo list!`)
                                 .setColor('#037bfc')
                                 .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                             if (results.length > 25) {
                                 const embed2 = new EmbedBuilder()
-                                    .setTitle('To Do List!')
-                                    .setDescription(`Here is the team's to-do list!`)
+                                    .setTitle('Todo List!')
+                                    .setDescription(`Here is the team's todo list!`)
                                     .setColor('#037bfc')
                                     .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                                 for (let i = 0; i < results.length; i++) {
                                     if (i < 25) {
-                                        embed.addFields({ name: `To Do ${i + 1}`, value: `**To Do:** ${results[i].todo}\n**Time Added:** ${new Date(results[i].time * 1000).toLocaleString()}\n**Priority:** ${results[i].priority}` });
+                                        embed.addFields({ name: `Todo ${i + 1}`, value: `**Todo:** ${results[i].todo}\n**Time Added:** ${new Date(results[i].time * 1000).toLocaleString()}\n**Priority:** ${results[i].priority}` });
                                     } else {
-                                        embed2.addFields({ name: `To Do ${i + 1}`, value: `**To Do:** ${results[i].todo}\n**Time Added:** ${new Date(results[i].time * 1000).toLocaleString()}\n**Priority:** ${results[i].priority}` });
+                                        embed2.addFields({ name: `Todo ${i + 1}`, value: `**Todo:** ${results[i].todo}\n**Time Added:** ${new Date(results[i].time * 1000).toLocaleString()}\n**Priority:** ${results[i].priority}` });
                                     }
                                 }
                                 const button1 = new ButtonBuilder()
@@ -189,7 +212,7 @@ module.exports = {
                                 });
                             } else {
                                 for (let i = 0; i < results.length; i++) {
-                                    embed.addFields({ name: `To Do ${i + 1}`, value: `**To Do:** ${results[i].todo}\n**Time Added:** ${new Date(results[i].time * 1000).toLocaleString()}\n**Priority:** ${results[i].priority}` });
+                                    embed.addFields({ name: `Todo ${i + 1}`, value: `**Todo:** ${results[i].todo}\n**Time Added:** ${new Date(results[i].time * 1000).toLocaleString()}\n**Priority:** ${results[i].priority}` });
                                 }
                                 interaction.reply({ embeds: [embed], ephemeral: true });
                             }
@@ -206,8 +229,8 @@ module.exports = {
                                 return;
                             }
                             const embed = new EmbedBuilder()
-                                .setTitle('To Do List Cleared!')
-                                .setDescription(`You have cleared the team's to-do list!`)
+                                .setTitle('Todo List Cleared!')
+                                .setDescription(`You have cleared the team's todo list!`)
                                 .setColor('#037bfc')
                                 .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                             interaction.reply({ embeds: [embed], ephemeral: true });

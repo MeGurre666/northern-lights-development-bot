@@ -3,8 +3,6 @@ const { createPool } = require('mysql2/promise');
 const { database_name, database_host, database_password, database_user, connection_limit } = require('../../config.json');
 const path = require('path');
 const fs = require('fs');
-
-
 const pool = createPool({
     host: database_host,
     user: database_user,
@@ -12,12 +10,11 @@ const pool = createPool({
     database: database_name,
     connectionLimit: connection_limit,
 });
-
 async function checkValidationStatus(userId, connection) {
     try {
         const [results3] = await connection.execute('SELECT validate FROM users WHERE id = ?', [userId], error => {
             if (error) {
-                console.error(`Error happened in ${guildId}, check logs for error code`);
+                console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                 fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Validation | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
                 return null;
             }
@@ -25,11 +22,10 @@ async function checkValidationStatus(userId, connection) {
         const isValidateTrue = results3.length > 0 && results3[0].validate;
         return isValidateTrue;
     } catch (error) {
-        console.error(`Error happened in ${guildId}, check logs for error code`);
+        console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
         return null;
     }
 }
-
 module.exports = {
     cooldown: 5,
     category: 'guild',
@@ -59,21 +55,20 @@ module.exports = {
         const logFilePath = path.join(logPath, `${dateStr}.log`);
         const category = interaction.options.getString('category');
         const application = await interaction.client.application?.fetch();
-        
+        const guildId = interaction.guild.id;
         try {
             const connection = await pool.getConnection();
-            const guildId = interaction.guild.id;
             const query = 'SELECT * FROM guilds WHERE guild_id = ?';
             const query2 = 'SELECT * FROM users WHERE id = ?';
             const [results] = await connection.execute(query, [guildId], error => {
                 if (error) {
-                    console.error(`Error happened in ${guildId}, check logs for error code`);
+                    console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                     fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Guild Loading | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
                 }
             })
             const [results2] = await connection.execute(query2, [userId], error => {
                 if (error) {
-                    console.error(`Error happened in ${guildId}, check logs for error code`);
+                    console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                     fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: User Loading | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
                 }
             })
@@ -140,7 +135,7 @@ module.exports = {
                                         clearInterval(intervalId);
                                         await connection.execute(`UPDATE guilds SET fa_req = 0 WHERE guild_id = ?`, [guildId], error => {
                                             if (error) {
-                                                console.error(`Error happened in ${guildId}, check logs for error code`);
+                                                console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                                                 fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: 2FA | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
                                                 return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
                                             }
@@ -212,7 +207,7 @@ module.exports = {
                         const query3 = 'UPDATE users SET validate = ? WHERE id = ?';
                         await connection.execute(query3, [false, userId], error => {
                             if (error) {
-                                console.error(`Error happened in ${guildId}, check logs for error code`);
+                                console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                                 fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: 2FA | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
                                 return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
                             }
@@ -233,7 +228,7 @@ module.exports = {
                                 clearInterval(intervalId);
                                 connection.execute(`UPDATE guilds SET fa_req = 1 WHERE guild_id = ?`, [guildId], error => {
                                     if (error) {
-                                        console.error(`Error happened in ${guildId}, check logs for error code`);
+                                        console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                                         fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: 2FA | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
                                         return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
                                     }
@@ -292,7 +287,7 @@ module.exports = {
                             const query3 = 'UPDATE users SET validate = ? WHERE id = ?';
                             await connection.execute(query3, [false, userId], error => {
                                 if (error) {
-                                    console.error(`Error happened in ${guildId}, check logs for error code`);
+                                    console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                                     fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
                                     return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
                                 }
@@ -313,7 +308,7 @@ module.exports = {
                                     clearInterval(intervalId);
                                     await connection.execute(`UPDATE guilds SET log_channel = ? WHERE guild_id = ?`, [i.values[0], guildId], error => {
                                         if (error) {
-                                            console.error(`Error happened in ${guildId}, check logs for error code`);
+                                            console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                                             fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
                                             return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
                                         }
@@ -340,17 +335,16 @@ module.exports = {
                                 .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                             interaction.editReply({ embeds: [embed2], components: [], ephemeral: true });
                         }
-
                     } else {
                         const embed2 = new EmbedBuilder()
                             .setTitle('Logging Setup')
-                            .setDescription('You have successfully setup logging for channel !')
+                            .setDescription(`You have successfully setup logging for the channel <#${i.values[0]}>!`)
                             .setColor('#037bfc')
-                            .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                            .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip', iconURL: application.iconURL({ dynamic: true }) });
                         interaction.editReply({ embeds: [embed2], components: [], ephemeral: true });
                         await connection.execute(`UPDATE guilds SET log_channel = ? WHERE guild_id = ?`, [i.values[0], guildId], error => {
                             if (error) {
-                                console.error(`Error happened in ${guildId}, check logs for error code`);
+                                console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                                 fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
                                 return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
                             }
@@ -359,9 +353,10 @@ module.exports = {
                 }
             });
         } else {
+            console.log(results[0].log_channel)
             const embed = new EmbedBuilder()
                 .setTitle('Logging Settings')
-                .setDescription(`Logging is currently setup for this server for the channel <#${results[0].log_channel}>!`)
+                .setDescription(`Logging is currently setup for this server for the channel <#${(results[0].log_channel)}>!`)
                 .addFields({ name: 'Update Logging', value: 'To update logging please select a channel from the list below'})
                 .addFields({ name: 'Disable Logging', value: 'To disable logging please click the button below' })
                 .setColor('#037bfc')
@@ -394,7 +389,7 @@ module.exports = {
                             const query3 = 'UPDATE users SET validate = ? WHERE id = ?';
                             await connection.execute(query3, [false, userId], error => {
                                 if (error) {
-                                    console.error(`Error happened in ${guildId}, check logs for error code`);
+                                    console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                                     fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
                                     return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
                                 }
@@ -415,7 +410,7 @@ module.exports = {
                                     clearInterval(intervalId);
                                     await connection.execute(`UPDATE guilds SET log_channel = ? WHERE guild_id = ?`, [i.values[0], guildId], error => {
                                         if (error) {
-                                            console.error(`Error happened in ${guildId}, check logs for error code`);
+                                            console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                                             fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
                                             return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
                                         }
@@ -441,7 +436,7 @@ module.exports = {
         }
     }
 } catch (error) {
-        console.error(`Error happened in ${guildId}, check logs for error code`);
+        console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
         return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
     }
 }

@@ -1,17 +1,17 @@
-const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const speakeasy = require('speakeasy');
+const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelSelectMenuBuilder } = require('discord.js');
 const { createPool } = require('mysql2/promise');
-const { database_name, issuer } = require('../../config.json');
+const { database_name, database_host, database_password, database_user, connection_limit } = require('../../config.json');
 const path = require('path');
 const fs = require('fs');
 const qr = require('qrcode');
 
 const pool = createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '',
+    host: database_host,
+    user: database_user,
+    password: database_password,
     database: database_name,
-    connectionLimit: 100,
+    connectionLimit: connection_limit,
 });
 
 async function checkValidationStatus(userId, connection) {
@@ -24,7 +24,6 @@ async function checkValidationStatus(userId, connection) {
         return null;
     }
 }
-
 async function generateQRCodeImage(otpAuthUrl) {
     return new Promise((resolve, reject) => {
         qr.toDataURL(otpAuthUrl, (qrError, qrCodeImageUrl) => {
@@ -36,7 +35,6 @@ async function generateQRCodeImage(otpAuthUrl) {
         });
     });
 }
-
 module.exports = {
     cooldown: 5,
     category: 'utility',

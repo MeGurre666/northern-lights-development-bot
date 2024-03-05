@@ -1,5 +1,14 @@
-const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
-
+const speakeasy = require('speakeasy');
+const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelSelectMenuBuilder } = require('discord.js');
+const { createPool } = require('mysql2/promise');
+const { database_name, database_host, database_password, database_user, connection_limit } = require('../../config.json');
+const pool = createPool({
+    host: database_host,
+    user: database_user,
+    password: database_password,
+    database: database_name,
+    connectionLimit: connection_limit,
+});
 module.exports = {
     cooldown: 5,
     category: 'guild',
@@ -11,22 +20,16 @@ module.exports = {
                 .setDescription('The user to check.')
                 .setRequired(true)),
     async execute(interaction) {
-        const application = await interaction.client.application?.fetch();
-        const teamMember = application.owner.members;
-        const reason = interaction.options.getString('reason', true);
-        if (teamMember.has(interaction.user.id)) {
-            const user = interaction.options.getUser('user', true);
-            const guilds = interaction.client.guilds.cache;
-            const bannedGuilds = [];
-            for (const [guildId, guild] of guilds) {
-                try {
-                    await guild.members.ban(user.id, { reason: `Global Ban Executed by ${interaction.user.username} for the reason: ${reason}` });
-                    bannedGuilds.push(guild.name);
-                } catch (error) {
-                    console.error(`Failed to ban user ${user.tag} from guild ${guild.name}: ${error.message}`);
-                }
+        const guild = interaction.guild;
+        const user = interaction.options.getUser('user');
+        pool.execute('SELECT * FROM guilds_bans WHERE user_id = ? AND guild_id = ?', [user.id, guild.id]).then(([results]) => {
+            if (results.length > 0){
+                //go through all the bans and check if the user still is banned
+                let isBanned = false;
+                
             }
-            interaction.reply({ content: `Banned ${user.tag} from ${bannedGuilds.length} guilds.`, ephemeral: true });
-        }
+            
+        });
+
     }
-};
+}
