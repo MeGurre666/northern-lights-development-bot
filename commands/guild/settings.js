@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelSelectMenuBuilder } = require('discord.js');
+const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelSelectMenuBuilder, WebhookClient, WebHook } = require('discord.js');
 const { createPool } = require('mysql2/promise');
 const { database_name, database_host, database_password, database_user, connection_limit } = require('../../config.json');
 const path = require('path');
@@ -270,7 +270,7 @@ module.exports = {
             const collection = interaction.channel.createMessageComponentCollector({ time: 15000 });
             collection.on('collect', async i => {
                 if (i.customId === 'logging' && i.user.id === userId) {
-                    if (results[0].fa_req === 1 || results2.length > 0) {
+                    if (results[0].fa_req === 1 && results.length > 0 || results2.length > 0) {
                         if (results2.length > 0) {
                             const currentTime = date.getTime();
                             const expirationTime = Math.floor(currentTime / 1000) + 300;
@@ -353,12 +353,10 @@ module.exports = {
                 }
             });
         } else {
-            console.log(results[0].log_channel)
             const embed = new EmbedBuilder()
                 .setTitle('Logging Settings')
                 .setDescription(`Logging is currently setup for this server for the channel <#${(results[0].log_channel)}>!`)
                 .addFields({ name: 'Update Logging', value: 'To update logging please select a channel from the list below'})
-                .addFields({ name: 'Disable Logging', value: 'To disable logging please click the button below' })
                 .setColor('#037bfc')
                 .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
             const channelSelect = new ChannelSelectMenuBuilder()
@@ -430,6 +428,20 @@ module.exports = {
                                 }
                             }, 1000)
                         }
+                    } else {
+                        const embed2 = new EmbedBuilder()
+                            .setTitle('Logging Setup')
+                            .setDescription(`You have successfully updated logging to the channel <#${i.values[0]}>!`)
+                            .setColor('#037bfc')
+                            .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                        interaction.editReply({ embeds: [embed2], components: [], ephemeral: true });
+                        await connection.execute(`UPDATE guilds SET log_channel = ? WHERE guild_id = ?`, [i.values[0], guildId], error => {
+                            if (error) {
+                                console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
+                                fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                            }
+                        })
                     }
                 }
             })

@@ -24,12 +24,13 @@ connection.connect((err) => {
 
   const createTableQuery2 = `
   CREATE TABLE IF NOT EXISTS guilds (
-    guild_id BIGINT,
+    guild_id varchar(19),
     fa_req BOOLEAN,
     raid_channels TEXT,
     advanced_mod TEXT,
     basic_mod TEXT,
-    log_channel BIGINT,
+    log_channel varchar(19),
+    log_channel_webhook varchar(255),
     raid_mode BOOLEAN,
     raid_mode_time TIMESTAMP NULL DEFAULT NULL,
     ban_perms TEXT,
@@ -40,9 +41,9 @@ connection.connect((err) => {
 `;
 const createTableQuery3 = `
   CREATE TABLE IF NOT EXISTS guilds_bans (
-    unique_id BIGINT AUTO_INCREMENT,
-    guild_id BIGINT,
-    user_id BIGINT,
+    unique_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    guild_id varchar(19),
+    user_id varchar(19),
     ban_time TIMESTAMP NULL DEFAULT NULL,
     unban_time TIMESTAMP NULL DEFAULT NULL,
     reason VARCHAR(255),
@@ -51,8 +52,8 @@ const createTableQuery3 = `
 `;
 const createTableQuery4 = `
   CREATE TABLE IF NOT EXISTS todo_list (
-    guild_id BIGINT,
-    user_id BIGINT,
+    guild_id varchar(19),
+    guild_id varchar(19),
     todo VARCHAR(255),
     time VARCHAR(255),
     priority INT,
@@ -62,25 +63,25 @@ const createTableQuery4 = `
 
 const createTableQuery5 = `
   CREATE TABLE IF NOT EXISTS tickets (
-    guild_id BIGINT,
-    user_id BIGINT,
+    guild_id varchar(19),
+    guild_id varchar(19),
     ticket_id BIGINT,
     PRIMARY KEY (guild_id, user_id)
   )
 `;
 const createTableQuery6 = `
   CREATE TABLE IF NOT EXISTS ticket_presets (
-    guild_id BIGINT,
-    preset_id BIGINT,
-    channel_id BIGINT,
-    message_id TEXT,
+    guild_id varchar(19),
+    preset_id varchar(19),
+    channel_id varchar(19),
+    message_id varchar(19),
     roles TEXT,
     PRIMARY KEY (guild_id, preset_id)
   )
 `;
 const createTableQuery7 = `
   CREATE TABLE IF NOT EXISTS global_ban (
-    user_id BIGINT,
+    guild_id varchar(19),
     banned_by BIGINT,
     ban_time TIMESTAMP NULL DEFAULT NULL,
     reason VARCHAR(255),

@@ -1,7 +1,7 @@
 const speakeasy = require('speakeasy');
 const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelSelectMenuBuilder } = require('discord.js');
 const { createPool } = require('mysql2/promise');
-const { database_name, database_host, database_password, database_user, connection_limit } = require('../../config.json');
+const { database_name, database_host, database_password, database_user, connection_limit, issuer } = require('../../config.json');
 const path = require('path');
 const fs = require('fs');
 const qr = require('qrcode');

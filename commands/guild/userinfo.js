@@ -24,7 +24,6 @@ module.exports = {
         const user = interaction.options.getUser('user');
         pool.execute('SELECT * FROM guilds_bans WHERE user_id = ? AND guild_id = ?', [user.id, guild.id]).then(([results]) => {
             if (results.length > 0){
-                //go through all the bans and check if the user still is banned
                 let isBanned = false;
                 
             }

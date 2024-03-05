@@ -21,11 +21,10 @@ module.exports = {
                 .setDescription('The activity type to set.')
                 .setRequired(true)
                 .addChoices(
-                    {name: 'Playing', value: 'Playing'},
-                    {name: 'Streaming', value: 'Streaming'},
-                    {name: 'Listening', value: 'Listening'},
-                    {name: 'Watching', value: 'Watching'},
-                    {name: 'Competing', value: 'Competing'},
+                    {name: 'Playing', value: 'playing'},
+                    {name: 'Streaming', value: 'streaming'},
+                    {name: 'Listening', value: 'listening'},
+                    {name: 'Competing', value: 'competing'},
                 ))
         .addStringOption(option =>
             option.setName('status')
