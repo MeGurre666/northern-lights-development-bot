@@ -1,6 +1,6 @@
-const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelSelectMenuBuilder, WebhookClient, WebHook } = require('discord.js');
+const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelSelectMenuBuilder, WebhookClient } = require('discord.js');
 const { createPool } = require('mysql2/promise');
-const { database_name, database_host, database_password, database_user, connection_limit } = require('../../config.json');
+const { database_name, database_host, database_password, database_user, connection_limit, bot_name } = require('../../config.json');
 const path = require('path');
 const fs = require('fs');
 const pool = createPool({
@@ -252,7 +252,7 @@ module.exports = {
             });
         }
     } else if (category === 'logging') {
-        if (results[0].log_channel === 0) {
+        if (results[0].log_channel === 0 || results[0].log_channel === null) {
             const embed = new EmbedBuilder()
                 .setTitle('Logging Settings')
                 .setDescription('Logging is currently not setup for this server!')
@@ -270,7 +270,7 @@ module.exports = {
             const collection = interaction.channel.createMessageComponentCollector({ time: 15000 });
             collection.on('collect', async i => {
                 if (i.customId === 'logging' && i.user.id === userId) {
-                    if (results[0].fa_req === 1 && results.length > 0 || results2.length > 0) {
+                    if (results[0].fa_req === 1 && results.length > 0) {
                         if (results2.length > 0) {
                             const currentTime = date.getTime();
                             const expirationTime = Math.floor(currentTime / 1000) + 300;
@@ -306,13 +306,29 @@ module.exports = {
                                         .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                                     interaction.editReply({ embeds: [embed4], components: [], ephemeral: true });
                                     clearInterval(intervalId);
-                                    await connection.execute(`UPDATE guilds SET log_channel = ? WHERE guild_id = ?`, [i.values[0], guildId], error => {
-                                        if (error) {
-                                            console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
-                                            fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
-                                            return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-                                        }
+                                    channel = interaction.guild.channels.cache.get(i.values[0]);
+                                    channel.createWebhook({
+                                        name: "Northern Lights Logging",
+                                        avatar: application.iconURL({ dynamic: true }),
+                                        reason: 'Logging Setup'
                                     })
+                                    .then(webhook => {
+                                        const embed5 = new EmbedBuilder()
+                                            .setTitle('Logging Setup')
+                                            .setDescription(`Logging was setup to the channel <#${i.values[0]}> !`)
+                                            .addFields({name: 'Changed By', value: `${interaction.user.tag}`})
+                                            .setColor('#037bfc')
+                                            .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip', iconURL: application.iconURL({ dynamic: true }) });
+                                        webhook.send({ embeds: [embed5] }).catch(console.error);
+                                        const query4 = 'UPDATE guilds SET log_channel = ?, log_channel_token = ? WHERE guild_id = ?';
+                                        connection.execute(query4, [channel.id, webhook.token, guildId], error => {
+                                            if (error) {
+                                                console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
+                                                fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                                return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                                            }
+                                        });
+                                    });
                                 } else {
                                     const elapsedTime = (new Date().getTime() - currentTime) / 1000;
                                     if (elapsedTime >= 5 * 60) {
@@ -338,17 +354,33 @@ module.exports = {
                     } else {
                         const embed2 = new EmbedBuilder()
                             .setTitle('Logging Setup')
-                            .setDescription(`You have successfully setup logging for the channel <#${i.values[0]}>!`)
+                            .setDescription(`You have successfully setup logging to the channel <#${i.values[0]}>!`)
                             .setColor('#037bfc')
                             .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip', iconURL: application.iconURL({ dynamic: true }) });
                         interaction.editReply({ embeds: [embed2], components: [], ephemeral: true });
-                        await connection.execute(`UPDATE guilds SET log_channel = ? WHERE guild_id = ?`, [i.values[0], guildId], error => {
-                            if (error) {
-                                console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
-                                fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
-                                return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-                            }
+                        channel = interaction.guild.channels.cache.get(i.values[0]);
+                        channel.createWebhook({
+                            name: "Northern Lights Logging",
+                            avatar: application.iconURL({ dynamic: true }),
+                            reason: 'Logging Setup'
                         })
+                        .then(webhook => {
+                            const embed5 = new EmbedBuilder()
+                                .setTitle('Logging Setup')
+                                .setDescription(`Logging was changed to the channel <#${i.values[0]}> !`)
+                                .addFields({name: 'Changed By', value: `${interaction.user.tag}`})
+                                .setColor('#037bfc')
+                                .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip', iconURL: application.iconURL({ dynamic: true }) });
+                            webhook.send({ embeds: [embed5] }).catch(console.error);
+                            const query4 = 'UPDATE guilds SET log_channel = ?, log_channel_token = ? WHERE guild_id = ?';
+                            connection.execute(query4, [channel.id, webhook.token, guildId], error => {
+                                if (error) {
+                                    console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
+                                    fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                    return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                                }
+                            });
+                        });
                     }
                 }
             });
@@ -401,18 +433,46 @@ module.exports = {
                                 if (connectionStatus) {
                                     const embed4 = new EmbedBuilder()
                                         .setTitle('Logging Setup')
-                                        .setDescription('You have successfully updated logging for channel !')
+                                        .setDescription(`You have successfully updated logging to the channel <#${i.values[0]}> !`)
                                         .setColor('#037bfc')
                                         .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                                     interaction.editReply({ embeds: [embed4], components: [], ephemeral: true });
                                     clearInterval(intervalId);
-                                    await connection.execute(`UPDATE guilds SET log_channel = ? WHERE guild_id = ?`, [i.values[0], guildId], error => {
-                                        if (error) {
-                                            console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
-                                            fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
-                                            return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-                                        }
-                                    })
+                                    const channel = interaction.guild.channels.cache.get(i.values[0]);
+                                    const channel2 = interaction.guild.channels.cache.get(results[0].log_channel);
+                                    try {
+                                        const webhooks = await channel2.fetchWebhooks();
+                                        const webhook = webhooks.find(wh => wh.token === results[0].log_channel_token);
+
+                                        if (!webhook) {
+                                            console.log('No webhook found error')
+                                    }
+                                        webhook.edit({
+                                            name: "Northern Lights Logging",
+                                            avatar: application.iconURL({ dynamic: true }),
+                                            channel: channel.id
+                                        })
+                                        setTimeout(() => {
+                                            const embed5 = new EmbedBuilder()
+                                                .setTitle('Logging Setup')
+                                                .setDescription(`Logging channel was updated to the channel <#${i.values[0]}>!`)
+                                                .addFields({name: 'Changed By', value: `${interaction.user.tag}`})
+                                                .setColor('#037bfc')
+                                                .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                                            webhook.send({ embeds: [embed5] }).catch(console.error);
+                                            const query4 = 'UPDATE guilds SET log_channel = ?, log_channel_token =?  WHERE guild_id = ?';
+                                            connection.execute(query4, [channel.id, webhook.token, guildId], error => {
+                                                if (error) {
+                                                    console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
+                                                    fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                                    return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                                                }
+                                            })
+                                    }, 1000);
+                                } catch (error) {
+                                    console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
+                                    return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                                }
                                 } else {
                                     const elapsedTime = (new Date().getTime() - currentTime) / 1000;
                                     if (elapsedTime >= 5 * 60) {
@@ -429,20 +489,48 @@ module.exports = {
                             }, 1000)
                         }
                     } else {
-                        const embed2 = new EmbedBuilder()
-                            .setTitle('Logging Setup')
-                            .setDescription(`You have successfully updated logging to the channel <#${i.values[0]}>!`)
-                            .setColor('#037bfc')
-                            .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
-                        interaction.editReply({ embeds: [embed2], components: [], ephemeral: true });
-                        await connection.execute(`UPDATE guilds SET log_channel = ? WHERE guild_id = ?`, [i.values[0], guildId], error => {
-                            if (error) {
-                                console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
-                                fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
-                                return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-                            }
-                        })
+                        const channel = interaction.guild.channels.cache.get(i.values[0]);
+                        const channel2 = interaction.guild.channels.cache.get(results[0].log_channel);
+                        try {
+                            const webhooks = await channel2.fetchWebhooks();
+                            const webhook = webhooks.find(wh => wh.token === results[0].log_channel_token);
+
+                            if (!webhook) {
+                                console.log('No webhook found error')
+                        }
+                            webhook.edit({
+                                name: "Northern Lights Logging",
+                                avatar: application.iconURL({ dynamic: true }),
+                                channel: channel.id
+                            })
+                            const embed4 = new EmbedBuilder()
+                                .setTitle('Logging Setup')
+                                .setDescription(`You have successfully updated logging to the channel <#${i.values[0]}> !`)
+                                .setColor('#037bfc')
+                                .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                            interaction.editReply({ embeds: [embed4], components: [], ephemeral: true });
+                            setTimeout(() => {
+                                const embed5 = new EmbedBuilder()
+                                    .setTitle('Logging Setup')
+                                    .setDescription(`Logging channel was updated to the channel <#${i.values[0]}>!`)
+                                    .addFields({name: 'Changed By', value: `${interaction.user.tag}`})
+                                    .setColor('#037bfc')
+                                    .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                                webhook.send({ embeds: [embed5] }).catch(console.error);
+                                const query4 = 'UPDATE guilds SET log_channel = ?, log_channel_token =?  WHERE guild_id = ?';
+                                connection.execute(query4, [channel.id, webhook.token, guildId], error => {
+                                    if (error) {
+                                        console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
+                                        fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                        return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                                    }
+                                })
+                            }, 1000);
+                    } catch (error) {
+                        console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
+                        return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
                     }
+                }
                 }
             })
         }

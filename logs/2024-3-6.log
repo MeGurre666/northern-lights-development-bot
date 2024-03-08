@@ -1,0 +1,814 @@
+[WARNING] 18:21:49 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\bot\user.js is missing a required "data" or "execute" property.
+[WARNING] 18:21:49 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:21:49 | Started refreshing 10 application (/) commands.
+[INFO] 18:21:49 | Successfully reloaded 10 application (/) commands.
+[DEBUG] 18:21:49 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:21:49 | Preparing to connect to the gateway...
+[DEBUG] 18:21:50 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:21:50 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 1000
+[DEBUG] 18:21:50 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:21:50 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:21:50 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.5405618675480337; waiting 22298ms
+[DEBUG] 18:21:50 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:21:50 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:21:50 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:21:50 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:22:12 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:22:12 | [WS => Shard 0] Heartbeat acknowledged, latency of 143ms.
+[DEBUG] 18:22:54 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 18:23:35 | [WS => Shard 0] Heartbeat acknowledged, latency of 148ms.
+[DEBUG] 18:24:16 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 18:24:57 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[WARNING] 18:25:03 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\bot\user.js is missing a required "data" or "execute" property.
+[WARNING] 18:25:03 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:25:03 | Started refreshing 10 application (/) commands.
+[INFO] 18:25:03 | Successfully reloaded 10 application (/) commands.
+[DEBUG] 18:25:03 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:25:03 | Preparing to connect to the gateway...
+[DEBUG] 18:25:04 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:25:04 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 999
+[DEBUG] 18:25:04 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:25:04 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:25:04 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.6734823954378089; waiting 27781ms
+[DEBUG] 18:25:04 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:25:04 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:25:04 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:25:04 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:25:32 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:25:32 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 18:26:13 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 18:26:54 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 18:27:36 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 18:28:17 | [WS => Shard 0] Heartbeat acknowledged, latency of 152ms.
+[DEBUG] 18:28:58 | [WS => Shard 0] Heartbeat acknowledged, latency of 142ms.
+[DEBUG] 18:29:39 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 18:30:20 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:30:20 | Preparing to connect to the gateway...
+[DEBUG] 18:30:20 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:30:20 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 998
+[DEBUG] 18:30:20 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:30:20 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:30:20 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.07167658044444503; waiting 2956ms
+[DEBUG] 18:30:20 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:30:20 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:30:20 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:30:21 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:30:23 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:30:23 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 18:31:05 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:31:05 | Preparing to connect to the gateway...
+[DEBUG] 18:31:05 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:31:05 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 997
+[DEBUG] 18:31:05 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:31:05 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:31:05 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.5301523201204663; waiting 21868ms
+[DEBUG] 18:31:05 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:31:05 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:31:05 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:31:06 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:31:27 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:31:27 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 18:32:08 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 18:32:50 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[DEBUG] 18:32:51 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:32:51 | Preparing to connect to the gateway...
+[DEBUG] 18:32:51 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:32:51 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 996
+[DEBUG] 18:32:51 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:32:51 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:32:52 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.527096334913381; waiting 21742ms
+[DEBUG] 18:32:52 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:32:52 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:32:52 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:32:52 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:32:59 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:32:59 | Preparing to connect to the gateway...
+[DEBUG] 18:32:59 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:32:59 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 995
+[DEBUG] 18:32:59 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:32:59 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:32:59 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.6228705402619159; waiting 25693ms
+[DEBUG] 18:32:59 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:32:59 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:32:59 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:33:00 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[WARNING] 18:33:02 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\bot\user.js is missing a required "data" or "execute" property.
+[WARNING] 18:33:02 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:33:02 | Started refreshing 10 application (/) commands.
+[INFO] 18:33:03 | Successfully reloaded 10 application (/) commands.
+[DEBUG] 18:33:03 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:33:03 | Preparing to connect to the gateway...
+[DEBUG] 18:33:04 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:33:04 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 994
+[DEBUG] 18:33:04 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:33:04 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:33:05 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.024574745940231235; waiting 1013ms
+[DEBUG] 18:33:05 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:33:05 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:33:05 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:33:05 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:33:06 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:33:06 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[DEBUG] 18:33:22 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:33:22 | Preparing to connect to the gateway...
+[DEBUG] 18:33:22 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:33:22 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 993
+[DEBUG] 18:33:22 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:33:22 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:33:23 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.2572188801005022; waiting 10610ms
+[DEBUG] 18:33:23 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:33:23 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:33:23 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:33:23 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:33:33 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:33:33 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 18:34:15 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 18:34:56 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 18:35:37 | [WS => Shard 0] Heartbeat acknowledged, latency of 152ms.
+[DEBUG] 18:36:18 | [WS => Shard 0] Heartbeat acknowledged, latency of 218ms.
+[DEBUG] 18:37:00 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 18:37:41 | [WS => Shard 0] Heartbeat acknowledged, latency of 147ms.
+[DEBUG] 18:38:22 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 18:39:03 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 18:39:45 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 18:40:26 | [WS => Shard 0] Heartbeat acknowledged, latency of 160ms.
+[DEBUG] 18:41:07 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 18:41:48 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 18:42:30 | [WS => Shard 0] Heartbeat acknowledged, latency of 143ms.
+[DEBUG] 18:43:11 | [WS => Shard 0] Heartbeat acknowledged, latency of 151ms.
+[MEMORY] 18:43:22 | 17.64 MB out of 19.64 MB
+[CPU] 18:43:22 |  0.01 % used
+[UPTIME] 18:43:22 | 0d 0h 10m 0s
+[DEBUG] 18:43:52 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 18:44:33 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[WARNING] 18:45:20 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\bot\user.js is missing a required "data" or "execute" property.
+[WARNING] 18:45:20 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:45:20 | Started refreshing 10 application (/) commands.
+[INFO] 18:45:20 | Successfully reloaded 10 application (/) commands.
+[DEBUG] 18:45:20 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:45:20 | Preparing to connect to the gateway...
+[DEBUG] 18:45:22 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:45:22 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 992
+[DEBUG] 18:45:22 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:45:22 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:45:22 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.1715869816221518; waiting 7077ms
+[DEBUG] 18:45:22 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:45:22 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:45:22 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:45:22 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:45:28 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:45:28 | Preparing to connect to the gateway...
+[DEBUG] 18:45:28 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:45:28 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 991
+[DEBUG] 18:45:28 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:45:28 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:45:28 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.9214215515873034; waiting 38008ms
+[DEBUG] 18:45:28 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:45:28 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:45:28 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:45:29 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:46:06 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:46:06 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 18:46:48 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 18:47:29 | [WS => Shard 0] Heartbeat acknowledged, latency of 141ms.
+[DEBUG] 18:48:10 | [WS => Shard 0] Heartbeat acknowledged, latency of 143ms.
+[DEBUG] 18:48:51 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 18:49:33 | [WS => Shard 0] Heartbeat acknowledged, latency of 148ms.
+[DEBUG] 18:50:14 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 18:50:55 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[DEBUG] 18:51:36 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[DEBUG] 18:52:18 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 18:52:59 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 18:53:40 | [WS => Shard 0] Heartbeat acknowledged, latency of 138ms.
+[DEBUG] 18:54:21 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 18:55:03 | [WS => Shard 0] Heartbeat acknowledged, latency of 163ms.
+[MEMORY] 18:55:28 | 17.64 MB out of 19.64 MB
+[CPU] 18:55:28 |  0.00 % used
+[UPTIME] 18:55:28 | 0d 0h 10m 0s
+[DEBUG] 18:55:44 | [WS => Shard 0] Heartbeat acknowledged, latency of 146ms.
+[DEBUG] 18:56:25 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 18:57:06 | [WS => Shard 0] Heartbeat acknowledged, latency of 142ms.
+[DEBUG] 18:57:48 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 18:58:29 | [WS => Shard 0] Heartbeat acknowledged, latency of 144ms.
+[DEBUG] 18:59:10 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[DEBUG] 18:59:51 | [WS => Shard 0] Heartbeat acknowledged, latency of 138ms.
+[DEBUG] 19:00:33 | [WS => Shard 0] Heartbeat acknowledged, latency of 142ms.
+[DEBUG] 19:01:14 | [WS => Shard 0] Heartbeat acknowledged, latency of 147ms.
+[DEBUG] 19:01:55 | [WS => Shard 0] Heartbeat acknowledged, latency of 138ms.
+[WARNING] 19:02:20 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\bot\user.js is missing a required "data" or "execute" property.
+[WARNING] 19:02:20 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 19:02:20 | Started refreshing 10 application (/) commands.
+[INFO] 19:02:20 | Successfully reloaded 10 application (/) commands.
+[DEBUG] 19:02:21 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 19:02:21 | Preparing to connect to the gateway...
+[DEBUG] 19:02:21 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 19:02:21 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 990
+[DEBUG] 19:02:21 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 19:02:21 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 19:02:21 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.6916269872059233; waiting 28529ms
+[DEBUG] 19:02:21 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 19:02:21 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 19:02:21 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 19:02:23 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 19:02:28 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 19:02:28 | Preparing to connect to the gateway...
+[DEBUG] 19:02:29 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 19:02:29 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 989
+[DEBUG] 19:02:29 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 19:02:29 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 19:02:29 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.38072238166595973; waiting 15704ms
+[DEBUG] 19:02:29 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 19:02:29 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 19:02:29 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 19:02:29 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 19:02:45 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 19:02:45 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 19:03:26 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 19:03:26 | Preparing to connect to the gateway...
+[DEBUG] 19:03:26 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 19:03:26 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 988
+[DEBUG] 19:03:26 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 19:03:26 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 19:03:27 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.08828607374932229; waiting 3641ms
+[DEBUG] 19:03:27 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 19:03:27 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 19:03:27 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 19:03:27 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 19:03:30 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 19:03:30 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[WARNING] 19:03:39 | Command: Reload | megurre (324856872987262996) tried to reload setting but it does not exist.
+[DEBUG] 19:03:48 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 19:03:48 | Preparing to connect to the gateway...
+[DEBUG] 19:03:48 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 19:03:48 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 987
+[DEBUG] 19:03:48 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 19:03:48 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 19:03:48 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.3424872361054101; waiting 14127ms
+[DEBUG] 19:03:48 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 19:03:48 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 19:03:48 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 19:03:49 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 19:04:03 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 19:04:03 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 19:04:44 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 19:04:57 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 19:04:57 | Preparing to connect to the gateway...
+[DEBUG] 19:04:57 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 19:04:57 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 986
+[DEBUG] 19:04:57 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 19:04:57 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 19:04:57 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.36693507454723684; waiting 15136ms
+[DEBUG] 19:04:57 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 19:04:57 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 19:04:57 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 19:04:58 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 19:05:12 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 19:05:12 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 19:05:54 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 19:06:35 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 19:07:16 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 19:07:57 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 19:08:39 | [WS => Shard 0] Heartbeat acknowledged, latency of 143ms.
+[DEBUG] 19:09:20 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 19:10:01 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 19:10:42 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 19:11:24 | [WS => Shard 0] Heartbeat acknowledged, latency of 138ms.
+[DEBUG] 19:12:05 | [WS => Shard 0] Heartbeat acknowledged, latency of 156ms.
+[DEBUG] 19:12:46 | [WS => Shard 0] Heartbeat acknowledged, latency of 152ms.
+[DEBUG] 19:13:28 | [WS => Shard 0] Heartbeat acknowledged, latency of 141ms.
+[DEBUG] 19:14:09 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 19:14:50 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[MEMORY] 19:14:57 | 19.31 MB out of 20.39 MB
+[CPU] 19:14:57 |  0.01 % used
+[UPTIME] 19:14:57 | 0d 0h 10m 0s
+[DEBUG] 19:15:31 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 19:16:11 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 19:16:11 | Preparing to connect to the gateway...
+[DEBUG] 19:16:11 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 19:16:11 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 985
+[DEBUG] 19:16:11 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 19:16:11 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 19:16:11 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.4018287642997005; waiting 16575ms
+[DEBUG] 19:16:11 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 19:16:11 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 19:16:11 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 19:16:12 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[WARNING] 19:16:30 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\bot\user.js is missing a required "data" or "execute" property.
+[WARNING] 19:16:30 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 19:16:30 | Started refreshing 10 application (/) commands.
+[INFO] 19:16:30 | Successfully reloaded 10 application (/) commands.
+[DEBUG] 19:16:30 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 19:16:30 | Preparing to connect to the gateway...
+[DEBUG] 19:16:31 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 19:16:31 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 984
+[DEBUG] 19:16:31 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 19:16:31 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 19:16:31 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.8372489131535794; waiting 34536ms
+[DEBUG] 19:16:31 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 19:16:31 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 19:16:31 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 19:16:31 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 19:17:05 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 19:17:06 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 19:17:47 | [WS => Shard 0] Heartbeat acknowledged, latency of 141ms.
+[DEBUG] 19:18:28 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 19:19:09 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 19:19:51 | [WS => Shard 0] Heartbeat acknowledged, latency of 162ms.
+[DEBUG] 19:20:32 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 19:21:13 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 19:21:54 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 19:22:36 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 19:23:17 | [WS => Shard 0] Heartbeat acknowledged, latency of 159ms.
+[DEBUG] 19:23:58 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 19:24:39 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 19:25:21 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[DEBUG] 19:26:02 | [WS => Shard 0] Heartbeat acknowledged, latency of 176ms.
+[MEMORY] 19:26:30 | 22.21 MB out of 23.89 MB
+[CPU] 19:26:30 |  0.03 % used
+[UPTIME] 19:26:30 | 0d 0h 10m 0s
+[DEBUG] 19:26:43 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 19:27:24 | [WS => Shard 0] Heartbeat acknowledged, latency of 150ms.
+[DEBUG] 19:28:06 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 19:28:47 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 19:29:28 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 19:30:09 | [WS => Shard 0] Heartbeat acknowledged, latency of 145ms.
+[DEBUG] 19:30:51 | [WS => Shard 0] Heartbeat acknowledged, latency of 162ms.
+[DEBUG] 19:31:32 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[DEBUG] 19:32:13 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 19:32:54 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 19:33:36 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 19:34:17 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 19:34:58 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 19:35:39 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 19:36:21 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[MEMORY] 19:36:30 | 22.63 MB out of 23.89 MB
+[CPU] 19:36:30 |  0.03 % used
+[UPTIME] 19:36:30 | 0d 0h 20m 0s
+[DEBUG] 19:37:02 | [WS => Shard 0] Heartbeat acknowledged, latency of 236ms.
+[DEBUG] 19:37:43 | [WS => Shard 0] Heartbeat acknowledged, latency of 146ms.
+[DEBUG] 19:38:24 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 19:39:06 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 19:39:47 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[DEBUG] 19:40:28 | [WS => Shard 0] Heartbeat acknowledged, latency of 144ms.
+[DEBUG] 19:41:09 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 19:41:51 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 19:42:32 | [WS => Shard 0] Heartbeat acknowledged, latency of 155ms.
+[DEBUG] 19:43:13 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 19:43:54 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 19:44:36 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 19:45:17 | [WS => Shard 0] Heartbeat acknowledged, latency of 158ms.
+[DEBUG] 19:45:58 | [WS => Shard 0] Heartbeat acknowledged, latency of 141ms.
+[MEMORY] 19:46:30 | 22.13 MB out of 24.89 MB
+[CPU] 19:46:30 |  0.03 % used
+[UPTIME] 19:46:30 | 0d 0h 30m 0s
+[DEBUG] 19:46:39 | [WS => Shard 0] Heartbeat acknowledged, latency of 140ms.
+[DEBUG] 19:47:21 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 19:48:02 | [WS => Shard 0] Heartbeat acknowledged, latency of 167ms.
+[DEBUG] 19:48:43 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 19:49:24 | [WS => Shard 0] Heartbeat acknowledged, latency of 154ms.
+[DEBUG] 19:50:06 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 19:50:47 | [WS => Shard 0] Heartbeat acknowledged, latency of 138ms.
+[DEBUG] 19:51:28 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[DEBUG] 19:52:09 | [WS => Shard 0] Heartbeat acknowledged, latency of 144ms.
+[DEBUG] 19:52:51 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 19:53:32 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 19:54:13 | [WS => Shard 0] Heartbeat acknowledged, latency of 181ms.
+[DEBUG] 19:54:54 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 19:55:36 | [WS => Shard 0] Heartbeat acknowledged, latency of 151ms.
+[DEBUG] 19:56:17 | [WS => Shard 0] Heartbeat acknowledged, latency of 150ms.
+[MEMORY] 19:56:30 | 22.52 MB out of 24.89 MB
+[CPU] 19:56:30 |  0.03 % used
+[UPTIME] 19:56:30 | 0d 0h 40m 0s
+[DEBUG] 19:56:58 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 19:57:39 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 19:58:21 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 19:59:02 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 19:59:43 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:00:24 | [WS => Shard 0] Heartbeat acknowledged, latency of 147ms.
+[DEBUG] 20:01:06 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:01:47 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 20:02:28 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 20:03:09 | [WS => Shard 0] Heartbeat acknowledged, latency of 166ms.
+[DEBUG] 20:03:51 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 20:04:32 | [WS => Shard 0] Heartbeat acknowledged, latency of 151ms.
+[DEBUG] 20:05:13 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[DEBUG] 20:05:54 | [WS => Shard 0] Heartbeat acknowledged, latency of 148ms.
+[MEMORY] 20:06:30 | 22.09 MB out of 23.89 MB
+[CPU] 20:06:30 |  0.03 % used
+[UPTIME] 20:06:30 | 0d 0h 50m 0s
+[DEBUG] 20:06:36 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:07:17 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:07:58 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 20:08:39 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 20:09:21 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 20:10:02 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 20:10:43 | [WS => Shard 0] Heartbeat acknowledged, latency of 138ms.
+[DEBUG] 20:11:24 | [WS => Shard 0] Heartbeat acknowledged, latency of 145ms.
+[DEBUG] 20:12:06 | [WS => Shard 0] Heartbeat acknowledged, latency of 142ms.
+[DEBUG] 20:12:47 | [WS => Shard 0] Heartbeat acknowledged, latency of 145ms.
+[DEBUG] 20:13:28 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:14:09 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:14:51 | [WS => Shard 0] Heartbeat acknowledged, latency of 146ms.
+[DEBUG] 20:15:32 | [WS => Shard 0] Heartbeat acknowledged, latency of 142ms.
+[DEBUG] 20:16:13 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[MEMORY] 20:16:30 | 22.51 MB out of 23.89 MB
+[CPU] 20:16:30 |  0.03 % used
+[UPTIME] 20:16:30 | 0d 1h 0m 0s
+[DEBUG] 20:16:54 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 20:17:36 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:18:17 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 20:18:58 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 20:19:39 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 20:20:21 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:21:02 | [WS => Shard 0] Heartbeat acknowledged, latency of 152ms.
+[DEBUG] 20:21:43 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 20:22:24 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[DEBUG] 20:23:06 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 20:23:47 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:24:28 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 20:25:09 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:25:51 | [WS => Shard 0] Heartbeat acknowledged, latency of 168ms.
+[MEMORY] 20:26:30 | 22.90 MB out of 23.89 MB
+[CPU] 20:26:30 |  0.03 % used
+[UPTIME] 20:26:30 | 0d 1h 10m 0s
+[DEBUG] 20:26:32 | [WS => Shard 0] Heartbeat acknowledged, latency of 144ms.
+[DEBUG] 20:27:13 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 20:27:54 | [WS => Shard 0] Heartbeat acknowledged, latency of 153ms.
+[DEBUG] 20:28:36 | [WS => Shard 0] Heartbeat acknowledged, latency of 140ms.
+[DEBUG] 20:29:17 | [WS => Shard 0] Heartbeat acknowledged, latency of 141ms.
+[DEBUG] 20:29:58 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 20:30:39 | [WS => Shard 0] Heartbeat acknowledged, latency of 146ms.
+[DEBUG] 20:31:21 | [WS => Shard 0] Heartbeat acknowledged, latency of 148ms.
+[DEBUG] 20:32:02 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 20:32:43 | [WS => Shard 0] Heartbeat acknowledged, latency of 142ms.
+[DEBUG] 20:33:24 | [WS => Shard 0] Heartbeat acknowledged, latency of 152ms.
+[DEBUG] 20:34:06 | [WS => Shard 0] Heartbeat acknowledged, latency of 144ms.
+[DEBUG] 20:34:47 | [WS => Shard 0] Heartbeat acknowledged, latency of 140ms.
+[DEBUG] 20:35:28 | [WS => Shard 0] Heartbeat acknowledged, latency of 147ms.
+[DEBUG] 20:36:09 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[MEMORY] 20:36:30 | 22.35 MB out of 23.89 MB
+[CPU] 20:36:30 |  0.03 % used
+[UPTIME] 20:36:30 | 0d 1h 20m 0s
+[DEBUG] 20:36:51 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 20:37:32 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 20:38:13 | [WS => Shard 0] Heartbeat acknowledged, latency of 143ms.
+[DEBUG] 20:38:54 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:39:36 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 20:40:17 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 20:40:58 | [WS => Shard 0] Heartbeat acknowledged, latency of 144ms.
+[DEBUG] 20:41:39 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 20:42:21 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:43:02 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 20:43:43 | [WS => Shard 0] Heartbeat acknowledged, latency of 141ms.
+[DEBUG] 20:44:24 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:45:06 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 20:45:47 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 20:46:28 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[MEMORY] 20:46:30 | 22.74 MB out of 23.89 MB
+[CPU] 20:46:30 |  0.03 % used
+[UPTIME] 20:46:30 | 0d 1h 30m 0s
+[DEBUG] 20:47:09 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 20:47:51 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:48:32 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 20:49:13 | [WS => Shard 0] Heartbeat acknowledged, latency of 148ms.
+[DEBUG] 20:49:54 | [WS => Shard 0] Heartbeat acknowledged, latency of 141ms.
+[DEBUG] 20:50:36 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:51:17 | [WS => Shard 0] Heartbeat acknowledged, latency of 163ms.
+[DEBUG] 20:51:58 | [WS => Shard 0] Heartbeat acknowledged, latency of 163ms.
+[DEBUG] 20:52:39 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 20:53:21 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 20:54:02 | [WS => Shard 0] Heartbeat acknowledged, latency of 146ms.
+[DEBUG] 20:54:43 | [WS => Shard 0] Heartbeat acknowledged, latency of 138ms.
+[DEBUG] 20:55:24 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 20:56:06 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[WARNING] 20:56:11 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\bot\user.js is missing a required "data" or "execute" property.
+[WARNING] 20:56:11 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 20:56:11 | Started refreshing 10 application (/) commands.
+[INFO] 20:56:11 | Successfully reloaded 10 application (/) commands.
+[DEBUG] 20:56:11 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 20:56:11 | Preparing to connect to the gateway...
+[DEBUG] 20:56:12 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 20:56:12 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 983
+[DEBUG] 20:56:12 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 20:56:12 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 20:56:12 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.10408261893564741; waiting 4293ms
+[DEBUG] 20:56:12 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 20:56:12 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 20:56:12 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 20:56:12 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 20:56:16 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 20:56:16 | [WS => Shard 0] Heartbeat acknowledged, latency of 151ms.
+[DEBUG] 20:56:58 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 20:57:39 | [WS => Shard 0] Heartbeat acknowledged, latency of 157ms.
+[DEBUG] 20:58:20 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 20:59:01 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 20:59:43 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 21:00:24 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 21:01:05 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 21:01:46 | [WS => Shard 0] Heartbeat acknowledged, latency of 152ms.
+[DEBUG] 21:02:28 | [WS => Shard 0] Heartbeat acknowledged, latency of 138ms.
+[WARNING] 21:02:45 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\bot\user.js is missing a required "data" or "execute" property.
+[WARNING] 21:02:45 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 21:02:45 | Started refreshing 10 application (/) commands.
+[INFO] 21:02:46 | Successfully reloaded 10 application (/) commands.
+[DEBUG] 21:02:46 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 21:02:46 | Preparing to connect to the gateway...
+[DEBUG] 21:02:46 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 21:02:46 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 982
+[DEBUG] 21:02:46 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 21:02:46 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 21:02:46 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.14803591411326456; waiting 6106ms
+[DEBUG] 21:02:46 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 21:02:46 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 21:02:46 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 21:02:47 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 21:02:53 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 21:02:53 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 21:03:34 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[INFO] 21:03:55 | megurre (324856872987262996) listed a todo from the database.
+[DEBUG] 21:04:15 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 21:04:56 | [WS => Shard 0] Heartbeat acknowledged, latency of 130ms.
+[DEBUG] 21:05:38 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[DEBUG] 21:06:19 | [WS => Shard 0] Heartbeat acknowledged, latency of 142ms.
+[DEBUG] 21:07:00 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 21:07:41 | [WS => Shard 0] Heartbeat acknowledged, latency of 138ms.
+[DEBUG] 21:08:23 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 21:09:04 | [WS => Shard 0] Heartbeat acknowledged, latency of 147ms.
+[WARNING] 21:09:16 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\bot\user.js is missing a required "data" or "execute" property.
+[WARNING] 21:09:16 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 21:09:16 | Started refreshing 10 application (/) commands.
+[INFO] 21:09:17 | Successfully reloaded 10 application (/) commands.
+[DEBUG] 21:09:17 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 21:09:17 | Preparing to connect to the gateway...
+[DEBUG] 21:09:17 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 21:09:17 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 981
+[DEBUG] 21:09:17 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 21:09:17 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 21:09:18 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.6993950725767735; waiting 28850ms
+[DEBUG] 21:09:18 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 21:09:18 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 21:09:18 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 21:09:18 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 21:09:46 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 21:09:47 | [WS => Shard 0] Heartbeat acknowledged, latency of 140ms.
+[DEBUG] 21:10:28 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 21:11:09 | [WS => Shard 0] Heartbeat acknowledged, latency of 142ms.
+[DEBUG] 21:11:50 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 21:12:32 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 21:13:13 | [WS => Shard 0] Heartbeat acknowledged, latency of 141ms.
+[DEBUG] 21:13:54 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 21:14:35 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 21:15:17 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 21:15:46 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 21:15:46 | Preparing to connect to the gateway...
+[DEBUG] 21:15:46 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 21:15:46 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 980
+[DEBUG] 21:15:46 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 21:15:46 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 21:15:47 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.5814365176034397; waiting 23984ms
+[DEBUG] 21:15:47 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 21:15:47 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 21:15:47 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 21:15:47 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 21:16:11 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 21:16:11 | [WS => Shard 0] Heartbeat acknowledged, latency of 181ms.
+[DEBUG] 21:16:52 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[DEBUG] 21:17:06 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 21:17:06 | Preparing to connect to the gateway...
+[DEBUG] 21:17:06 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 21:17:06 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 979
+[DEBUG] 21:17:06 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 21:17:06 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 21:17:07 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.7263684441621878; waiting 29962ms
+[DEBUG] 21:17:07 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 21:17:07 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 21:17:07 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 21:17:07 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 21:17:37 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 21:17:37 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 21:18:18 | [WS => Shard 0] Heartbeat acknowledged, latency of 153ms.
+[DEBUG] 21:18:59 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 21:19:40 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[WARNING] 21:19:56 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\bot\user.js is missing a required "data" or "execute" property.
+[WARNING] 21:19:56 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 21:19:56 | Started refreshing 10 application (/) commands.
+[INFO] 21:19:56 | Successfully reloaded 10 application (/) commands.
+[DEBUG] 21:19:57 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 21:19:57 | Preparing to connect to the gateway...
+[DEBUG] 21:19:57 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 21:19:57 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 978
+[DEBUG] 21:19:57 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 21:19:57 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 21:19:57 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.543412815548574; waiting 22415ms
+[DEBUG] 21:19:57 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 21:19:57 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 21:19:57 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 21:19:58 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 21:20:08 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 21:20:08 | Preparing to connect to the gateway...
+[DEBUG] 21:20:08 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 21:20:08 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 977
+[DEBUG] 21:20:08 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 21:20:08 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 21:20:08 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.9637092119400565; waiting 39753ms
+[DEBUG] 21:20:08 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 21:20:08 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 21:20:08 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 21:20:09 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 21:20:48 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 21:20:48 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 21:21:30 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 21:22:11 | [WS => Shard 0] Heartbeat acknowledged, latency of 150ms.
+[DEBUG] 21:22:52 | [WS => Shard 0] Heartbeat acknowledged, latency of 160ms.

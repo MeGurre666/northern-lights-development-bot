@@ -13,7 +13,6 @@ module.exports = {
 		console.log(`Ready! Logged in as ${client.user.tag}`);
 		client.user.setActivity(activity, { type: ActivityType[type] });
 		client.user.setStatus(status);
-		client.user.setUsername('Northern Lights Development');
 		const logPath = path.join(__dirname, '../logs');
         const date = new Date();
         const dateStr = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
