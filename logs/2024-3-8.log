@@ -267,3 +267,42 @@
 [DEBUG] 19:55:04 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
 [DEBUG] 19:55:15 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
 [DEBUG] 19:55:15 | [WS => Shard 0] Heartbeat acknowledged, latency of 123ms.
+[DEBUG] 19:55:57 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 19:56:38 | [WS => Shard 0] Heartbeat acknowledged, latency of 125ms.
+[DEBUG] 19:57:19 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 19:58:00 | [WS => Shard 0] Heartbeat acknowledged, latency of 122ms.
+[DEBUG] 19:58:42 | [WS => Shard 0] Heartbeat acknowledged, latency of 124ms.
+[DEBUG] 19:59:23 | [WS => Shard 0] Heartbeat acknowledged, latency of 126ms.
+[DEBUG] 20:00:04 | [WS => Shard 0] Heartbeat acknowledged, latency of 128ms.
+[DEBUG] 20:00:45 | [WS => Shard 0] Heartbeat acknowledged, latency of 122ms.
+[DEBUG] 20:01:27 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 20:02:08 | [WS => Shard 0] Heartbeat acknowledged, latency of 123ms.
+[DEBUG] 20:02:49 | [WS => Shard 0] Heartbeat acknowledged, latency of 125ms.
+[DEBUG] 20:03:30 | [WS => Shard 0] Heartbeat acknowledged, latency of 127ms.
+[DEBUG] 20:04:12 | [WS => Shard 0] Heartbeat acknowledged, latency of 129ms.
+[DEBUG] 20:04:53 | [WS => Shard 0] Heartbeat acknowledged, latency of 125ms.
+[MEMORY] 20:05:03 | 17.56 MB out of 19.39 MB
+[CPU] 20:05:03 |  0.01 % used
+[UPTIME] 20:05:03 | 0d 0h 10m 0s
+[DEBUG] 20:05:34 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[DEBUG] 20:06:15 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 20:06:57 | [WS => Shard 0] Heartbeat acknowledged, latency of 122ms.
+[DEBUG] 20:07:38 | [WS => Shard 0] Heartbeat acknowledged, latency of 128ms.
+[DEBUG] 20:08:19 | [WS => Shard 0] Heartbeat acknowledged, latency of 123ms.
+[DEBUG] 20:09:00 | [WS => Shard 0] Heartbeat acknowledged, latency of 128ms.
+[DEBUG] 20:09:42 | [WS => Shard 0] Heartbeat acknowledged, latency of 127ms.
+[DEBUG] 20:10:23 | [WS => Shard 0] Heartbeat acknowledged, latency of 126ms.
+[DEBUG] 20:11:04 | [WS => Shard 0] Heartbeat acknowledged, latency of 121ms.
+[DEBUG] 20:11:45 | [WS => Shard 0] Heartbeat acknowledged, latency of 125ms.
+[DEBUG] 20:12:27 | [WS => Shard 0] Heartbeat acknowledged, latency of 126ms.
+[DEBUG] 20:13:08 | [WS => Shard 0] Heartbeat acknowledged, latency of 122ms.
+[DEBUG] 20:13:49 | [WS => Shard 0] Heartbeat acknowledged, latency of 125ms.
+[DEBUG] 20:14:30 | [WS => Shard 0] Heartbeat acknowledged, latency of 127ms.
+[MEMORY] 20:15:03 | 17.74 MB out of 20.89 MB
+[CPU] 20:15:03 |  0.01 % used
+[UPTIME] 20:15:03 | 0d 0h 20m 0s
+[DEBUG] 20:15:12 | [WS => Shard 0] Heartbeat acknowledged, latency of 122ms.
+[DEBUG] 20:15:53 | [WS => Shard 0] Heartbeat acknowledged, latency of 122ms.
+[DEBUG] 20:16:34 | [WS => Shard 0] Heartbeat acknowledged, latency of 124ms.
+[DEBUG] 20:17:15 | [WS => Shard 0] Heartbeat acknowledged, latency of 140ms.
+[DEBUG] 20:17:57 | [WS => Shard 0] Heartbeat acknowledged, latency of 124ms.
