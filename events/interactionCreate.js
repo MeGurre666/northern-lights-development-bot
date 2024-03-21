@@ -1,8 +1,7 @@
 const { Events, Collection } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
-const {all_logs } = require('../config.json');
-
+const { all_logs } = require('../config.json');
 
 module.exports = {
     name: Events.InteractionCreate,
@@ -11,30 +10,36 @@ module.exports = {
         const date = new Date();
         const dateStr = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
         const logFilePath = path.join(logPath, `${dateStr}.log`);
-        if (!interaction.isChatInputCommand()) return;
 
         const command = interaction.client.commands.get(interaction.commandName);
-        if (!command) {
+        if (!command && interaction.commandName !== undefined) {
             console.error(`No command matching ${interaction.commandName} was found.`);
-            fs.appendFileSync(logFilePath, `[WARNING] ${new Date().toLocaleTimeString()} | No command matching ${interaction.commandName} was found.\n`);
             return;
-        } 
+        }
+        if (interaction.isAutocomplete()) {
+            try {
+                await command.autocomplete(interaction);
+            } catch (error) {
+                console.error(error);
+            }
+            return;
+        }
 
         const application = await interaction.client.application?.fetch();
         const isTeamMember = application.owner.members.has(interaction.user.id);
 
-        if (!isTeamMember) {
+        if (!isTeamMember && !interaction.isChatInputCommand()) {
             const { cooldowns } = interaction.client;
 
             if (!cooldowns.has(command.data.name)) {
                 cooldowns.set(command.data.name, new Collection());
             }
-            
+
             const now = Date.now();
             const timestamps = cooldowns.get(command.data.name);
             const defaultCooldownDuration = 3;
             const cooldownAmount = (command.cooldown ?? defaultCooldownDuration) * 1000;
-            
+
             if (timestamps.has(interaction.user.id)) {
                 const expirationTime = timestamps.get(interaction.user.id) + cooldownAmount;
 

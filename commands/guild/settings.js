@@ -252,7 +252,7 @@ module.exports = {
             });
         }
     } else if (category === 'logging') {
-        if (results[0].log_channel === 0 || results[0].log_channel === null) {
+        if (results[0].log_channel === 0 || results[0].log_channel === null || results[0].log_channel === undefined || results[0].log_channel === 'null') {
             const embed = new EmbedBuilder()
                 .setTitle('Logging Settings')
                 .setDescription('Logging is currently not setup for this server!')
@@ -316,7 +316,7 @@ module.exports = {
                                         const embed5 = new EmbedBuilder()
                                             .setTitle('Logging Setup')
                                             .setDescription(`Logging was setup to the channel <#${i.values[0]}> !`)
-                                            .addFields({name: 'Changed By', value: `${interaction.user.tag}`})
+                                            .addFields({name: 'Changed By', value: `${interaction.user.tag} | ${interaction.user.id}`})
                                             .setColor('#037bfc')
                                             .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip', iconURL: application.iconURL({ dynamic: true }) });
                                         webhook.send({ embeds: [embed5] }).catch(console.error);
@@ -368,7 +368,7 @@ module.exports = {
                             const embed5 = new EmbedBuilder()
                                 .setTitle('Logging Setup')
                                 .setDescription(`Logging was changed to the channel <#${i.values[0]}> !`)
-                                .addFields({name: 'Changed By', value: `${interaction.user.tag}`})
+                                .addFields({name: 'Changed By', value: `${interaction.user.tag} | ${interaction.user.id}`})
                                 .setColor('#037bfc')
                                 .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip', iconURL: application.iconURL({ dynamic: true }) });
                             webhook.send({ embeds: [embed5] }).catch(console.error);
@@ -456,7 +456,7 @@ module.exports = {
                                             const embed5 = new EmbedBuilder()
                                                 .setTitle('Logging Setup')
                                                 .setDescription(`Logging channel was updated to the channel <#${i.values[0]}>!`)
-                                                .addFields({name: 'Changed By', value: `${interaction.user.tag}`})
+                                                .addFields({name: 'Changed By', value: `${interaction.user.tag} | ${interaction.user.id}`})
                                                 .setColor('#037bfc')
                                                 .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                                             webhook.send({ embeds: [embed5] }).catch(console.error);
@@ -513,7 +513,7 @@ module.exports = {
                                 const embed5 = new EmbedBuilder()
                                     .setTitle('Logging Setup')
                                     .setDescription(`Logging channel was updated to the channel <#${i.values[0]}>!`)
-                                    .addFields({name: 'Changed By', value: `${interaction.user.tag}`})
+                                    .addFields({name: 'Changed By', value: `${interaction.user.tag} | ${interaction.user.id}`})
                                     .setColor('#037bfc')
                                     .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                                 webhook.send({ embeds: [embed5] }).catch(console.error);
