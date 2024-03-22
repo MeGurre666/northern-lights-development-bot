@@ -24,13 +24,13 @@ module.exports = {
 				return;
 			}
 			const guildId = guild.id
-            connection.query(`SELECT * FROM guilds WHERE guild_id = '${guildId}'`, (err, results) => {
+            connection.query(`SELECT * FROM guilds WHERE id = '${guildId}'`, (err, results) => {
                 if (err) {
                     fs.appendFileSync(logFilePath, `[ERROR] ${new Date().toLocaleTimeString()} | File: GuildDelete.js | Error getting guild data: ${err}\n`);
                     return;
                 }
                 if (results.length  <= 1) {
-					connection.query(`DELETE FROM guilds WHERE guild_id = '${guildId}'`, (err, results) => {
+					connection.query(`DELETE FROM guilds WHERE id = '${guildId}'`, (err, results) => {
 						if (err) {
 							fs.appendFileSync(logFilePath, `[ERROR] ${new Date().toLocaleTimeString()} | File: GuildDelete.js | Error deleting guild data: ${err}\n`);
 							return;

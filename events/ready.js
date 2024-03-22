@@ -30,13 +30,13 @@ module.exports = {
 			}
 			client.guilds.cache.forEach(guild => {
 				const guildId = guild.id
-				connection.query(`SELECT * FROM guilds WHERE guild_id = '${guildId}'`, (err, results) => {
+				connection.query(`SELECT * FROM guilds WHERE id = '${guildId}'`, (err, results) => {
 					if (err) {
 						fs.appendFileSync(logFilePath, `[ERROR] ${new Date().toLocaleTimeString()} | File: ready.js | Error getting guild data: ${err}\n`);
 						return;
 					}
 					if (results.length === 0) {
-						connection.query(`INSERT INTO guilds (guild_id, fa_req, raid_channels, advanced_mod, basic_mod, log_channel, raid_mode, raid_mode_time, ban_perms, tickets) VALUES ('${guildId}', 0, '', '', '', '', 0, NULL, '', '')`, (err, results) => {
+						connection.query(`INSERT INTO guilds (id, fa_req, raid_channels, advanced_mod, basic_mod, log_channel, raid_mode, raid_mode_time, ban_perms, tickets) VALUES ('${guildId}', 0, '', '', '', '', 0, NULL, '', '')`, (err, results) => {
 							if (err) {
 								fs.appendFileSync(logFilePath, `[ERROR] ${new Date().toLocaleTimeString()} | File: ready.js | Error inserting guild data: ${err}\n`);
 								return;
