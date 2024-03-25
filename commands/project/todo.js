@@ -54,7 +54,7 @@ module.exports = {
             password: '',
             database: database_name,
         });
-        const querystart = `SELECT * FROM guilds WHERE guild_id = '${guildId}'`;
+        const querystart = `SELECT * FROM guilds WHERE id = '${guildId}'`;
         connection.query(querystart, (err, results) => {
             if (err) {
                 console.error('Error getting guild data from the database:', err);
@@ -89,7 +89,7 @@ module.exports = {
                         const checkTodoQuery = `
                             SELECT todo
                             FROM todo_list
-                            WHERE user_id = '${userId}' AND todo = '${todo}' and guild_id = '${guildId}'
+                            WHERE user_id = '${userId}' AND todo = '${todo}' and id = '${guildId}'
                         `;
                         connection.query(checkTodoQuery, (err, results) => {
                             if (err) {
@@ -102,7 +102,7 @@ module.exports = {
                             }
                         });
                         const addTodoQuery = `
-                            INSERT INTO todo_list (user_id, guild_id, todo, time, priority)
+                            INSERT INTO todo_list (user_id, id, todo, time, priority)
                             VALUES ('${userId}', '${guildId}', '${todo}', '${currentTime}', '${priorityOption.value}')
                         `;
                         connection.query(addTodoQuery, (err, results) => {
@@ -122,7 +122,7 @@ module.exports = {
                         const checkTodoQuery = `
                             SELECT todo
                             FROM todo_list
-                            WHERE user_id = '${userId}' AND todo = '${todo}' and guild_id = '${guildId}'
+                            WHERE user_id = '${userId}' AND todo = '${todo}' and id = '${guildId}'
                         `;
                         connection.query(checkTodoQuery, (err, results) => {
                             if (err) {
@@ -138,7 +138,7 @@ module.exports = {
                         
                             const removeTodoQuery = `
                                 DELETE FROM todo_list
-                                WHERE user_id = '${userId}' AND todo = '${todo}' AND guild_id = '${guildId}'
+                                WHERE user_id = '${userId}' AND todo = '${todo}' AND id = '${guildId}'
                             `;
                             connection.query(removeTodoQuery, (err, results) => {
                                 if (err) {
@@ -160,7 +160,7 @@ module.exports = {
                         const listTodoQuery = `
                             SELECT todo, time, priority
                             FROM todo_list
-                            WHERE user_id = '${userId}' and guild_id = '${guildId}'
+                            WHERE user_id = '${userId}' and id = '${guildId}'
                             ORDER BY priority DESC
                         `;
                         connection.query(listTodoQuery, (err, results) => {
@@ -220,7 +220,7 @@ module.exports = {
                     } else if (subCommand === 'clear'){
                         const clearTodoQuery = `
                             DELETE FROM todo_list
-                            WHERE user_id = '${userId}' and guild_id = '${guildId}'
+                            WHERE user_id = '${userId}' and id = '${guildId}'
                         `;
                         connection.query(clearTodoQuery, (err, results) => {
                             if (err) {

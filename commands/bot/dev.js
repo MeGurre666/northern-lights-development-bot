@@ -16,6 +16,7 @@ function random(colors) {
 module.exports = {
     cooldown: 5,
     category: 'bot',
+    autocompleteName: 'dev',
     data: new SlashCommandBuilder()
         .setName('dev')
         .setDescription('Development purposes only!')
@@ -106,7 +107,11 @@ module.exports = {
             const fields = [];
             if (typeof results[0] === 'object' && results[0] !== null) {
                 for (const [key, value] of Object.entries(results[0])) {
-                    fields.push({ name: key, value: String(value)});
+                    let newValue = value;
+                    if (newValue === '') {
+                        newValue = 'null';
+                    }
+                    fields.push({ name: String(key), value: String(newValue)});
                 }
             }
             const embed = new EmbedBuilder()

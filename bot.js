@@ -51,7 +51,7 @@ setInterval(() => {
 	var newdateStr = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
 	if (dateStr !== newdateStr) {
 		logFilePath = path.join(logPath, `${newdateStr}.log`);
-		const channel01 = client.channels.cache.get(all_logs);
+		const channel01 = client.channels.cache.get(1191501717389459456);
 		if (channel01) {
 			channel01.send({files: [logFilePath]});
 		} else {
@@ -71,7 +71,7 @@ client.on(Events.Warn, message => {
 })
 client.on(Events.Error, message => {
 	fs.appendFileSync(logFilePath, `[ERROR] ${new Date().toLocaleTimeString()} | ${message}\n`);
-})
+})	
 function formatUptime(uptime) {
     const days = Math.floor(uptime / (1000 * 60 * 60 * 24));
     const hours = Math.floor((uptime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

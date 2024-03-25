@@ -7,7 +7,7 @@ const dateStr = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
 const logFilePath = path.join(logPath, `${dateStr}.log`);
 module.exports = {
     cooldown: 5,
-	category: 'utility',
+	category: 'bot',
 	data: new SlashCommandBuilder()
 		.setName('restart')
 		.setDescription('Restart the bot! (We recommend not using this command as unforeseen issues may occur.)'),
@@ -17,7 +17,6 @@ module.exports = {
 		if (teamMember.has(interaction.user.id)) {
             await interaction.reply({content:`Restarting...`, ephemeral: true});
             fs.appendFileSync(logFilePath, `[COMMAND] ${new Date().toLocaleTimeString()} | Command: Restart | ${interaction.user.tag} (${interaction.user.id}) restarted the bot.\n`);
-            //reloads all the commands
             const commandFolders = fs.readdirSync(path.join(__dirname, '../..', 'commands'));
             for (const folder of commandFolders) {
                 const commandsPath = path.join(__dirname, '../..', 'commands', folder);
