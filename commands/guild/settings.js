@@ -1,8 +1,9 @@
-const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelSelectMenuBuilder, WebhookClient } = require('discord.js');
+const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelSelectMenuBuilder, WebhookClient, UserSelectMenuBuilder, RoleSelectMenuBuilder } = require('discord.js');
 const { createPool } = require('mysql2/promise');
-const { database_name, database_host, database_password, database_user, connection_limit, bot_name } = require('../../config.json');
+const { database_name, database_host, database_password, database_user, connection_limit, bot_name, token } = require('../../config.json');
 const path = require('path');
 const fs = require('fs');
+const { Client, Intents } = require('discord.js');
 const pool = createPool({
     host: database_host,
     user: database_user,
@@ -127,23 +128,21 @@ module.exports = {
                                     }
                                     if (connectionStatus) {
                                         if (results[0].log_channeL !== 0 && results[0].log_channel !== null && results[0].log_channel !== undefined && results[0].log_channel !== 'null' && results[0].log_channel !=='') {
-                                            console.log('Webhook found')
+                                            const channel2 = interaction.guild.channels.cache.get(results[0].log_channel);
                                             try {
-                                                const channel2 = interaction.guild.channels.cache.get(results[0].log_channel);
-                                                const webhooks = await channel2.fetchWebhooks();
-                                                const webhook = webhooks.find(wh => wh.token === results[0].log_channeL_url);
+                                                const webhookClient = new WebhookClient({id:results[0].logging_id, token:results[0].logging_token})
                     
-                                                if (!webhook) {
+                                                if (!webhookClient) {
                                                     console.log('No webhook found error')
                                                     return;
                                                 }
                                                 const embed5 = new EmbedBuilder()
                                                     .setTitle('2FA Settings')
-                                                    .setDescription('2FA requirement was disabled in this server!')
+                                                    .setDescription('2FA was disabled as a requirement in this server!')
                                                     .addFields({ name: 'Changed By', value: `${interaction.user.tag} | ${interaction.user.id}` })
                                                     .setColor('#037bfc')
                                                     .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
-                                                webhook.send({ embeds: [embed5] }).catch(console.error);
+                                                webhookClient.send({ embeds: [embed5] }).catch(console.error);
                                             } catch (error) {
                                                 console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                                                 fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: 2FA | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
@@ -202,23 +201,21 @@ module.exports = {
                 if (i.customId === 'enable2fa' && i.user.id === userId) {
                     if (results2.length === 0) {
                         if (results[0].log_channeL !== 0 && results[0].log_channel !== null && results[0].log_channel !== undefined && results[0].log_channel !== 'null' && results[0].log_channel !=='') {
-                            console.log('Webhook found')
+                            const channel2 = interaction.guild.channels.cache.get(results[0].log_channel);
                             try {
-                                const channel2 = interaction.guild.channels.cache.get(results[0].log_channel);
-                                const webhooks = await channel2.fetchWebhooks();
-                                const webhook = webhooks.find(wh => wh.token === results[0].log_channeL_url);
+                                const webhookClient = new WebhookClient({id:results[0].logging_id, token:results[0].logging_token})
     
-                                if (!webhook) {
+                                if (!webhookClient) {
                                     console.log('No webhook found error')
                                     return;
                                 }
                                 const embed5 = new EmbedBuilder()
                                     .setTitle('2FA Settings')
-                                    .setDescription('2FA requirement was enabled in this server!')
+                                    .setDescription('2FA was enabled as a requirement!')
                                     .addFields({ name: 'Changed By', value: `${interaction.user.tag} | ${interaction.user.id}` })
                                     .setColor('#037bfc')
                                     .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
-                                webhook.send({ embeds: [embed5] }).catch(console.error);
+                                webhookClient.send({ embeds: [embed5] }).catch(console.error);
                             } catch (error) {
                                 console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                                 fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: 2FA | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
@@ -270,13 +267,11 @@ module.exports = {
                             }
                             if (connectionStatus) {
                                 if (results[0].log_channeL !== 0 && results[0].log_channel !== null && results[0].log_channel !== undefined && results[0].log_channel !== 'null' && results[0].log_channel !=='') {
-                                    console.log('Webhook found')
+                                    const channel2 = interaction.guild.channels.cache.get(results[0].log_channel);
                                     try {
-                                        const channel2 = interaction.guild.channels.cache.get(results[0].log_channel);
-                                        const webhooks = await channel2.fetchWebhooks();
-                                        const webhook = webhooks.find(wh => wh.token === results[0].log_channeL_url);
+                                        const webhookClient = new WebhookClient({id:results[0].logging_id, token:results[0].logging_token})
             
-                                        if (!webhook) {
+                                        if (!webhookClient) {
                                             console.log('No webhook found error')
                                             return;
                                         }
@@ -286,7 +281,7 @@ module.exports = {
                                             .addFields({ name: 'Changed By', value: `${interaction.user.tag} | ${interaction.user.id}` })
                                             .setColor('#037bfc')
                                             .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
-                                        webhook.send({ embeds: [embed5] }).catch(console.error);
+                                        webhookClient.send({ embeds: [embed5] }).catch(console.error);
                                     } catch (error) {
                                         console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                                         fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: 2FA | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
@@ -327,7 +322,7 @@ module.exports = {
             });
         }
     } else if (category === 'logging') {
-        if (results[0].log_channel === 0 || results[0].log_channel === null || results[0].log_channel === undefined || results[0].log_channel === 'null') {
+        if (results[0].log_channel === 0 || results[0].log_channel === null || results[0].log_channel === undefined || results[0].log_channel === 'null' || results[0].log_channel === '') {
             const embed = new EmbedBuilder()
                 .setTitle('Logging Settings')
                 .setDescription('Logging is currently not setup for this server!')
@@ -345,7 +340,7 @@ module.exports = {
             const collection = interaction.channel.createMessageComponentCollector({ time: 15000 });
             collection.on('collect', async i => {
                 if (i.customId === 'logging' && i.user.id === userId) {
-                    if (results[0].fa_req === 1 && results.length > 0) {
+                    if (results[0].fa_req === 1 || results.length > 0) {
                         if (results2.length > 0) {
                             const currentTime = date.getTime();
                             const expirationTime = Math.floor(currentTime / 1000) + 300;
@@ -395,8 +390,8 @@ module.exports = {
                                             .setColor('#037bfc')
                                             .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip', iconURL: application.iconURL({ dynamic: true }) });
                                         webhook.send({ embeds: [embed5] }).catch(console.error);
-                                        const query4 = 'UPDATE guilds SET log_channel = ?, log_channeL_url = ? WHERE id = ?';
-                                        connection.execute(query4, [channel.id, webhook.token, guildId], error => {
+                                        const query4 = 'UPDATE guilds SET log_channel = ?, logging_id =?, logging_token = ? WHERE id = ?';
+                                        connection.execute(query4, [channel.id, webhook.id, webhook.token, guildId], error => {
                                             if (error) {
                                                 console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                                                 fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
@@ -447,8 +442,8 @@ module.exports = {
                                 .setColor('#037bfc')
                                 .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip', iconURL: application.iconURL({ dynamic: true }) });
                             webhook.send({ embeds: [embed5] }).catch(console.error);
-                            const query4 = 'UPDATE guilds SET log_channel = ?, log_channeL_url = ? WHERE id = ?';
-                            connection.execute(query4, [channel.id, webhook.token, guildId], error => {
+                            const query4 = 'UPDATE guilds SET log_channel = ?, logging_id =?, logging_token = ? WHERE id = ?';
+                            connection.execute(query4, [channel.id, webhook.id, webhook.token, guildId], error => {
                                 if (error) {
                                     console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                                     fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
@@ -514,40 +509,43 @@ module.exports = {
                                     interaction.editReply({ embeds: [embed4], components: [], ephemeral: true });
                                     clearInterval(intervalId);
                                     const channel = interaction.guild.channels.cache.get(i.values[0]);
-                                    const channel2 = interaction.guild.channels.cache.get(results[0].log_channel);
-                                    try {
-                                        const webhooks = await channel2.fetchWebhooks();
-                                        const webhook = webhooks.find(wh => wh.token === results[0].log_channeL_url);
+                                    const channel2 = interaction.client.channels.cache.get(results[0].log_channel);
 
-                                        if (!webhook) {
-                                            console.log('No webhook found error')
-                                    }
-                                        webhook.edit({
-                                            name: "Northern Lights Logging",
-                                            avatar: application.iconURL({ dynamic: true }),
-                                            channel: channel.id
-                                        })
-                                        setTimeout(() => {
-                                            const embed5 = new EmbedBuilder()
-                                                .setTitle('Logging Setup')
-                                                .setDescription(`Logging channel was updated to the channel <#${i.values[0]}>!`)
-                                                .addFields({name: 'Changed By', value: `${interaction.user.tag} | ${interaction.user.id}`})
-                                                .setColor('#037bfc')
-                                                .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
-                                            webhook.send({ embeds: [embed5] }).catch(console.error);
-                                            const query4 = 'UPDATE guilds SET log_channel = ?, log_channeL_url =?  WHERE id = ?';
-                                            connection.execute(query4, [channel.id, webhook.token, guildId], error => {
-                                                if (error) {
-                                                    console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
-                                                    fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
-                                                    return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-                                                }
+                                    if (!results[0].logging_id || !channel.id) {
+                                        console.log('No logging ID or channel ID found');
+                                    } else {
+                                        const embed5 = new EmbedBuilder()
+                                            .setTitle('Logging Setup')
+                                            .setDescription(`Logging channel was updated to the channel <#${i.values[0]}>!`)
+                                            .addFields({name: 'Changed By', value: `${interaction.user.tag} | ${interaction.user.id}`})
+                                            .setColor('#037bfc')
+                                            .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                                        const webhooks = await channel2.fetchWebhooks()
+                                        const webhookClient = await webhooks.find(wh => wh.id === results[0].logging_id);
+
+                                        if (!webhookClient) {
+                                            console.log('No webhook found error');
+                                        } else {
+                                            webhookClient.edit({
+                                                name: "Northern Lights Logging",
+                                                avatar: application.iconURL({ dynamic: true }),
+                                                channel: channel.id
                                             })
-                                    }, 1000);
-                                } catch (error) {
-                                    console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
-                                    return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-                                }
+                                            .then(() => {
+                                                webhookClient.send({ embeds: [embed5] }).catch(console.error);
+                                            })
+                                            .catch(console.error);
+                                        }
+                                    
+                                        const query4 = 'UPDATE guilds SET log_channel = ?, logging_id =?, logging_token =?  WHERE id = ?';
+                                        connection.execute(query4, [channel.id, webhookClient.id, webhookClient.token, guildId], error => {
+                                            if (error) {
+                                                console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
+                                                fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                                return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                                            }
+                                        })
+                                    }
                                 } else {
                                     const elapsedTime = (new Date().getTime() - currentTime) / 1000;
                                     if (elapsedTime >= 5 * 60) {
@@ -567,40 +565,42 @@ module.exports = {
                         const channel = interaction.guild.channels.cache.get(i.values[0]);
                         const channel2 = interaction.guild.channels.cache.get(results[0].log_channel);
                         try {
-                            const webhooks = await channel2.fetchWebhooks();
-                            const webhook = webhooks.find(wh => wh.token === results[0].log_channeL_url);
+                            const embed5 = new EmbedBuilder()
+                                .setTitle('Logging Setup')
+                                .setDescription(`Logging channel was updated to the channel <#${i.values[0]}>!`)
+                                .addFields({name: 'Changed By', value: `${interaction.user.tag} | ${interaction.user.id}`})
+                                .setColor('#037bfc')
+                                .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                            const webhooks = channel2.fetchWebhooks()
+                            const webhookClient = webhooks.find(wh => wh.id === results[0].logging_id);
 
-                            if (!webhook) {
+                            if (!webhookClient) {
                                 console.log('No webhook found error')
                         }
-                            webhook.edit({
+                            webhookClient.edit({
                                 name: "Northern Lights Logging",
                                 avatar: application.iconURL({ dynamic: true }),
                                 channel: channel.id
                             })
+                            .then(() => {
+                                webhookClient.send({ embeds: [embed5] }).catch(console.error);
+                            }
+                            )
+                            .catch(console.error);
                             const embed4 = new EmbedBuilder()
                                 .setTitle('Logging Setup')
                                 .setDescription(`You have successfully updated logging to the channel <#${i.values[0]}> !`)
                                 .setColor('#037bfc')
                                 .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                             interaction.editReply({ embeds: [embed4], components: [], ephemeral: true });
-                            setTimeout(() => {
-                                const embed5 = new EmbedBuilder()
-                                    .setTitle('Logging Setup')
-                                    .setDescription(`Logging channel was updated to the channel <#${i.values[0]}>!`)
-                                    .addFields({name: 'Changed By', value: `${interaction.user.tag} | ${interaction.user.id}`})
-                                    .setColor('#037bfc')
-                                    .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
-                                webhook.send({ embeds: [embed5] }).catch(console.error);
-                                const query4 = 'UPDATE guilds SET log_channel = ?, log_channeL_url =?  WHERE id = ?';
-                                connection.execute(query4, [channel.id, webhook.token, guildId], error => {
-                                    if (error) {
-                                        console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
-                                        fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
-                                        return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
-                                    }
-                                })
-                            }, 1000);
+                            const query4 = 'UPDATE guilds SET log_channel = ?, logging_id =?, logging_token  WHERE id = ?';
+                            connection.execute(query4, [channel.id, webhookClient.id, webhookClient.token, guildId], error => {
+                                if (error) {
+                                    console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
+                                    fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Logging | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                                    return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+                                }
+                            })
                     } catch (error) {
                         console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
                         return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
@@ -609,7 +609,31 @@ module.exports = {
                 }
             })
         }
-    }
+    } else if (category === 'banpermissions') {
+        if (results[0].ban_perms === ""){
+            const embed = new EmbedBuilder()
+                .setTitle('Ban Permissions')
+                .setDescription('Ban Permissions are currently set to the default of Discord Ban Member Permission')
+                .addFields({ name: 'Update Ban Permissions', value: 'To update the ban permissions please select a role(s) from the list below'})
+                .setColor('#037bfc')
+                .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+            const roleSelect = new RoleSelectMenuBuilder()
+                .setCustomId('banpermissions')
+                .setPlaceholder('Select a role')
+                .setMinValues(1)
+                .setMaxValues(10)
+            const row = new ActionRowBuilder()
+                .addComponents(roleSelect)
+            interaction.reply({ embeds: [embed], components: [row], ephemeral:true });
+            const collection = interaction.channel.createMessageComponentCollector({ time: 15000 });
+            collection.on('collect', async i => {
+                if (i.customId === 'banpermissions' && i.user.id === userId) {
+                    console.log(i.values)
+                }
+            })
+        }
+
+        }
 } catch (error) {
         console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
         return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });

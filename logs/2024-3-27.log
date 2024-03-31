@@ -1,0 +1,465 @@
+[WARNING] 17:35:23 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:35:23 | Started refreshing 11 application (/) commands.
+[WARNING] 17:35:31 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:35:31 | Started refreshing 11 application (/) commands.
+[WARNING] 17:35:38 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:35:38 | Started refreshing 11 application (/) commands.
+[WARNING] 17:35:50 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:35:50 | Started refreshing 11 application (/) commands.
+[WARNING] 17:36:18 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:36:18 | Started refreshing 11 application (/) commands.
+[WARNING] 18:05:59 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:05:59 | Started refreshing 11 application (/) commands.
+[INFO] 18:05:59 | Successfully reloaded 11 application (/) commands.
+[DEBUG] 18:06:00 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:06:00 | Preparing to connect to the gateway...
+[DEBUG] 18:06:00 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:06:00 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 1000
+[DEBUG] 18:06:00 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:06:00 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:06:00 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.4321938461635626; waiting 17827ms
+[DEBUG] 18:06:00 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:06:00 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:06:00 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:06:00 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:06:18 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:06:18 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 18:06:59 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
+[DEBUG] 18:07:41 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[WARNING] 18:08:18 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:08:18 | Started refreshing 11 application (/) commands.
+[INFO] 18:08:19 | Successfully reloaded 11 application (/) commands.
+[DEBUG] 18:08:19 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:08:19 | Preparing to connect to the gateway...
+[DEBUG] 18:08:19 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:08:19 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 999
+[DEBUG] 18:08:19 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:08:19 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:08:20 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.5974582215877611; waiting 24645ms
+[DEBUG] 18:08:20 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:08:20 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:08:20 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:08:20 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:08:44 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:08:44 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 18:09:26 | [WS => Shard 0] Heartbeat acknowledged, latency of 123ms.
+[DEBUG] 18:10:07 | [WS => Shard 0] Heartbeat acknowledged, latency of 132ms.
+[DEBUG] 18:10:48 | [WS => Shard 0] Heartbeat acknowledged, latency of 121ms.
+[DEBUG] 18:11:29 | [WS => Shard 0] Heartbeat acknowledged, latency of 120ms.
+[WARNING] 18:11:44 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:11:44 | Started refreshing 11 application (/) commands.
+[INFO] 18:11:45 | Successfully reloaded 11 application (/) commands.
+[DEBUG] 18:11:45 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:11:45 | Preparing to connect to the gateway...
+[DEBUG] 18:11:46 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:11:46 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 998
+[DEBUG] 18:11:46 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:11:46 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:11:46 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.36908262077335485; waiting 15224ms
+[DEBUG] 18:11:46 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:11:46 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:11:46 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:11:46 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:12:01 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:12:01 | [WS => Shard 0] Heartbeat acknowledged, latency of 122ms.
+[DEBUG] 18:12:19 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:12:19 | Preparing to connect to the gateway...
+[DEBUG] 18:12:20 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:12:20 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 997
+[DEBUG] 18:12:20 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:12:20 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:12:20 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.04406353887994929; waiting 1817ms
+[DEBUG] 18:12:20 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:12:20 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:12:20 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:12:20 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:12:22 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:12:22 | [WS => Shard 0] Heartbeat acknowledged, latency of 124ms.
+[WARNING] 18:13:18 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:13:18 | Started refreshing 11 application (/) commands.
+[INFO] 18:13:19 | Successfully reloaded 11 application (/) commands.
+[DEBUG] 18:13:19 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:13:19 | Preparing to connect to the gateway...
+[DEBUG] 18:13:19 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:13:19 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 996
+[DEBUG] 18:13:19 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:13:19 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:13:20 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.7639800984863319; waiting 31514ms
+[DEBUG] 18:13:20 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:13:20 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:13:20 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:13:20 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:13:38 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:13:38 | Preparing to connect to the gateway...
+[DEBUG] 18:13:39 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:13:39 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 995
+[DEBUG] 18:13:39 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:13:39 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:13:39 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.7992653958202196; waiting 32969ms
+[DEBUG] 18:13:39 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:13:39 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:13:39 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:13:39 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[WARNING] 18:14:43 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:14:43 | Started refreshing 11 application (/) commands.
+[INFO] 18:14:44 | Successfully reloaded 11 application (/) commands.
+[DEBUG] 18:14:44 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:14:44 | Preparing to connect to the gateway...
+[DEBUG] 18:14:44 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:14:44 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 994
+[DEBUG] 18:14:44 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:14:44 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:14:45 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.8414201253130551; waiting 34708ms
+[DEBUG] 18:14:45 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:14:45 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:14:45 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:14:45 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:15:07 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:15:07 | Preparing to connect to the gateway...
+[DEBUG] 18:15:07 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:15:07 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 993
+[DEBUG] 18:15:07 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:15:07 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:15:07 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.292828482153874; waiting 12079ms
+[DEBUG] 18:15:07 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:15:07 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:15:07 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:15:07 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[WARNING] 18:16:23 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:16:23 | Started refreshing 11 application (/) commands.
+[INFO] 18:16:23 | Successfully reloaded 11 application (/) commands.
+[DEBUG] 18:16:23 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:16:23 | Preparing to connect to the gateway...
+[DEBUG] 18:16:24 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:16:24 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 992
+[DEBUG] 18:16:24 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:16:24 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:16:24 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.26750736520429585; waiting 11034ms
+[DEBUG] 18:16:24 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:16:24 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:16:24 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:16:24 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:16:35 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:16:35 | [WS => Shard 0] Heartbeat acknowledged, latency of 119ms.
+[DEBUG] 18:16:47 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:16:47 | Preparing to connect to the gateway...
+[DEBUG] 18:16:47 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:16:47 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 991
+[DEBUG] 18:16:47 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:16:47 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:16:47 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.4609331082948531; waiting 19013ms
+[DEBUG] 18:16:47 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:16:47 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:16:47 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:16:48 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[WARNING] 18:19:20 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:19:20 | Started refreshing 11 application (/) commands.
+[INFO] 18:19:20 | Successfully reloaded 11 application (/) commands.
+[DEBUG] 18:19:21 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:19:21 | Preparing to connect to the gateway...
+[DEBUG] 18:19:21 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:19:21 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 990
+[DEBUG] 18:19:21 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:21 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:21 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.44632454817399014; waiting 18410ms
+[DEBUG] 18:19:21 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:19:21 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:19:21 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:19:22 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:19:40 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:19:40 | [WS => Shard 0] Heartbeat acknowledged, latency of 124ms.
+[DEBUG] 18:19:48 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:19:48 | Preparing to connect to the gateway...
+[DEBUG] 18:19:48 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:19:48 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 989
+[DEBUG] 18:19:48 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:48 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:48 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.7781800845767841; waiting 32099ms
+[DEBUG] 18:19:48 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:19:48 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:19:48 | [WS => Shard 0] Waiting for event ready for 15000ms
+[WARNING] 18:28:04 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:28:04 | Started refreshing 11 application (/) commands.
+[INFO] 18:28:04 | Successfully reloaded 11 application (/) commands.
+[DEBUG] 18:28:05 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:28:05 | Preparing to connect to the gateway...
+[DEBUG] 18:28:05 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:28:05 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 988
+[DEBUG] 18:28:05 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:28:05 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:28:05 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.7691366385640599; waiting 31726ms
+[DEBUG] 18:28:05 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:28:05 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:28:05 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:28:05 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:28:20 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:28:20 | Preparing to connect to the gateway...
+[WARNING] 18:30:51 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:30:51 | Started refreshing 11 application (/) commands.
+[INFO] 18:30:52 | Successfully reloaded 11 application (/) commands.
+[DEBUG] 18:30:52 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:30:52 | Preparing to connect to the gateway...
+[DEBUG] 18:30:53 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:30:53 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 987
+[DEBUG] 18:30:53 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:30:53 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:30:53 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.24965098430896937; waiting 10298ms
+[DEBUG] 18:30:53 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:30:53 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:30:53 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:30:53 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:31:03 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:31:03 | Preparing to connect to the gateway...
+[DEBUG] 18:31:03 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:31:03 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 986
+[DEBUG] 18:31:03 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:31:03 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:31:03 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.4713232000092886; waiting 19442ms
+[DEBUG] 18:31:03 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:31:03 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:31:03 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:31:03 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:31:23 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:31:23 | [WS => Shard 0] Heartbeat acknowledged, latency of 125ms.
+[WARNING] 18:31:59 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:31:59 | Started refreshing 11 application (/) commands.
+[INFO] 18:32:00 | Successfully reloaded 11 application (/) commands.
+[DEBUG] 18:32:00 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:32:00 | Preparing to connect to the gateway...
+[DEBUG] 18:32:00 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:32:00 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 985
+[DEBUG] 18:32:00 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:32:00 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:32:00 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.9780702966260617; waiting 40345ms
+[DEBUG] 18:32:00 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:32:00 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:32:00 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:32:01 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:32:08 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:32:08 | Preparing to connect to the gateway...
+[DEBUG] 18:32:08 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:32:08 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 984
+[DEBUG] 18:32:08 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:32:08 | [WS => Shard 0] Waiting for event hello for 60000ms
+[WARNING] 18:32:33 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:32:33 | Started refreshing 11 application (/) commands.
+[INFO] 18:32:34 | Successfully reloaded 11 application (/) commands.
+[DEBUG] 18:32:34 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:32:34 | Preparing to connect to the gateway...
+[DEBUG] 18:32:34 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:32:34 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 984
+[DEBUG] 18:32:34 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:32:34 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:32:35 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.9324801200623505; waiting 38464ms
+[DEBUG] 18:32:35 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:32:35 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:32:35 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:32:35 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:32:43 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:32:43 | Preparing to connect to the gateway...
+[DEBUG] 18:32:43 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:32:43 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 983
+[DEBUG] 18:32:43 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:32:43 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:32:43 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.7936472074859835; waiting 32737ms
+[DEBUG] 18:32:43 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:32:43 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:32:43 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:32:44 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[WARNING] 18:33:02 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:33:03 | Started refreshing 11 application (/) commands.
+[INFO] 18:33:03 | Successfully reloaded 11 application (/) commands.
+[DEBUG] 18:33:03 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:33:04 | Preparing to connect to the gateway...
+[DEBUG] 18:33:04 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:33:04 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 982
+[DEBUG] 18:33:04 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:33:04 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:33:04 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.7649127336297197; waiting 31552ms
+[DEBUG] 18:33:04 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:33:04 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:33:04 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:33:04 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:33:36 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:33:36 | [WS => Shard 0] Heartbeat acknowledged, latency of 205ms.
+[WARNING] 18:33:38 | The command at C:\Users\richa\OneDrive - w6l3y\northernlightsdev\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:33:38 | Started refreshing 11 application (/) commands.
+[INFO] 18:33:39 | Successfully reloaded 11 application (/) commands.
+[DEBUG] 18:33:39 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:33:39 | Preparing to connect to the gateway...
+[DEBUG] 18:33:39 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:33:39 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 981
+[DEBUG] 18:33:39 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:33:39 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:33:40 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.16348057516783232; waiting 6743ms
+[DEBUG] 18:33:40 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:33:40 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:33:40 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:33:40 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:33:46 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:33:46 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 18:34:28 | [WS => Shard 0] Heartbeat acknowledged, latency of 131ms.
