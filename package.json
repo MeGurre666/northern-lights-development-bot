@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "discord.js": "^14.14.1",
+    "discord.js": "^14.15.3",
     "fs": "^0.0.1-security",
     "mysql2": "^3.6.5",
     "qrcode": "^1.5.3",
