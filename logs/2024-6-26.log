@@ -1,0 +1,25 @@
+[WARNING] 18:01:21 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:01:21 | Started refreshing 11 application (/) commands.
+[INFO] 18:01:22 | Successfully reloaded 11 application (/) commands.
+[DEBUG] 18:01:22 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZK5eK.**************************************
+[DEBUG] 18:01:22 | Preparing to connect to the gateway...
+[DEBUG] 18:01:22 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:01:22 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 1000
+[DEBUG] 18:01:22 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:01:22 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:01:23 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.34025436808521614; waiting 14035ms
+[DEBUG] 18:01:23 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:01:23 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 513
+	compression: none
+[DEBUG] 18:01:23 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:01:23 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[ERROR] 18:01:23 | File: ready.js | Error getting guild data: Error: Table 'northern_lights.guilds' doesn't exist
+[DEBUG] 18:01:37 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:01:37 | [WS => Shard 0] Heartbeat acknowledged, latency of 118ms.
