@@ -25,6 +25,7 @@ module.exports = {
                     {name: 'Streaming', value: 'streaming'},
                     {name: 'Listening', value: 'listening'},
                     {name: 'Competing', value: 'competing'},
+                    {name: 'Watching', value: 'watching'},
                 ))
         .addStringOption(option =>
             option.setName('status')

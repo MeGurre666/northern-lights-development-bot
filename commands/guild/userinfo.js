@@ -22,7 +22,8 @@ module.exports = {
     async execute(interaction) {
         const guild = interaction.guild;
         const user = interaction.options.getUser('user');
-        pool.execute('SELECT * FROM guilds_bans WHERE user_id = ? AND guild_id = ?', [user.id, guild.id]).then(([results]) => {
+        interaction.reply({content: 'Command is currently under development.', ephemeral: true});
+        pool.execute('SELECT * FROM guilds_bans WHERE user_id = ? AND id = ?', [user.id, guild.id]).then(([results]) => {
             if (results.length > 0){
                 let isBanned = false;
                 

@@ -169,7 +169,7 @@ module.exports = {
                                         if (elapsedTime >= 5 * 60) {
                                             const embed2 = new EmbedBuilder()
                                                 .setTitle('2FA Settings')
-                                                .setDescription('The action has expiaaared. Please run the command again.')
+                                                .setDescription('The action has expired. Please run the command again.')
                                                 .setColor('#037bfc')
                                                 .setTimestamp()
                                                 .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
@@ -199,6 +199,7 @@ module.exports = {
             const collection = interaction.channel.createMessageComponentCollector({ time: 15000 });
             collection.on('collect', async i => {
                 if (i.customId === 'enable2fa' && i.user.id === userId) {
+                    console.log(results2.length);
                     if (results2.length === 0) {
                         if (results[0].log_channeL !== 0 && results[0].log_channel !== null && results[0].log_channel !== undefined && results[0].log_channel !== 'null' && results[0].log_channel !=='') {
                             const channel2 = interaction.guild.channels.cache.get(results[0].log_channel);
@@ -226,7 +227,7 @@ module.exports = {
                         const embed2 = new EmbedBuilder()
                             .setTitle('2FA Settings')
                             .setDescription('You have successfully enabled 2FA Requirement!')
-                            .addFields({name: '2FA', content: 'Due to thsi setting now being enabled, you will need to setup 2FA for your account to make further changes to the server!'})
+                            .addFields({name: '2FA', content: 'Due to this setting now being enabled, you will need to setup 2FA for your account to make further changes to the server!'})
                             .setColor('#037bfc')
                             .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                         interaction.editReply({ embeds: [embed2], components: [], ephemeral: true })
@@ -340,7 +341,7 @@ module.exports = {
             const collection = interaction.channel.createMessageComponentCollector({ time: 15000 });
             collection.on('collect', async i => {
                 if (i.customId === 'logging' && i.user.id === userId) {
-                    if (results[0].fa_req === 1 || results.length > 0) {
+                    if (results[0].fa_req === 1) {
                         if (results2.length > 0) {
                             const currentTime = date.getTime();
                             const expirationTime = Math.floor(currentTime / 1000) + 300;

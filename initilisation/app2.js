@@ -18,7 +18,8 @@ connection.connect((err) => {
       id BIGINT PRIMARY KEY,
       secret VARCHAR(255),
       validate BOOLEAN,
-      setup_time TIMESTAMP
+      setup_time TIMESTAMP,
+      global_ban_perms BOOLEAN
     )
   `;
 

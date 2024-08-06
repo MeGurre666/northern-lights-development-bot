@@ -20,6 +20,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('dev')
         .setDescription('Development purposes only!')
+        .setDefaultMemberPermissions(0)
         .addSubcommand(subcommand =>
             subcommand
                 .setName('list')
@@ -66,7 +67,11 @@ module.exports = {
                         .setRequired(true))
                 .addStringOption(option =>
                     option.setName('value')
-                        .setDescription('The value you want to edit. Development purposes only!'))),
+                        .setDescription('The value you want to edit. Development purposes only!')))
+        .addSubcommand(subcommand =>
+            subcommand
+                .setName('reload')
+                .setDescription('Reload all guilds into database. May cause database lag. Development purposes only!')),
     async autocomplete(interaction) {
         const connection = await pool.getConnection();
         let choices;
@@ -153,6 +158,26 @@ module.exports = {
                     { name: `New`, value: `${key}: ${value}`, inline: true },
                     { name: `Old`, value: `${key}: ${results[0][key]}`, inline: true });
             await interaction.reply({ embeds: [embed], ephemeral: true});
+        } else if (subcommand === 'reload') {
+            const connection = await pool.getConnection();
+            const query = 'SELECT id FROM guilds';
+            const [results] = await connection.execute(query);
+            const guilds = interaction.client.guilds.cache;
+            const existingGuildIds = new Set(results.map(row => row.id));
+            for (const guild of guilds.values()) {
+                const guildId = guild.id;
+                if (!existingGuildIds.has(guildId)) {
+                    try {
+                        await connection.execute(`INSERT INTO guilds (id, fa_req, raid_channels, advanced_mod, basic_mod, log_channel, raid_mode, raid_mode_time, ban_perms, tickets) VALUES (?, 0, '', '', '', '', 0, NULL, '', '')`, [guildId]);
+                        console.log(`Finished inserting guild ${guildId}`);
+                    } catch (err) {
+                        console.error(err);
+                    }
+                }
+            }
+        
+            await connection.release();
+            await interaction.reply({ content: 'All guilds have been reloaded into the database!', ephemeral: true });
         }
     }
 };
