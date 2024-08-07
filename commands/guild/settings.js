@@ -2,6 +2,7 @@ const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder
 const { createPool } = require('mysql2/promise');
 const { database_name, database_host, database_password, database_user, connection_limit, bot_name, token } = require('../../config.json');
 const path = require('path');
+const { ChannelType } = require('discord.js');
 const fs = require('fs');
 const { Client, Intents } = require('discord.js');
 const pool = createPool({
@@ -572,29 +573,29 @@ module.exports = {
                                 .addFields({name: 'Changed By', value: `${interaction.user.tag} | ${interaction.user.id}`})
                                 .setColor('#037bfc')
                                 .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
-                            const webhooks = channel2.fetchWebhooks()
-                            const webhookClient = webhooks.find(wh => wh.id === results[0].logging_id);
+                                const webhooks = await channel2.fetchWebhooks()
+                                const webhookClient = await webhooks.find(wh => wh.id === results[0].logging_id);
 
-                            if (!webhookClient) {
-                                console.log('No webhook found error')
-                        }
-                            webhookClient.edit({
-                                name: "Northern Lights Logging",
-                                avatar: application.iconURL({ dynamic: true }),
-                                channel: channel.id
-                            })
-                            .then(() => {
-                                webhookClient.send({ embeds: [embed5] }).catch(console.error);
-                            }
-                            )
-                            .catch(console.error);
+                                if (!webhookClient) {
+                                    console.log('No webhook found error');
+                                } else {
+                                    webhookClient.edit({
+                                        name: "Northern Lights Logging",
+                                        avatar: application.iconURL({ dynamic: true }),
+                                        channel: channel.id
+                                    })
+                                    .then(() => {
+                                        webhookClient.send({ embeds: [embed5] }).catch(console.error);
+                                    })
+                                    .catch(console.error);
+                                }
                             const embed4 = new EmbedBuilder()
                                 .setTitle('Logging Setup')
                                 .setDescription(`You have successfully updated logging to the channel <#${i.values[0]}> !`)
                                 .setColor('#037bfc')
                                 .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
                             interaction.editReply({ embeds: [embed4], components: [], ephemeral: true });
-                            const query4 = 'UPDATE guilds SET log_channel = ?, logging_id =?, logging_token  WHERE id = ?';
+                            const query4 = 'UPDATE guilds SET log_channel = ?, logging_id =?, logging_token =?  WHERE id = ?';
                             connection.execute(query4, [channel.id, webhookClient.id, webhookClient.token, guildId], error => {
                                 if (error) {
                                     console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
