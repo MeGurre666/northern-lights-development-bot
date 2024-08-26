@@ -177,7 +177,7 @@ module.exports = {
             }
         
             await connection.release();
-            await interaction.reply({ content: 'All guilds have been reloaded into the database!', ephemeral: true });
+            await interaction.reply({ content: 'All guilds have been reloaded into the database!', ephemeral: true }); 
         }
     }
 };

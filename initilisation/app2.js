@@ -18,8 +18,7 @@ connection.connect((err) => {
       id BIGINT PRIMARY KEY,
       secret VARCHAR(255),
       validate BOOLEAN,
-      setup_time TIMESTAMP,
-      global_ban_perms BOOLEAN
+      setup_time TIMESTAMP
     )
   `;
 
@@ -35,7 +34,6 @@ connection.connect((err) => {
     logging_id TEXT NULL DEFAULT NULL,
     raid_mode BOOLEAN,
     raid_mode_time TIMESTAMP NULL DEFAULT NULL,
-    ban_perms TEXT,
     tickets TEXT,
     dev TEXT,
     PRIMARY KEY (id)
@@ -91,6 +89,34 @@ const createTableQuery7 = `
     PRIMARY KEY (ban_id)
   )
 `;
+const createTableQuery8 = `
+  CREATE TABLE IF NOT EXISTS permissions_discord (
+    id varchar(19),
+    netg BOOLEAN DEFAULT FALSE,
+    net BOOLEAN DEFAULT FALSE,
+    blacklist BOOLEAN DEFAULT FALSE,
+    rolesync BOOLEAN DEFAULT FALSE,
+    kick BOOLEAN DEFAULT FALSE,
+    global_kick BOOLEAN DEFAULT FALSE,
+    PRIMARY KEY (id)
+  )
+`;
+const createTableQuery9 = `
+  CREATE TABLE IF NOT EXISTS permissions_role (
+    guildid varchar(19),
+    id varchar(19),
+    permission varchar(5000),
+    PRIMARY KEY (id)
+  )
+`;
+const createTableQuery10 = `
+  CREATE TABLE IF NOT EXISTS roleconnect (
+    id varchar(19),
+    roleid varchar(19),
+    connected VARCHAR(5000),
+    PRIMARY KEY (roleid)
+  )
+`;
   connection.query(createTableQuery, (err, results) => {
     if (err) {
       console.error('Error creating Users Table:', err);
@@ -136,9 +162,29 @@ const createTableQuery7 = `
               }
               console.log('Global Ban Table created successfully');
             });
-              connection.end();
+            connection.query(createTableQuery8, (err, results) => {
+              if (err) {
+                console.error('Error creating Permissions Table:', err);
+                return;
+              }
+              console.log('Permissions Table created successfully');
+            });
+            connection.query(createTableQuery9, (err, results) => {
+              if (err) {
+                console.error('Error creating Permissions Table:', err);
+                return;
+              }
+              console.log('Permissions Table created successfully');
+            });
+            connection.query(createTableQuery10, (err, results) => {
+              if (err) {
+                console.error('Error creating Permissions Table:', err);
+                return;
+              }
+              console.log('Permissions Table created successfully');
+            });
+            connection.end();
           });
-            
         });
       });
     });

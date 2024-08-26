@@ -24,5 +24,8 @@ module.exports = {
                 .setDescription('The role to assign to the user.')
                 .setRequired(true)),
     async execute(interaction) {
+        const user = interaction.options.getUser('user');
+        const role = interaction.options.getRole('role');
+        const member = await interaction.guild.members.fetch(user.id);
     }
 }

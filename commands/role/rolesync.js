@@ -20,5 +20,6 @@ module.exports = {
                 .setDescription('The user to sync.')
                 .setRequired(true)),
     async execute(interaction) {
+        interaction.deferReply();
     }
 }

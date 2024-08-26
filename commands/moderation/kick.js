@@ -1,0 +1,1 @@
+//kick and request global kick
