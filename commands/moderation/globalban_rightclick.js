@@ -1,7 +1,8 @@
 const speakeasy = require('speakeasy');
-const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelSelectMenuBuilder, ContextMenuCommandBuilder, ApplicationCommandType, REST, Routes } = require('discord.js');
+const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelSelectMenuBuilder, ContextMenuCommandBuilder, ApplicationCommandType, REST, Routes, WebhookClient, blockQuote, bold, italic, quote, spoiler, strikethrough, underline } = require('discord.js');
 const { createPool } = require('mysql2/promise');
 const { database_name, database_host, database_password, database_user, connection_limit } = require('../../config.json');
+const fs = require('fs');
 const pool = createPool({
     host: database_host,
     user: database_user,
@@ -17,7 +18,7 @@ module.exports = {
         .setType(ApplicationCommandType.User),
     async execute(interaction) {
         const [userRows] = await pool.query(`SELECT * FROM permissions_discord WHERE id = '${interaction.user.id}'`);
-        
+        const application = await interaction.client.application?.fetch();
         let hasPermission = userRows.length > 0 && userRows[0].netg === 1;
         
         if (!hasPermission) {
@@ -72,6 +73,28 @@ module.exports = {
                     console.error(`Failed to ban user ${user.id} in guild ${guild.id}:`, error);
                 }
             });
+            const [results] = await pool.query(`SELECT * FROM guilds WHERE id = '${interaction.guild.id}'`);
+                if (results[0].log_channeL !== 0 && results[0].log_channel !== null && results[0].log_channel !== undefined && results[0].log_channel !== 'null' && results[0].log_channel !=='') {
+                    try {
+                        const webhookClient = new WebhookClient({id:results[0].logging_id, token:results[0].logging_token})
+
+                        if (!webhookClient) {
+                            console.log('No webhook found error')
+                            return;
+                        }
+                        const embed5 = new EmbedBuilder()
+                            .setTitle('User Banned')
+                            .setDescription(`User ${user} has been globalbanned with ban id ${random}`)
+                            .addFields({ name: 'Banned By', value: `${interaction.user} | ${interaction.user.id}` },
+                            { name: 'Reason', value: 'No reason provided' })
+                            .setColor('#037bfc')
+                            .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                        webhookClient.send({ embeds: [embed5] }).catch(console.error);
+                    } catch (error) {
+                        console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
+                        fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: Settings | Command Section: Assign Role | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                    }
+                }
         
         }
     }
