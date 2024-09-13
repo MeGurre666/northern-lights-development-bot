@@ -47,21 +47,6 @@ module.exports = {
             return interaction.reply({ embeds: [embed], ephemeral: true });
         } else {
             const user = interaction.options.getUser('user');
-            let memberToBan;
-            try {
-                memberToBan = await interaction.guild.members.fetch(user.id);
-            } catch (error) {
-                console.warn(`Could not fetch member ${user.id} in guild ${guildId}:`, error);
-            }
-            const memberBanning = await interaction.guild.members.fetch(interaction.user.id);
-
-            if (memberToBan && memberToBan.roles.highest.position >= memberBanning.roles.highest.position) {
-                const embed = new EmbedBuilder()
-                    .setTitle('You cannot ban this user')
-                    .setDescription('The user you are trying to ban has a role higher or equal to yours.')
-                    .setColor('#FF0000');
-                return interaction.reply({ embeds: [embed], ephemeral: true });
-            }
 
             let random;
             let isUnique = false;
