@@ -4,7 +4,7 @@ const {activity, type, status} = require('../config.json');
 const fs = require('fs');
 const path = require('path');
 const mysql = require('mysql2');
-const {database_name} = require('../config.json');
+const { database_name, database_host, database_password, database_user, connection_limit, issuer} = require('../config.json');
 
 module.exports = {
 	name: Events.ClientReady,
@@ -18,9 +18,9 @@ module.exports = {
         const dateStr = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
         const logFilePath = path.join(logPath, `${dateStr}.log`);
         const connection = mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: '',
+            host: database_host,
+            user: database_user,
+            password: database_password,
             database: database_name,
         });
 		connection.connect((err) => {
@@ -36,7 +36,7 @@ module.exports = {
 						return;
 					}
 					if (results.length === 0) {
-						connection.query(`INSERT INTO guilds (id, fa_req, raid_channels, advanced_mod, basic_mod, log_channel, raid_mode, raid_mode_time, ban_perms, tickets) VALUES ('${guildId}', 0, '', '', '', '', 0, NULL, '', '')`, (err, results) => {
+						connection.query(`INSERT INTO guilds (id, fa_req, raid_channels, advanced_mod, basic_mod, log_channel, logging_token, logging_id, raid_mode, raid_mode_time, tickets, dev) VALUES ('${guildId}', 0, '', '', '', '', 0, NULL, '', '', '', '')`, (err, results) => {
 							if (err) {
 								fs.appendFileSync(logFilePath, `[ERROR] ${new Date().toLocaleTimeString()} | File: ready.js | Error inserting guild data: ${err}\n`);
 								return;
