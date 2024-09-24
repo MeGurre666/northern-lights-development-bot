@@ -60,6 +60,8 @@ module.exports = {
             const memberToKick = await interaction.guild.members.fetch(user.id);
             const memberKicking = await interaction.guild.members.fetch(interaction.user.id);
             const guildId = interaction.guild.id;
+
+            // Check if the command executor's highest role is higher than the target user's highest role
             if (memberToKick.roles.highest.position >= memberKicking.roles.highest.position) {
                 const embed = new EmbedBuilder()
                     .setTitle('You cannot kick this user')
@@ -67,6 +69,7 @@ module.exports = {
                     .setColor('#FF0000');
                 return interaction.reply({ embeds: [embed], ephemeral: true });
             }
+
             if (request_global_kick === 'yes') {
                 const embed = new EmbedBuilder()
                     .setTitle('Global Kick Request')
@@ -136,7 +139,7 @@ module.exports = {
                                 .setColor('#FF0000');
                             return i.reply({ embeds: [embed], ephemeral: true });
                         } else {
-                            //remove it from the interaction state
+                            // Remove it from the interaction state
                             const interactionStates = JSON.parse(fs.readFileSync(interactionStateFile, 'utf8'));
                             const newState = interactionStates.filter(state => state.id !== i.id);
                             fs.writeFileSync(interactionStateFile, JSON.stringify(newState, null, 2));
@@ -150,7 +153,7 @@ module.exports = {
                                     }
                                 } catch (error) {
                                     if (error.code === 10007) {
-    
+                                        console.warn(`Member ${user.id} not found in guild ${guildId}, skipping.`);
                                     } else {
                                         console.error(`Failed to kick member in guild ${guildId}:`, error);
                                     }
@@ -224,28 +227,28 @@ module.exports = {
                 .setColor('#00FF00');
             interaction.reply({ embeds: [embed2], ephemeral: true });
             const [results] = await pool.query(`SELECT * FROM guilds WHERE id = '${interaction.guild.id}'`);
-                if (results[0].log_channeL !== 0 && results[0].log_channel !== null && results[0].log_channel !== undefined && results[0].log_channel !== 'null' && results[0].log_channel !=='') {
-                    try {
-                        const webhookClient = new WebhookClient({id:results[0].logging_id, token:results[0].logging_token})
+            if (results[0].log_channel !== 0 && results[0].log_channel !== null && results[0].log_channel !== undefined && results[0].log_channel !== 'null' && results[0].log_channel !== '') {
+                try {
+                    const webhookClient = new WebhookClient({ id: results[0].logging_id, token: results[0].logging_token });
 
-                        if (!webhookClient) {
-                            console.log('No webhook found error')
-                            return;
-                        }
-                        const embed5 = new EmbedBuilder()
-                            .setTitle('User Kicked')
-                            .setDescription(`The user ${user} has been kicked from ${interaction.guild.name}.`)
-                            .addFields({ name: 'Kicked By', value: `${interaction.user} | ${interaction.user.id}` },
+                    if (!webhookClient) {
+                        console.log('No webhook found error');
+                        return;
+                    }
+                    const embed5 = new EmbedBuilder()
+                        .setTitle('User Kicked')
+                        .setDescription(`The user ${user} has been kicked from ${interaction.guild.name}.`)
+                        .addFields({ name: 'Kicked By', value: `${interaction.user} | ${interaction.user.id}` },
                             { name: 'Reason', value: `${reason}` },
                             { name: 'Request Global Kick', value: response },)
-                            .setColor('#037bfc')
-                            .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
-                        webhookClient.send({ embeds: [embed5] }).catch(console.error);
-                    } catch (error) {
-                        console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
-                        fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: UnGlobal Ban | Command Section: UnGlobal ban | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
-                    }
+                        .setColor('#037bfc')
+                        .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip', iconURL: application.iconURL({ dynamic: true }) });
+                    webhookClient.send({ embeds: [embed5] }).catch(console.error);
+                } catch (error) {
+                    console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
+                    fs.appendFileSync(logFilePath, `[${new Date().toLocaleString()}] [ERROR] | Command: UnGlobal Ban | Command Section: UnGlobal ban | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
                 }
+            }
         }
     }
 };

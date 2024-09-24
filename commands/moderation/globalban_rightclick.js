@@ -20,6 +20,9 @@ module.exports = {
         const [userRows] = await pool.query(`SELECT * FROM permissions_discord WHERE id = '${interaction.user.id}'`);
         const application = await interaction.client.application?.fetch();
         let hasPermission = userRows.length > 0 && userRows[0].netg === 1;
+        const user = interaction.options.getUser('user');
+        const memberToBan = await interaction.guild.members.fetch(user.id);
+        const memberBanning = await interaction.guild.members.fetch(interaction.user.id);
         
         if (!hasPermission) {
             const member = await interaction.guild.members.fetch(interaction.user.id);
@@ -35,18 +38,13 @@ module.exports = {
                 .setTitle('You do not have permission to use this command')
                 .setColor('#FF0000');
             return interaction.reply({ embeds: [embed], ephemeral: true });
-        } else {
-            const user = interaction.options.getUser('user');
-            const memberToBan = await interaction.guild.members.fetch(user.id);
-            const memberBanning = await interaction.guild.members.fetch(interaction.user.id);
-
-            if (memberToBan.roles.highest.position >= memberBanning.roles.highest.position) {
+        } else if (memberToBan.roles.highest.position >= memberBanning.roles.highest.position) {
                 const embed = new EmbedBuilder()
                     .setTitle('You cannot ban this user')
                     .setDescription('The user you are trying to ban has a role higher or equal to yours.')
                     .setColor('#FF0000');
                 return interaction.reply({ embeds: [embed], ephemeral: true });
-            }
+            } else {
 
             let random;
             let isUnique = false;

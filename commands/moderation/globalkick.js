@@ -49,6 +49,8 @@ module.exports = {
             const memberToKick = await interaction.guild.members.fetch(user.id);
             const memberKicking = await interaction.guild.members.fetch(interaction.user.id);
             const guildId = interaction.guild.id;
+
+            // Check if the command executor's highest role is higher than the target user's highest role
             if (memberToKick.roles.highest.position >= memberKicking.roles.highest.position) {
                 const embed = new EmbedBuilder()
                     .setTitle('You cannot kick this user')
@@ -56,6 +58,7 @@ module.exports = {
                     .setColor('#FF0000');
                 return interaction.reply({ embeds: [embed], ephemeral: true });
             }
+
             const guilds = interaction.client.guilds.cache;
             for (const guild of guilds) {
                 const member = await guild.members.fetch(user.id);
@@ -69,27 +72,27 @@ module.exports = {
                 .setColor('#00FF00');
             interaction.reply({ embeds: [embed], ephemeral: true });
             const [results] = await pool.query(`SELECT * FROM guilds WHERE id = '${interaction.guild.id}'`);
-                if (results[0].log_channeL !== 0 && results[0].log_channel !== null && results[0].log_channel !== undefined && results[0].log_channel !== 'null' && results[0].log_channel !=='') {
-                    try {
-                        const webhookClient = new WebhookClient({id:results[0].logging_id, token:results[0].logging_token})
+            if (results[0].log_channel !== 0 && results[0].log_channel !== null && results[0].log_channel !== undefined && results[0].log_channel !== 'null' && results[0].log_channel !== '') {
+                try {
+                    const webhookClient = new WebhookClient({ id: results[0].logging_id, token: results[0].logging_token });
 
-                        if (!webhookClient) {
-                            console.log('No webhook found error')
-                            return;
-                        }
-                        const embed5 = new EmbedBuilder()
-                            .setTitle('User Global Kicked')
-                            .setDescription(`The user ${user} has been global kicked from all servers.`)
-                            .addFields({ name: 'Global Kicked By', value: `${interaction.user} | ${interaction.user.id}` },
-                            { name: 'Reason', value: `${reason}` })
-                            .setColor('#037bfc')
-                            .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
-                        webhookClient.send({ embeds: [embed5] }).catch(console.error);
-                    } catch (error) {
-                        console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
-                        fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: UnGlobal Ban | Command Section: UnGlobal ban | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                    if (!webhookClient) {
+                        console.log('No webhook found error');
+                        return;
                     }
+                    const embed5 = new EmbedBuilder()
+                        .setTitle('User Global Kicked')
+                        .setDescription(`The user ${user} has been global kicked from all servers.`)
+                        .addFields({ name: 'Global Kicked By', value: `${interaction.user} | ${interaction.user.id}` },
+                            { name: 'Reason', value: `${reason}` })
+                        .setColor('#037bfc')
+                        .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip', iconURL: application.iconURL({ dynamic: true }) });
+                    webhookClient.send({ embeds: [embed5] }).catch(console.error);
+                } catch (error) {
+                    console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
+                    fs.appendFileSync(logFilePath, `[${new Date().toLocaleString()}] [ERROR] | Command: Global Kick | Command Section: Global kick | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
                 }
+            }
         }
     }
 };

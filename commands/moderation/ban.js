@@ -39,6 +39,7 @@ module.exports = {
         const application = await interaction.client.application?.fetch();
         let hasPermission = userRows.length > 0 && userRows[0].net === 1;
 
+
         if (!hasPermission) {
             const member = await interaction.guild.members.fetch(interaction.user.id);
             const roleIds = member.roles.cache.map(role => role.id);

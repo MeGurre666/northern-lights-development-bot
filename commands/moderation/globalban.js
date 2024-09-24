@@ -30,6 +30,9 @@ module.exports = {
         const guildId = interaction.guild.id;
         const application = await interaction.client.application?.fetch();
         let hasPermission = userRows.length > 0 && userRows[0].netg === 1;
+        const user = interaction.options.getUser('user');
+        const memberBanning = await interaction.guild.members.fetch(interaction.user.id);
+        const memberToBan = await interaction.guild.members.fetch(user.id);
         
         if (!hasPermission) {
             const member = await interaction.guild.members.fetch(interaction.user.id);
@@ -45,8 +48,13 @@ module.exports = {
                 .setTitle('You do not have permission to use this command')
                 .setColor('#FF0000');
             return interaction.reply({ embeds: [embed], ephemeral: true });
-        } else {
-            const user = interaction.options.getUser('user');
+        } else if (memberBanning.roles.highest.position <= memberToBan.roles.highest.position) {
+                const embed = new EmbedBuilder()
+                    .setTitle('Insufficient Role Hierarchy')
+                    .setDescription('You cannot global ban a user with a role equal to or higher than yours.')
+                    .setColor('#FF0000');
+                return interaction.reply({ embeds: [embed], ephemeral: true });
+            } else {
 
             let random;
             let isUnique = false;
