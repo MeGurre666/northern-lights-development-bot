@@ -31,8 +31,6 @@ module.exports = {
         const application = await interaction.client.application?.fetch();
         let hasPermission = userRows.length > 0 && userRows[0].netg === 1;
         const user = interaction.options.getUser('user');
-        const memberBanning = await interaction.guild.members.fetch(interaction.user.id);
-        const memberToBan = await interaction.guild.members.fetch(user.id);
         
         if (!hasPermission) {
             const member = await interaction.guild.members.fetch(interaction.user.id);
@@ -48,60 +46,57 @@ module.exports = {
                 .setTitle('You do not have permission to use this command')
                 .setColor('#FF0000');
             return interaction.reply({ embeds: [embed], ephemeral: true });
-        } else if (memberBanning.roles.highest.position <= memberToBan.roles.highest.position) {
-                const embed = new EmbedBuilder()
-                    .setTitle('Insufficient Role Hierarchy')
-                    .setDescription('You cannot global ban a user with a role equal to or higher than yours.')
-                    .setColor('#FF0000');
-                return interaction.reply({ embeds: [embed], ephemeral: true });
-            } else {
+        }
 
-            let random;
-            let isUnique = false;
-            while (!isUnique) {
-                random = Math.floor(1000000 + Math.random() * 900000);
-                random = `NETG-${random}`;
-                const [rows] = await pool.query(`SELECT * FROM global_ban WHERE ban_id = '${random}'`);
-                
-                if (rows.length === 0) {
-                    isUnique = true;
-                }
+        let random;
+        let isUnique = false;
+        while (!isUnique) {
+            random = Math.floor(1000000 + Math.random() * 900000);
+            random = `NETG-${random}`;
+            const [rows] = await pool.query(`SELECT * FROM global_ban WHERE ban_id = '${random}'`);
+            
+            if (rows.length === 0) {
+                isUnique = true;
             }
-            await pool.query(`INSERT INTO global_ban (id, ban_id, banned_by, ban_time, reason) VALUES ('${user.id}', '${random}', '${interaction.user.id}', NOW(), '${reason}')`);
-            const embed2 = new EmbedBuilder()
-                .setTitle(`User ${user.username} has been banned`)
-                .setDescription(`The user has been banned with ban id ${random}`)
-                .setColor('#00FF00');
-            interaction.reply({ embeds: [embed2], ephemeral: true });
-            const guilds = interaction.client.guilds.cache;
-            guilds.forEach(async (guild) => {
-                try {
-                    await guild.members.ban(user.id, { reason: `Global banned by ${interaction.user.username} for ${reason}` });
-                } catch (error) {
+        }
+        await pool.query(`INSERT INTO global_ban (id, ban_id, banned_by, ban_time, reason) VALUES ('${user.id}', '${random}', '${interaction.user.id}', NOW(), '${reason}')`);
+        const embed2 = new EmbedBuilder()
+            .setTitle(`User ${user.username} has been banned`)
+            .setDescription(`The user has been banned with ban id ${random}`)
+            .setColor('#00FF00');
+        interaction.reply({ embeds: [embed2], ephemeral: true });
+        const guilds = interaction.client.guilds.cache;
+        guilds.forEach(async (guild) => {
+            try {
+                await guild.members.ban(user.id, { reason: `Global banned by ${interaction.user.username} for ${reason}` });
+            } catch (error) {
+                if (error.code === 10007) {
+                    console.warn(`Member ${user.id} not found in guild ${guild.id}, skipping.`);
+                } else {
                     console.error(`Failed to ban user ${user.id} in guild ${guild.id}:`, error);
                 }
-            });
-            const [results] = await pool.query(`SELECT * FROM guilds WHERE id = '${interaction.guild.id}'`);
-            if (results[0].log_channel !== 0 && results[0].log_channel !== null && results[0].log_channel !== undefined && results[0].log_channel !== 'null' && results[0].log_channel !== '') {
-                try {
-                    const webhookClient = new WebhookClient({ id: results[0].logging_id, token: results[0].logging_token });
+            }
+        });
+        const [results] = await pool.query(`SELECT * FROM guilds WHERE id = '${interaction.guild.id}'`);
+        if (results[0].log_channel !== 0 && results[0].log_channel !== null && results[0].log_channel !== undefined && results[0].log_channel !== 'null' && results[0].log_channel !== '') {
+            try {
+                const webhookClient = new WebhookClient({ id: results[0].logging_id, token: results[0].logging_token });
 
-                    if (!webhookClient) {
-                        console.log('No webhook found error');
-                        return;
-                    }
-                    const embed5 = new EmbedBuilder()
-                        .setTitle('User Banned')
-                        .setDescription(`User ${user} has been global banned with ban id ${random}`)
-                        .addFields({ name: 'Banned By', value: `${interaction.user} | ${interaction.user.id}` },
-                            { name: 'Reason', value: `${reason}` })
-                        .setColor('#037bfc')
-                        .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip', iconURL: application.iconURL({ dynamic: true }) });
-                    webhookClient.send({ embeds: [embed5] }).catch(console.error);
-                } catch (error) {
-                    console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
-                    fs.appendFileSync(logFilePath, `[${new Date().toLocaleString()}] [ERROR] | Command: Settings | Command Section: Global ban | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                if (!webhookClient) {
+                    console.log('No webhook found error');
+                    return;
                 }
+                const embed5 = new EmbedBuilder()
+                    .setTitle('User Banned')
+                    .setDescription(`User ${user} has been global banned with ban id ${random}`)
+                    .addFields({ name: 'Banned By', value: `${interaction.user} | ${interaction.user.id}` },
+                        { name: 'Reason', value: `${reason}` })
+                    .setColor('#037bfc')
+                    .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip', iconURL: application.iconURL({ dynamic: true }) });
+                webhookClient.send({ embeds: [embed5] }).catch(console.error);
+            } catch (error) {
+                console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
+                fs.appendFileSync(logFilePath, `[${new Date().toLocaleString()}] [ERROR] | Command: Settings | Command Section: Global ban | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
             }
         }
     }
