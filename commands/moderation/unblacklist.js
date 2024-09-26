@@ -16,17 +16,27 @@ module.exports = {
     cooldown: 5,
     category: 'moderation',
     data: new SlashCommandBuilder()
-        .setName('blacklist')
-        .setDescription('Blacklists a user')
+        .setName('unblacklist')
+        .setDescription('UnBlacklists a user')
         .addUserOption(option =>
             option.setName('user')
-                .setDescription('The user to blacklist.')
+                .setDescription('The user to unblacklist.')
                 .setRequired(true))
         .addStringOption(option =>
             option.setName('reason')
-                .setDescription('The reason for the blacklist.')
+                .setDescription('The reason for the unblacklist.')
                 .setRequired(false)),
     async execute(interaction) {
+        const logPath = path.join(__dirname, '../../logs');
+        const date = new Date();
+        const dateStr = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+        const logFilePath = path.join(logPath, `${dateStr}.log`);
+
+        // Ensure the log directory exists
+        if (!fs.existsSync(logPath)) {
+            fs.mkdirSync(logPath, { recursive: true });
+        }
+
         const [userRows] = await pool.query(`SELECT * FROM permissions_discord WHERE id = '${interaction.user.id}'`);
         const application = await interaction.client.application?.fetch();
         let hasPermission = userRows.length > 0 && userRows[0].blacklist === 1;
@@ -51,36 +61,18 @@ module.exports = {
                 .setColor('#FF0000');
             return interaction.reply({ embeds: [embed], ephemeral: true });
         } else {
-            // kick the user from all guilds 
             const guilds = interaction.client.guilds.cache;
-            for (const [guildId, guild] of guilds) {
-                try {
-                    const member = await guild.members.fetch(user.id);
-                    if (guild.id === "1174863104115490919") {
-                        //remove all the users roles and give them the 1288185524560859208 role
-                        const roles = member.roles.cache;
-                        for (const role of roles.values()) {
-                            if (role.id !== "1174863104115490919") {
-                                await member.roles.remove(role.id);
-                            }
-                        }
-                        await member.roles.add("1288185524560859208");
-                    } else {
-                        await member.kick(`Blacklisted by ${interaction.user.tag} for ${reason}`);
-                    }
-                } catch (error) {
-                    if (error.code === 10007) {
-                        continue;
-                    } else {
-                        console.error(`Failed to kick user ${user.id} in guild ${guild.id}:`, error);
-                    }
-                }
-            }
-            // add the user to the blacklist
-            await pool.query(`INSERT INTO blacklist (id, blacklisted_by, blacklist_time, reason) VALUES ('${user.id}', '${interaction.user.id}', NOW(), '${reason}')`);
+            const member = await interaction.guild.members.fetch(user.id);
+            const role = interaction.guild.roles.cache.get("1288185524560859208");
+            await memberToBlacklist.roles.remove(role);
+
+            const role2 = interaction.guild.roles.cache.get("1175262050692382732");
+            await memberToBlacklist.roles.add(role2);
+
+            await pool.query(`DELETE FROM blacklist WHERE id = '${user.id}'`);
             const embed2 = new EmbedBuilder()
-                .setTitle(`User ${user} has been blacklisted`)
-                .setDescription(`The user has been blacklisted`)
+                .setTitle(`User ${user} has been unblacklisted`)
+                .setDescription(`The user has been unblacklisted`)
                 .setColor('#00FF00');
             interaction.reply({ embeds: [embed2], ephemeral: true });
             const [results] = await pool.query(`SELECT * FROM guilds WHERE id = '${interaction.guild.id}'`);
@@ -93,9 +85,9 @@ module.exports = {
                         return;
                     }
                     const embed5 = new EmbedBuilder()
-                        .setTitle('User Blacklisted')
-                        .setDescription(`User ${user} has been blacklisted`)
-                        .addFields({ name: 'Blacklisted By', value: `${interaction.user} | ${interaction.user.id}` },
+                        .setTitle('User UnBlacklisted')
+                        .setDescription(`User ${user} has been unblacklisted`)
+                        .addFields({ name: 'UnBlacklisted By', value: `${interaction.user} | ${interaction.user.id}` },
                             { name: 'Reason', value: `${reason}` })
                         .setColor('#037bfc')
                         .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip', iconURL: application.iconURL({ dynamic: true }) });

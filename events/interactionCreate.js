@@ -25,8 +25,9 @@ module.exports = {
                 }
                 const now = Date.now();
                 const timestamps = interaction.client.cooldowns.get(command.data.name);
-                const cooldownAmount = (command.cooldown ?? 3) * 1000;
+                const cooldownAmount = (command.cooldown ?? 5) * 1000;
                 const application = await interaction.client.application?.fetch();
+                console.log(application)
                 const teamMember = application.owner.members;
                 const isApplicationMember = teamMember.has(interaction.user.id);
                 if (!isApplicationMember && timestamps.has(interaction.user.id)) {

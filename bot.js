@@ -12,7 +12,8 @@ const pool = createPool({
     connectionLimit: connection_limit,
 });
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages] });
+// Ensure GuildMembers intent is enabled
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.MessageContent] });
 
 client.commands = new Collection();
 client.cooldowns = new Collection();
@@ -36,6 +37,7 @@ const eventsPath = path.join(__dirname, 'events');
 const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
 
 for (const file of eventFiles) {
+    console.log(`Loading event ${file}`);
     const filePath = path.join(eventsPath, file);
     const event = require(filePath);
     if (event.once) {
@@ -76,13 +78,19 @@ setInterval(() => {
 }, 1000);
 
 client.on(Events.Debug, message => {
+    try{
     fs.appendFileSync(logFilePath, `[DEBUG] ${new Date().toLocaleTimeString()} | ${message}\n`);
+    } catch (error) {}
 });
 client.on(Events.Warn, message => {
+    try {
     fs.appendFileSync(logFilePath, `[WARN] ${new Date().toLocaleTime()} | ${message}\n`);
+    } catch (error) {}
 });
 client.on(Events.Error, message => {
+    try {
     fs.appendFileSync(logFilePath, `[ERROR] ${new Date().toLocaleTimeString()} | ${message}\n`);
+    } catch (error) {}
 });
 
 function formatUptime(uptime) {
@@ -94,6 +102,7 @@ function formatUptime(uptime) {
 }
 
 setInterval(() => {
+    try{
     const currentTime = new Date().toLocaleTimeString();
     const memoryUsage = process.memoryUsage();
     const heapUsedInMB = (memoryUsage.heapUsed / (1024 * 1024)).toFixed(2);
@@ -107,6 +116,7 @@ setInterval(() => {
     uptime = Math.floor(uptime * 1000);
     uptime = formatUptime(uptime);
     fs.appendFileSync(logFilePath, `[UPTIME] ${currentTime} | ${uptime}\n`);
+    } catch (error) {}
 }, 600000);
 
 // Load the interaction state
@@ -398,6 +408,12 @@ client.once('ready', async () => {
                                 await i.update({ components: [row2] });
                                 fs.writeFileSync(interactionStateFile3, JSON.stringify(interactionStates3.filter(state => state !== interactionState3)));
                             } else if (i.customId === 'deny_global_ban') {
+                                const guilds = client.guilds.cache;
+                                guilds.forEach(async (guild) => {
+                                    try {
+                                        await guild.members.unban(user, { reason: `Global ban denied by ${i.user.username}` });
+                                    } catch (error) {}
+                                });
                                 const row2 = new ActionRowBuilder()
                                     .addComponents(
                                         new ButtonBuilder()

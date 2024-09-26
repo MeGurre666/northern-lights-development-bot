@@ -2,7 +2,7 @@ const { Events } = require('discord.js');
 const mysql = require('mysql2');
 const path = require('path');
 const fs = require('fs');
-const {database_name} = require('../config.json');
+const { database_name, database_host, database_password, database_user, connection_limit, issuer } = require('../config.json');
 
 module.exports = {
 	name: Events.GuildDelete,
@@ -13,9 +13,9 @@ module.exports = {
         const dateStr = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
         const logFilePath = path.join(logPath, `${dateStr}.log`);
         const connection = mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: '',
+            host: database_host,
+            user: database_user,
+            password: database_password,
             database: database_name,
         });
 		connection.connect((err) => {

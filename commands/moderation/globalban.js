@@ -31,6 +31,7 @@ module.exports = {
         const application = await interaction.client.application?.fetch();
         let hasPermission = userRows.length > 0 && userRows[0].netg === 1;
         const user = interaction.options.getUser('user');
+        const memberBanning = await interaction.guild.members.fetch(interaction.user.id);
         
         if (!hasPermission) {
             const member = await interaction.guild.members.fetch(interaction.user.id);
@@ -40,8 +41,15 @@ module.exports = {
                 hasPermission = roleRows.some(row => row.netg === 1);
             }
         }
-        
-        if (!hasPermission) {
+        let userMember;
+        try {
+            userMember = await interaction.guild.members.fetch(user.id);
+        } catch (error) {
+            // User is not in the server
+            userMember = null;
+        }
+
+        if (!hasPermission || (userMember && userMember.roles.highest.position >= memberBanning.roles.highest.position)) {
             const embed = new EmbedBuilder()
                 .setTitle('You do not have permission to use this command')
                 .setColor('#FF0000');
@@ -68,7 +76,7 @@ module.exports = {
         const guilds = interaction.client.guilds.cache;
         guilds.forEach(async (guild) => {
             try {
-                await guild.members.ban(user.id, { reason: `Global banned by ${interaction.user.username} for ${reason}` });
+                await guild.members.ban(user.id, { reason: `Global banned by ${interaction.user.username} for ${reason} with ban-id ${random}` });
             } catch (error) {
                 if (error.code === 10007) {
                     console.warn(`Member ${user.id} not found in guild ${guild.id}, skipping.`);

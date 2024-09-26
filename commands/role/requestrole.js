@@ -42,6 +42,13 @@ module.exports = {
             return interaction.reply({ embeds: [embed], ephemeral: true });
         }
         const [userRows] = await pool.query(`SELECT * FROM permissions_role WHERE id = '${role.id}'`);
+        if (userRows.length === 0) {
+            const embed = new EmbedBuilder()
+                .setTitle('No permission data found')
+                .setDescription('No permission data found for the specified role.')
+                .setColor('#FF0000');
+            return interaction.reply({ embeds: [embed], ephemeral: true });
+        }
         const requestedFromMember = await interaction.guild.members.fetch(requestedfrom.id);
         const userHasPermission = userRows[0].permission.includes(requestedfrom.id) || requestedFromMember.roles.cache.some(role => userRows[0].permission.includes(role.id));
         if (!userHasPermission) {
@@ -114,7 +121,6 @@ module.exports = {
             const collection = dmChannel.createMessageComponentCollector({ time: 86400000 });
             collection.on('collect', async i => {
                 if (i.customId === 'accept') {
-                    //remove the interaction state
                     const interactionStates = JSON.parse(fs.readFileSync(interactionStateFile, 'utf8'));
                     const newState = interactionStates.filter(state => state.messageId !== i.message.id);
                     fs.writeFileSync(interactionStateFile, JSON.stringify(newState, null, 2));
