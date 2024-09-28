@@ -67,14 +67,13 @@ module.exports = {
 
         if (ban) {
             if (ban.reason.includes('NETG-')) {
-                const banId = ban.reason.match(/NETG-\d{6}/g);
+                const banId = ban.reason.match(/NETG-\d{7}/g);
                 const [rows] = await pool.query(`SELECT * FROM global_ban WHERE ban_id = '${banId}'`);
                 if (rows.length > 0) {
-                    //filter for the most recent ban
                     rows.sort((a, b) => b.id - a.id);
                     const row = rows[0];
                     embed.addFields(
-                        { name: 'Banned', value: 'Yes', inline: false },
+                        { name: 'Banned', value: 'Global Banned', inline: false },
                         { name: 'Reason', value: row.reason, inline: false }
                     );
                 } else {

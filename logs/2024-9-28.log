@@ -1,0 +1,76 @@
+[WARNING] 16:01:53 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 16:01:53 | Started refreshing 28 application (/) commands.
+[INFO] 16:01:53 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 16:01:53 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 16:01:53 | Preparing to connect to the gateway...
+[DEBUG] 16:01:54 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 16:01:54 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 939
+[DEBUG] 16:01:54 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 16:01:54 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 16:01:54 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.31005911639884043; waiting 12789ms
+[DEBUG] 16:01:54 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 16:01:54 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 16:01:54 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 16:01:54 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[ERROR] 16:01:54 | File: ready.js | Error: Error: Access denied for user 'root'@'megurre' (using password: NO)
+[DEBUG] 16:02:07 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 16:02:07 | [WS => Shard 0] Heartbeat acknowledged, latency of 140ms.
+[ERROR] 16:02:09 | Error: Access denied for user 'root'@'megurre' (using password: NO)
+[WARNING] 16:02:18 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 16:02:18 | Started refreshing 28 application (/) commands.
+[INFO] 16:02:19 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 16:02:19 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 16:02:19 | Preparing to connect to the gateway...
+[DEBUG] 16:02:19 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 16:02:19 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 938
+[DEBUG] 16:02:19 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 16:02:19 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 16:02:19 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.45089539566829595; waiting 18599ms
+[DEBUG] 16:02:19 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 16:02:19 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 16:02:19 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 16:02:20 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[ERROR] 16:02:20 | File: ready.js | Error: Error: Access denied for user 'root'@'megurre' (using password: NO)
+[ERROR] 16:02:23 | Error: Access denied for user 'root'@'megurre' (using password: NO)
+[DEBUG] 16:02:38 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 16:02:38 | [WS => Shard 0] Heartbeat acknowledged, latency of 149ms.
+[WARNING] 16:03:20 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 16:03:20 | Started refreshing 28 application (/) commands.
+[INFO] 16:03:20 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 16:03:20 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 16:03:20 | Preparing to connect to the gateway...
+[DEBUG] 16:03:21 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 16:03:21 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 937
+[DEBUG] 16:03:21 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 16:03:21 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 16:03:21 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.9194683447077545; waiting 37928ms
+[DEBUG] 16:03:21 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 16:03:21 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 16:03:21 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 16:03:21 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[ERROR] 16:03:21 | File: ready.js | Error: Error: Access denied for user 'root'@'megurre' (using password: NO)
+[ERROR] 16:03:24 | Error: Access denied for user 'root'@'megurre' (using password: NO)
