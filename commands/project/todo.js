@@ -10,6 +10,7 @@ module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('todo')
 		.setDescription('Different options for the todo command!')
+        .setDefaultMemberPermissions(0)
         .addSubcommand(subcommand =>
             subcommand
                 .setName('add')

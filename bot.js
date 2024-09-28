@@ -123,6 +123,7 @@ setInterval(() => {
 const interactionStateFile = path.join(__dirname, 'interactionState.json');
 const interactionStateFile2 = path.join(__dirname, 'interactionState2.json');
 const interactionStateFile3 = path.join(__dirname, 'interactionState3.json');
+const interactionStateFile4 = path.join(__dirname, 'interactionState4.json');
 client.once('ready', async () => {
     if (fs.existsSync(interactionStateFile)) {
         const interactionStates = JSON.parse(fs.readFileSync(interactionStateFile));
@@ -337,20 +338,16 @@ client.once('ready', async () => {
         }
     }
     if (fs.existsSync(interactionStateFile3)) {
-        const interactionStates3= JSON.parse(fs.readFileSync(interactionStateFile3));
+        const interactionStates3 = JSON.parse(fs.readFileSync(interactionStateFile3));
         if (Array.isArray(interactionStates3)) {
             for (const interactionState3 of interactionStates3) {
-                const { guildId, channelId, userId, type, user, reason, request_global_ban, messageId } = interactionState3;
-    
-                // Log the loaded values
-                console.log('Loaded interaction state:', interactionState3);
-    
-                // Validate the loaded values
-                if (!channelId || !messageId || !userId || !guildId || !type || !user || !reason || !request_global_ban) {
+                const { id, guildId, channelId, userId, type, user, reason, request_global_ban, messageId } = interactionState3;
+                if (!id || !guildId || !channelId || !userId || !type || !user || !reason || !request_global_ban || !messageId) {
                     console.error('Invalid interaction state:', interactionState3);
                     continue;
                 }
-                
+                console.log('Loaded interaction state:', interactionState3);
+
                 try {
                     const guild = await client.guilds.fetch(guildId);
                     const memberRequesting = await guild.members.fetch(userId);
@@ -359,6 +356,8 @@ client.once('ready', async () => {
 
                     const collector = message.createMessageComponentCollector({ time: 86400000 });
                     collector.on('collect', async i => {
+                        console.log('Interaction collected:', i.customId);
+
                         const [userRows] = await pool.query(`SELECT * FROM permissions_discord WHERE id = '${i.user.id}'`);
                         let userHasPermission = userRows[0]?.netg === 1;
                         if (!userHasPermission) {
@@ -382,7 +381,7 @@ client.once('ready', async () => {
                                     random = Math.floor(1000000 + Math.random() * 900000);
                                     random = `NETG-${random}`;
                                     const [rows] = await pool.query(`SELECT * FROM global_ban WHERE ban_id = '${random}'`);
-                                    
+
                                     if (rows.length === 0) {
                                         isUnique = true;
                                     }
@@ -408,12 +407,11 @@ client.once('ready', async () => {
                                 await i.update({ components: [row2] });
                                 fs.writeFileSync(interactionStateFile3, JSON.stringify(interactionStates3.filter(state => state !== interactionState3)));
                             } else if (i.customId === 'deny_global_ban') {
-                                const guilds = client.guilds.cache;
-                                guilds.forEach(async (guild) => {
-                                    try {
-                                        await guild.members.unban(user, { reason: `Global ban denied by ${i.user.username}` });
-                                    } catch (error) {}
-                                });
+                                try {
+                                    await guild.members.unban(user, { reason: `Global ban denied by ${i.user.username}` });
+                                } catch (error) {
+                                    console.error(`Failed to unban user ${user} in guild ${guild.id}:`, error);
+                                }
                                 const row2 = new ActionRowBuilder()
                                     .addComponents(
                                         new ButtonBuilder()
@@ -425,13 +423,137 @@ client.once('ready', async () => {
                                     );
                                 await i.update({ components: [row2] });
                                 fs.writeFileSync(interactionStateFile3, JSON.stringify(interactionStates3.filter(state => state !== interactionState3)));
+                            } else if (i.customId === 'ownership') {
+                                const teamMember2 = application.owner.members;
+                                const member2 = await i.guild.members.fetch(i.user.id);
+                                const roleIds = member2.roles.cache.map(role => role.id);
+                                if (teamMember2.has(i.user.id) || roleIds.includes('1175245316992274492')) {
+                                    const [userRows] = await pool.query(`SELECT * FROM permissions_discord WHERE id = '${i.user.id}'`);
+                                    let hasPermission = userRows.length > 0 && userRows[0].netg === 1;
+                                    if (!hasPermission) {
+                                        const member = await i.guild.members.fetch(i.user.id);
+                                        const roleIds = member.roles.cache.map(role => role.id);
+                                        if (roleIds.length > 0) {
+                                            const [roleRows] = await pool.query(`SELECT * FROM permissions_discord WHERE id IN (${roleIds.map(id => `'${id}'`).join(', ')})`);
+                                            hasPermission = roleRows.some(row => row.netg === 1);
+                                        }
+                                    }
+                                    if (!hasPermission) {
+                                        const embed = new EmbedBuilder()
+                                            .setTitle('You do not have permission to use this command')
+                                            .setColor('#FF0000');
+                                        return i.reply({ embeds: [embed], ephemeral: true });
+                                    } else {
+                                        // Remove it from the interaction state
+                                        fs.writeFileSync(interactionStateFile3, JSON.stringify(interactionStates3.filter(state => state !== interactionState3)));
+
+                                        const embed = new EmbedBuilder()
+                                            .setTitle('Global Ban Request')
+                                            .setDescription(`User: ${user}\nReason: ${reason}`)
+                                            .addFields({ name: 'Requester', value: `${i.user}` },
+                                                { name: 'Requester ID', value: i.user.id },
+                                            )
+                                            .setColor('#FF0000');
+                                        const row2 = new ActionRowBuilder()
+                                            .addComponents(
+                                                new ButtonBuilder()
+                                                    .setCustomId('accept2')
+                                                    .setLabel('Ownership Unban Only by ' + i.user.username)
+                                                    .setStyle(ButtonStyle.Primary)
+                                                    .setDisabled(true)
+                                                    .setEmoji('🔵')
+                                            );
+                                        await i.update({ embeds: [embed], components: [row2] });
+                                        let random;
+                                        let isUnique = false;
+                                        while (!isUnique) {
+                                            random = Math.floor(1000000 + Math.random() * 900000);
+                                            random = `NETG-${random}`;
+                                            const [rows] = await pool.query(`SELECT * FROM global_ban WHERE ban_id = '${random}'`);
+
+                                            if (rows.length === 0) {
+                                                isUnique = true;
+                                            }
+                                        }
+                                        await pool.query(`INSERT INTO global_ban (id, ban_id, banned_by, ban_time, reason, ownership) VALUES ('${user.id}', '${random}', '${userId}', NOW(), '${reason}', '1')`);
+                                        const guilds = client.guilds.cache;
+                                        for (const [guildId, guild] of guilds) {
+                                            try {
+                                                await guild.bans.create(user.id, { reason: `Global banned by ${i.user.username} for ${reason} with ban id ${random}` });
+                                            } catch (error) {
+                                                if (error.code === 10007) {
+                                                    console.warn(`Member ${user.id} not found in guild ${guildId}, skipping.`);
+                                                } else {
+                                                    console.error(`Failed to ban member in guild ${guildId}:`, error);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     });
                 } catch (error) {
-                    if (error.code === 10008) {
-                        console.warn(`Message ${messageId} not found in channel ${channelId}, skipping interaction state.`);
-                    }
+                    console.error(`Error processing interaction state: ${error}`);
+                }
+            }
+        }
+    }
+    if (fs.existsSync(interactionStateFile4)) {
+        const interactionStates4 = JSON.parse(fs.readFileSync(interactionStateFile4));
+        if (Array.isArray(interactionStates4)) {
+            for (const interactionState4 of interactionStates4) {
+                const { id, guildId, channelId, userId, type, user, reason, random, messageId } = interactionState4;
+                if (!id || !guildId || !channelId || !userId || !type || !user || !reason || !random|| !messageId) {
+                    console.error('Invalid interaction state:', interactionState4);
+                    continue;
+                }
+                console.log('Loaded interaction state:', interactionState4);
+
+                try {
+                    const guild = await client.guilds.fetch(guildId);
+                    const memberRequesting = await guild.members.fetch(userId);
+                    const channel = await guild.channels.fetch(channelId);
+                    const message = await channel.messages.fetch(messageId);
+
+                    const collector = message.createMessageComponentCollector({ time: 86400000 });
+                    collector.on('collect', async i => {
+                        console.log('Interaction collected:', i.customId);
+
+                        if (i.customId === 'ownership') {
+                            const teamMember2 = application.owner.members;
+                            const member2 = await i.guild.members.fetch(i.user.id);
+                            const roleIds = member2.roles.cache.map(role => role.id);
+                            if (teamMember2.has(i.user.id) || roleIds.includes('1175245316992274492')) {
+                            fs.writeFileSync(interactionStateFile4, JSON.stringify(interactionStates4.filter(state => state !== interactionState4)));
+                            await pool.query(`UPDATE global_ban SET ownership = '1' WHERE ban_id = '${random}'`);
+                            const embed = new EmbedBuilder()
+                                            .setTitle('Global Ban Request')
+                                            .setDescription(`User: ${user}\nReason: ${reason}`)
+                                            .addFields({ name: 'Requester', value: `${i.user}` },
+                                                { name: 'Requester ID', value: i.user.id },
+                                            )
+                                            .setColor('#FF0000');
+                                        const row2 = new ActionRowBuilder()
+                                            .addComponents(
+                                                new ButtonBuilder()
+                                                    .setCustomId('accept2')
+                                                    .setLabel('Ownership Unban Only by ' + i.user.username)
+                                                    .setStyle(ButtonStyle.Primary)
+                                                    .setDisabled(true)
+                                                    .setEmoji('🔵')
+                                            );
+                                        await i.update({ embeds: [embed], components: [row2] });
+                        }
+                        } else {
+                            const embed = new EmbedBuilder()
+                                .setTitle('You do not have permission to use this command')
+                                .setColor('#FF0000');
+                            return i.reply({ embeds: [embed], ephemeral: true });
+                        }
+                    });
+                } catch (error) {
+                    console.error(`Error processing interaction state: ${error}`);
                 }
             }
         }

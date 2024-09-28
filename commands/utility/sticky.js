@@ -49,7 +49,6 @@ module.exports = {
                         const previousMessage = await channel.messages.fetch(row.id);
                         if (previousMessage) {
                             await previousMessage.delete();
-                            console.log(`Deleted previous message with ID: ${row.id}`);
                         }
                     } catch (error) {
                         console.error(`Failed to delete previous message with ID ${row.id}: ${error}`);

@@ -14,7 +14,8 @@ module.exports = {
 		.addStringOption(option =>
 			option.setName('command')
 				.setDescription('The command to reload.')
-				.setRequired(true)),
+				.setRequired(true))
+		.setDefaultMemberPermissions(0),
 	async execute(interaction) {
 		const application = await interaction.client.application?.fetch();
 		const teamMember = application.owner.members;

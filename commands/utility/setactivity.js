@@ -36,7 +36,8 @@ module.exports = {
                     {name: 'Idle', value: 'idle'},
                     {name: 'Do Not Disturb', value: 'dnd'},
                     {name: 'Invisible', value: 'invisible'},
-                )),
+                ))
+        .setDefaultMemberPermissions(0),
     async execute(interaction) {
         application = await interaction.client.application?.fetch();
         teamMember = application.owner.members;

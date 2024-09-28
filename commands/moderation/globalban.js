@@ -1,8 +1,10 @@
 const speakeasy = require('speakeasy');
-const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelSelectMenuBuilder, ContextMenuCommandBuilder, ApplicationCommandType, REST, Routes, WebhookClient, blockQuote, bold, italic, quote, spoiler, strikethrough, underline } = require('discord.js');
+const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, WebhookClient } = require('discord.js');
 const { createPool } = require('mysql2/promise');
 const { database_name, database_host, database_password, database_user, connection_limit } = require('../../config.json');
 const fs = require('fs');
+const path = require('path');
+const interactionStateFile = path.join(__dirname, '../../interactionState4.json');
 const pool = createPool({
     host: database_host,
     user: database_user,
@@ -10,6 +12,7 @@ const pool = createPool({
     database: database_name,
     connectionLimit: connection_limit,
 });
+
 module.exports = {
     cooldown: 5,
     category: 'moderation',
@@ -45,7 +48,6 @@ module.exports = {
         try {
             userMember = await interaction.guild.members.fetch(user.id);
         } catch (error) {
-            // User is not in the server
             userMember = null;
         }
 
@@ -107,5 +109,112 @@ module.exports = {
                 fs.appendFileSync(logFilePath, `[${new Date().toLocaleString()}] [ERROR] | Command: Settings | Command Section: Global ban | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
             }
         }
+        const embed = new EmbedBuilder()
+                    .setTitle('Global Ban')
+                    .setDescription(`User: ${user}\nReason: ${reason}`)
+                    .addFields({ name: 'Banned By', value: `${interaction.user}` },
+                        { name: 'Banned By ID', value: interaction.user.id }
+                    )
+                    .setColor('#FF0000');
+                const guild = interaction.client.guilds.cache.get('1174863104115490919');
+                const channel = guild.channels.cache.get('1279433902817153097');
+                const row = new ActionRowBuilder()
+                    .addComponents(
+                        new ButtonBuilder()
+                            .setCustomId('ownership')
+                            .setLabel('Ownership Unban Only')
+                            .setStyle(ButtonStyle.Primary)
+                    );
+                const sentMessage = await channel.send({ embeds: [embed], components: [row] });
+                const collector = sentMessage.createMessageComponentCollector({ time: 86400000 });
+
+                const saveInteractionState = (state) => {
+                    let interactionStates = [];
+                    if (fs.existsSync(interactionStateFile)) {
+                        const fileContent = fs.readFileSync(interactionStateFile, 'utf8');
+                        if (fileContent.trim()) { // Check if the file is not empty
+                            try {
+                                interactionStates = JSON.parse(fileContent);
+                                if (!Array.isArray(interactionStates)) {
+                                    interactionStates = [];
+                                }
+                            } catch (error) {
+                                console.error('Error parsing interaction state file:', error);
+                                interactionStates = [];
+                            }
+                        }
+                    }
+                    interactionStates.push(state);
+                    fs.writeFileSync(interactionStateFile, JSON.stringify(interactionStates, null, 2));
+                };
+
+                const removeInteractionState = (id) => {
+                    if (fs.existsSync(interactionStateFile)) {
+                        const fileContent = fs.readFileSync(interactionStateFile, 'utf8');
+                        let interactionStates = [];
+                        if (fileContent.trim()) {
+                            try {
+                                interactionStates = JSON.parse(fileContent);
+                                if (!Array.isArray(interactionStates)) {
+                                    interactionStates = [];
+                                }
+                            } catch (error) {
+                                console.error('Error parsing interaction state file:', error);
+                                interactionStates = [];
+                            }
+                        }
+                        const newState = interactionStates.filter(state => state.id !== id);
+                        fs.writeFileSync(interactionStateFile, JSON.stringify(newState, null, 2));
+                    }
+                };
+
+                const interactionState = {
+                    id: interaction.id,
+                    guildId: guild.id,
+                    channelId: channel.id,
+                    userId: interaction.user.id,
+                    type: 'global_ban',
+                    user: user.id,
+                    reason: reason,
+                    random: random,
+                    messageId: sentMessage.id,
+                };
+                saveInteractionState(interactionState);
+
+                collector.on('collect', async i => {
+                    if (i.customId === 'ownership') {
+                        const teamMember2 = application.owner.members;
+                        const guild = interaction.client.guilds.cache.get(interactionState.guildId);
+                        const member2 = await guild.members.fetch(interactionState.userId);
+                        const roleIds = member2.roles.cache.map(role => role.id);
+                        if (teamMember2.has(i.user.id) || roleIds.includes('1175245316992274492')) {
+                            //update the ban to be ownership only
+                            await pool.query(`UPDATE global_ban SET ownership = 1 WHERE ban_id = '${random}'`);
+                            removeInteractionState(interaction.id);
+                            const embed = new EmbedBuilder()
+                            .setTitle('Global Ban')
+                            .setDescription(`User: ${user}\nReason: ${reason}`)
+                            .addFields({ name: 'Banned By', value: `${interaction.user}` },
+                                { name: 'Banned By Id', value: interaction.user.id },
+                            )
+                            .setColor('#FF0000');
+                            const row2 = new ActionRowBuilder()
+                                .addComponents(
+                                    new ButtonBuilder()
+                                        .setCustomId('accept2')
+                                        .setLabel('Ownership Unban Only by ' + i.user.username)
+                                        .setStyle(ButtonStyle.Primary)
+                                        .setDisabled(true)
+                                        .setEmoji('🔵')
+                                );
+                            await i.update({ embeds: [embed], components: [row2] });
+                        } else {
+                            const embed = new EmbedBuilder()
+                                .setTitle('You don\'t have permission to do this')
+                                .setColor('#FF0000');
+                            await i.reply({ embeds: [embed], ephemeral: true });
+                        }
+                    }
+                });
     }
 };

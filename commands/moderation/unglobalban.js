@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ChannelSelectMenuBuilder, ContextMenuCommandBuilder, ApplicationCommandType, REST, Routes, WebhookClient, blockQuote, bold, italic, quote, spoiler, strikethrough, underline } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, WebhookClient } = require('discord.js');
 const { createPool } = require('mysql2/promise');
 const { database_name, database_host, database_password, database_user, connection_limit } = require('../../config.json');
 const fs = require('fs');
@@ -59,6 +59,17 @@ module.exports = {
             }
 
             if (user && !banId) {
+                const [latestBan] = await pool.query(`SELECT * FROM global_ban WHERE id = '${user.id}' ORDER BY ban_time DESC LIMIT 1`);
+                if (latestBan.length > 0 && latestBan[0].ownership === 1) {
+                    const teamMember2 = application.owner.members;
+                    if (!interaction.member.roles.cache.has('1175245316992274492') && !teamMember2.has(interaction.user.id)) {
+                        const embed = new EmbedBuilder()
+                            .setTitle('You do not have permission to unglobal ban this user')
+                            .setColor('#FF0000');
+                        return interaction.reply({ embeds: [embed], ephemeral: true });
+                    }
+                }
+
                 const embed = new EmbedBuilder()
                     .setTitle('User unbanned')
                     .setDescription(`The user ${user} has been unbanned from all servers.`)
@@ -81,6 +92,9 @@ module.exports = {
                         }
                     }
                 });
+
+                // Remove the ban from the global_ban table
+                await pool.query(`DELETE FROM global_ban WHERE id = '${user.id}'`);
             } else if (!user && banId) {
                 if (!banId.startsWith('NETG-')) {
                     banId = `NETG-${banId}`;
@@ -95,6 +109,17 @@ module.exports = {
                 }
                 const user_id = rows[0].id;
                 const user = await interaction.client.users.fetch(user_id);
+
+                if (rows[0].ownership === 1) {
+                    const teamMember2 = application.owner.members;
+                    if (!interaction.member.roles.cache.has('1175245316992274492') && !teamMember2.has(interaction.user.id)) {
+                        const embed = new EmbedBuilder()
+                            .setTitle('You do not have permission to unglobal ban this user')
+                            .setColor('#FF0000');
+                        return interaction.reply({ embeds: [embed], ephemeral: true });
+                    }
+                }
+
                 const embed = new EmbedBuilder()
                     .setTitle('User unbanned')
                     .setDescription(`The user ${user} has been unbanned from all servers.`)
@@ -117,29 +142,33 @@ module.exports = {
                         }
                     }
                 });
-            }
-            const [results] = await pool.query(`SELECT * FROM guilds WHERE id = '${interaction.guild.id}'`);
-                if (results[0].log_channeL !== 0 && results[0].log_channel !== null && results[0].log_channel !== undefined && results[0].log_channel !== 'null' && results[0].log_channel !=='') {
-                    try {
-                        const webhookClient = new WebhookClient({id:results[0].logging_id, token:results[0].logging_token})
 
-                        if (!webhookClient) {
-                            console.log('No webhook found error')
-                            return;
-                        }
-                        const embed5 = new EmbedBuilder()
-                            .setTitle('User UnGlobal Banned')
-                            .setDescription(`User ${user} has been unglobalbanned with ban id ${banId}`)
-                            .addFields({ name: 'UnGloballed By', value: `${interaction.user} | ${interaction.user.id}` },
-                            { name: 'Reason', value: `${reason}` })
-                            .setColor('#037bfc')
-                            .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
-                        webhookClient.send({ embeds: [embed5] }).catch(console.error);
-                    } catch (error) {
-                        console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
-                        fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: UnGlobal Ban | Command Section: UnGlobal ban | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
+                // Remove the ban from the global_ban table
+                await pool.query(`DELETE FROM global_ban WHERE ban_id = '${banId}'`);
+            }
+
+            const [results] = await pool.query(`SELECT * FROM guilds WHERE id = '${interaction.guild.id}'`);
+            if (results[0].log_channel !== 0 && results[0].log_channel !== null && results[0].log_channel !== undefined && results[0].log_channel !== 'null' && results[0].log_channel !== '') {
+                try {
+                    const webhookClient = new WebhookClient({ id: results[0].logging_id, token: results[0].logging_token });
+
+                    if (!webhookClient) {
+                        console.log('No webhook found error');
+                        return;
                     }
+                    const embed5 = new EmbedBuilder()
+                        .setTitle('User UnGlobal Banned')
+                        .setDescription(`User ${user} has been unglobalbanned with ban id ${banId}`)
+                        .addFields({ name: 'UnGloballed By', value: `${interaction.user} | ${interaction.user.id}` },
+                            { name: 'Reason', value: `${reason}` })
+                        .setColor('#037bfc')
+                        .setFooter({ text: 'Get your own custom bot today at https://megurre666.zip ', iconURL: application.iconURL({ dynamic: true }) });
+                    webhookClient.send({ embeds: [embed5] }).catch(console.error);
+                } catch (error) {
+                    console.error(`Error happened in ${guildId}, check logs for error code ${error}`);
+                    fs.appendFileSync(logFilePath, `[${date.toLocaleString()}] [ERROR] | Command: UnGlobal Ban | Command Section: UnGlobal ban | ${interaction.user.tag} (${interaction.user.id}) received an error: ${error}\n`);
                 }
+            }
         }
     }
 };

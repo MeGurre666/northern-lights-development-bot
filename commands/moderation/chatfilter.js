@@ -19,6 +19,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('chatfilter')
         .setDescription('Blacklists a user')
+        .setDefaultMemberPermissions(0)
         .addSubcommand(subcommand =>
             subcommand
                 .setName('status')
