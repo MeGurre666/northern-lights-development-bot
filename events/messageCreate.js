@@ -28,7 +28,7 @@ module.exports = {
             if (status[0].chatfilter === 0) {
                 return;
             } else if (status[0].chatfilter === 1) {
-                const inviteRegex = /(?:https?:\/\/)?(?:www\.)?(?:discord\.gg|discordapp\.com\/invite)\/([a-zA-Z0-9-]+)/;
+                const inviteRegex = /(?:https?:\/\/)?(?:www\.)?(?:discord\.gg|discordapp\.com\/invite|\.gg)\/([a-zA-Z0-9-]+)/;
                 const inviteMatch = message.content.match(inviteRegex);
         
                 if (inviteMatch) {
@@ -46,6 +46,7 @@ module.exports = {
                         return;
                     }
                 }
+            }
         
                 const [words] = await connection.execute('SELECT * FROM chatfilter');
                 for (const word of words) {
@@ -75,7 +76,10 @@ module.exports = {
                         }
                     }
                 }
+            } catch (error) {
+                console.error(`Error in messageCreate event: ${error}`);
             }
+        try {
 
             const [results] = await connection.execute('SELECT * FROM sticky WHERE channel_id = ?', [message.channel.id]);
             if (results.length > 0) {
