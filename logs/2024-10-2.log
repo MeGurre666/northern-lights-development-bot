@@ -1,0 +1,110 @@
+[WARNING] 17:39:53 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:39:53 | Started refreshing 28 application (/) commands.
+[INFO] 17:39:54 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:39:54 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:39:54 | Preparing to connect to the gateway...
+[DEBUG] 17:39:55 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:39:55 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 1000
+[DEBUG] 17:39:55 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:39:55 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:39:55 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.36935643782487304; waiting 15235ms
+[DEBUG] 17:39:55 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:39:55 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:39:55 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:39:55 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[ERROR] 17:39:57 | File: ready.js | Error: Error: connect ECONNREFUSED 192.168.1.237:3306
+[ERROR] 17:40:07 | Error: connect ECONNREFUSED 192.168.1.237:3306
+[DEBUG] 17:40:10 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 17:40:10 | [WS => Shard 0] Heartbeat acknowledged, latency of 142ms.
+[ERROR] 17:40:17 | Error: connect ECONNREFUSED 192.168.1.237:3306
+[ERROR] 17:40:40 | Error: connect ECONNREFUSED 192.168.1.237:3306
+[WARNING] 17:43:03 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:43:03 | Started refreshing 28 application (/) commands.
+[INFO] 17:43:03 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:43:03 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:43:03 | Preparing to connect to the gateway...
+[DEBUG] 17:43:04 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:43:04 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 999
+[DEBUG] 17:43:04 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:43:04 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:43:04 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.8125100493625559; waiting 33516ms
+[DEBUG] 17:43:04 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:43:04 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:43:04 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:43:04 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[ERROR] 17:43:06 | File: ready.js | Error: Error: connect ECONNREFUSED 192.168.1.237:3306
+[ERROR] 17:43:06 | Error: connect ECONNREFUSED 192.168.1.237:3306
+[WARNING] 17:43:15 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:43:15 | Started refreshing 28 application (/) commands.
+[INFO] 17:43:16 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:43:16 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:43:16 | Preparing to connect to the gateway...
+[DEBUG] 17:43:16 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:43:16 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 998
+[DEBUG] 17:43:16 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:43:16 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:43:16 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.5504537782021492; waiting 22706ms
+[DEBUG] 17:43:16 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:43:16 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:43:16 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:43:17 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[ERROR] 17:43:19 | File: ready.js | Error: Error: connect ECONNREFUSED 192.168.1.237:3306
+[DEBUG] 17:43:39 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 17:43:39 | [WS => Shard 0] Heartbeat acknowledged, latency of 124ms.
+[WARNING] 17:47:14 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:47:14 | Started refreshing 28 application (/) commands.
+[INFO] 17:47:14 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:47:15 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:47:15 | Preparing to connect to the gateway...
+[DEBUG] 17:47:15 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:47:15 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 997
+[DEBUG] 17:47:15 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:47:15 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:47:15 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.6978076743370267; waiting 28784ms
+[DEBUG] 17:47:15 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:47:15 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:47:15 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:47:15 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[ERROR] 17:47:17 | File: ready.js | Error: Error: connect ECONNREFUSED 192.168.1.237:3306
+[ERROR] 17:47:18 | Error: connect ECONNREFUSED 192.168.1.237:3306
+[ERROR] 17:47:23 | ReferenceError: logFilePath is not defined
+[DEBUG] 17:47:44 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 17:47:44 | [WS => Shard 0] Heartbeat acknowledged, latency of 147ms.
+[DEBUG] 17:48:25 | [WS => Shard 0] Heartbeat acknowledged, latency of 140ms.
+[DEBUG] 17:49:06 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[DEBUG] 17:49:48 | [WS => Shard 0] Heartbeat acknowledged, latency of 140ms.
+[DEBUG] 17:50:29 | [WS => Shard 0] Heartbeat acknowledged, latency of 149ms.
+[DEBUG] 17:51:10 | [WS => Shard 0] Heartbeat acknowledged, latency of 146ms.
+[DEBUG] 17:51:51 | [WS => Shard 0] Heartbeat acknowledged, latency of 146ms.
