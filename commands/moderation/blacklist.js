@@ -51,16 +51,14 @@ module.exports = {
                 .setColor('#FF0000');
             return interaction.reply({ embeds: [embed], ephemeral: true });
         } else {
-            // kick the user from all guilds 
             const guilds = interaction.client.guilds.cache;
             for (const [guildId, guild] of guilds) {
                 try {
                     const member = await guild.members.fetch(user.id);
                     if (guild.id === "1174863104115490919") {
-                        //remove all the users roles and give them the 1288185524560859208 role
                         const roles = member.roles.cache;
                         for (const role of roles.values()) {
-                            if (role.id !== "1174863104115490919") {
+                            if (role.id !== "1288185524560859208") {
                                 await member.roles.remove(role.id);
                             }
                         }
@@ -76,7 +74,6 @@ module.exports = {
                     }
                 }
             }
-            // add the user to the blacklist
             await pool.query(`INSERT INTO blacklist (id, blacklisted_by, blacklist_time, reason) VALUES ('${user.id}', '${interaction.user.id}', NOW(), '${reason}')`);
             const embed2 = new EmbedBuilder()
                 .setTitle(`User ${user} has been blacklisted`)

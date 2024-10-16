@@ -132,7 +132,7 @@ module.exports = {
                     let interactionStates = [];
                     if (fs.existsSync(interactionStateFile)) {
                         const fileContent = fs.readFileSync(interactionStateFile, 'utf8');
-                        if (fileContent.trim()) { // Check if the file is not empty
+                        if (fileContent.trim()) {
                             try {
                                 interactionStates = JSON.parse(fileContent);
                                 if (!Array.isArray(interactionStates)) {
@@ -188,7 +188,6 @@ module.exports = {
                         const member2 = await guild.members.fetch(interactionState.userId);
                         const roleIds = member2.roles.cache.map(role => role.id);
                         if (teamMember2.has(i.user.id) || roleIds.includes('1175245316992274492')) {
-                            //update the ban to be ownership only
                             await pool.query(`UPDATE global_ban SET ownership = 1 WHERE ban_id = '${random}'`);
                             removeInteractionState(interaction.id);
                             const embed = new EmbedBuilder()

@@ -121,7 +121,6 @@ module.exports = {
                         for (const roleId of rolesToRemove) {
                             const role = await guild.roles.fetch(roleId);
                             if (role) {
-                                // Check if the role should be removed
                                 const roleRows = results2.filter(row => row.roleid === roleId);
                                 let shouldRemoveRole = true;
                                 for (const roleRow of roleRows) {

@@ -61,7 +61,6 @@ module.exports = {
             const memberKicking = await interaction.guild.members.fetch(interaction.user.id);
             const guildId = interaction.guild.id;
 
-            // Check if the command executor's highest role is higher than the target user's highest role
             if (memberToKick.roles.highest.position >= memberKicking.roles.highest.position) {
                 const embed = new EmbedBuilder()
                     .setTitle('You cannot kick this user')
@@ -100,14 +99,13 @@ module.exports = {
                     let interactionStates = [];
                     if (fs.existsSync(interactionStateFile)) {
                         const fileContent = fs.readFileSync(interactionStateFile, 'utf8');
-                        if (fileContent.trim()) { // Check if the file is not empty
+                        if (fileContent.trim()) {
                             interactionStates = JSON.parse(fileContent);
                         }
                     }
                     interactionStates.push(state);
                     fs.writeFileSync(interactionStateFile, JSON.stringify(interactionStates, null, 2));
                 };
-                // Save the interaction state
                 const interactionState = {
                     id: interaction.id,
                     guildId: guild.id,
@@ -139,7 +137,6 @@ module.exports = {
                                 .setColor('#FF0000');
                             return i.reply({ embeds: [embed], ephemeral: true });
                         } else {
-                            // Remove it from the interaction state
                             const interactionStates = JSON.parse(fs.readFileSync(interactionStateFile, 'utf8'));
                             const newState = interactionStates.filter(state => state.id !== i.id);
                             fs.writeFileSync(interactionStateFile, JSON.stringify(newState, null, 2));

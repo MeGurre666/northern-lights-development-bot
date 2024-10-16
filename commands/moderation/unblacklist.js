@@ -32,7 +32,6 @@ module.exports = {
         const dateStr = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
         const logFilePath = path.join(logPath, `${dateStr}.log`);
 
-        // Ensure the log directory exists
         if (!fs.existsSync(logPath)) {
             fs.mkdirSync(logPath, { recursive: true });
         }

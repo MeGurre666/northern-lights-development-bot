@@ -40,8 +40,6 @@ module.exports = {
                 .setColor('#FF0000');
             return interaction.reply({ embeds: [embed], ephemeral: true });
         }
-
-        // Check if the user can give out that role
         const [userRows] = await pool.query(`SELECT * FROM permissions_role WHERE id = '${role.id}'`);
         const userHasPermission = userRows[0]?.permission.includes(interaction.user.id) || interaction.member.roles.cache.some(role => userRows[0]?.permission.includes(role.id));
         if (!userHasPermission) {

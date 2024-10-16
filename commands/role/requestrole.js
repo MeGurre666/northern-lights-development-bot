@@ -72,7 +72,7 @@ module.exports = {
                     inline: true
                 }, {
                     name: 'User',
-                    value: `${user}`, // Use user.tag to get a string representation of the user
+                    value: `${user}`,
                     inline: true
                 })
                 .setColor('#00FF00');
@@ -90,12 +90,11 @@ module.exports = {
                         .setEmoji('❌')
                 );
 
-            // Save interaction state
             const saveInteractionState = (state) => {
                 let interactionStates = [];
                 if (fs.existsSync(interactionStateFile)) {
                     const fileContent = fs.readFileSync(interactionStateFile, 'utf8');
-                    if (fileContent.trim()) { // Check if the file is not empty
+                    if (fileContent.trim()) {
                         interactionStates = JSON.parse(fileContent);
                     }
                 }
@@ -103,11 +102,8 @@ module.exports = {
                 fs.writeFileSync(interactionStateFile, JSON.stringify(interactionStates, null, 2));
             };
 
-            // Your existing code to send the embed and buttons
             const dmChannel = await requestedfrom.createDM();
             const message = await dmChannel.send({ embeds: [embed], components: [row] });
-
-            // Save the interaction state
             const interactionState = {
                 channelId: dmChannel.id,
                 messageId: message.id,

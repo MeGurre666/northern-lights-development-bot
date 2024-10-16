@@ -1,4 +1,4 @@
-const { Events } = require('discord.js');
+const { Events,EmbedBuilder } = require('discord.js');
 const mysql = require('mysql2/promise');
 const path = require('path');
 const fs = require('fs');
@@ -13,7 +13,7 @@ module.exports = {
         const dateStr = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
         const logFilePath = path.join(logPath, `${dateStr}.log`);
 
-        // Ensure the log directory exists
+
         if (!fs.existsSync(logPath)) {
             fs.mkdirSync(logPath, { recursive: true });
         }
@@ -22,9 +22,27 @@ module.exports = {
             host: database_host,
             user: database_user,
             password: database_password,
-            database: database_name,
+            database: database_name
         });
-
+        try {
+            const [results2] = await connection.execute('SELECT * from guilds where id = ?', [member.guild.id]);
+            if (results2.length > 0) {
+                if (results2[0].welcome_channel !== '') {
+                    const guild = member.client.guilds.cache.get(results2[0].id);
+                    const channel = guild.channels.cache.get(results2[0].welcome_channel);
+        
+                    if (channel) {
+                        const embed = new EmbedBuilder()
+                            .setTitle(`Welcome`)
+                            .setDescription('Please read the rules before continuing in the server');
+                        
+                        await channel.send({ content: `${member}`, embeds: [embed] });
+                    }
+                }
+            }
+        } catch (error) {
+            console.error(`Error handling GuildMemberAdd-JoinMessage: ${error}`);
+        }
         try {
             const [results] = await connection.execute('SELECT * FROM blacklist WHERE id = ?', [member.id]);
             if (results.length > 0) {

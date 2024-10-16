@@ -278,7 +278,6 @@ module.exports = {
                     const pageItems = results.slice(start, end);
                 
                     for (const row of pageItems) {
-                        //make the punishment into a r
                         function formatPunishment(seconds) {
                             const days = Math.floor(seconds / (24 * 3600));
                             seconds %= 24 * 3600;
@@ -297,7 +296,6 @@ module.exports = {
                     return embed;
                 };
                 
-                // Function to generate buttons for pagination
                 const generateButtons = (page, totalPages) => {
                     return new ActionRowBuilder().addComponents(
                         new ButtonBuilder()

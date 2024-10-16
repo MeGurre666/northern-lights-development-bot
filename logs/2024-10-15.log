@@ -1,0 +1,1994 @@
+[WARNING] 17:39:30 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:39:30 | Started refreshing 28 application (/) commands.
+[INFO] 17:39:31 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:39:31 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:39:31 | Preparing to connect to the gateway...
+[DEBUG] 17:39:31 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:39:31 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 1000
+[DEBUG] 17:39:31 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:39:31 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:39:31 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.7011724756653743; waiting 28923ms
+[DEBUG] 17:39:31 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:39:31 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:39:31 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:39:32 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[WARNING] 17:39:56 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:39:56 | Started refreshing 28 application (/) commands.
+[INFO] 17:39:56 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:39:56 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:39:56 | Preparing to connect to the gateway...
+[DEBUG] 17:39:57 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:39:57 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 999
+[DEBUG] 17:39:57 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:39:57 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:39:57 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.5049572074749313; waiting 20829ms
+[DEBUG] 17:39:57 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:39:57 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:39:57 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:39:57 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 17:40:18 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 17:40:18 | [WS => Shard 0] Heartbeat acknowledged, latency of 138ms.
+[DEBUG] 17:40:59 | [WS => Shard 0] Heartbeat acknowledged, latency of 143ms.
+[DEBUG] 17:41:40 | [WS => Shard 0] Heartbeat acknowledged, latency of 160ms.
+[DEBUG] 17:42:22 | [WS => Shard 0] Heartbeat acknowledged, latency of 144ms.
+[ERROR] 17:42:30 | ReferenceError: error is not defined
+[DEBUG] 17:43:03 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[ERROR] 17:43:15 | ReferenceError: error is not defined
+[WARNING] 17:43:26 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:43:26 | Started refreshing 28 application (/) commands.
+[INFO] 17:43:26 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:43:27 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:43:27 | Preparing to connect to the gateway...
+[DEBUG] 17:43:27 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:43:27 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 998
+[DEBUG] 17:43:27 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:43:27 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:43:27 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.5961035965356201; waiting 24589ms
+[DEBUG] 17:43:27 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:43:27 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:43:27 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:43:28 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[WARNING] 17:43:34 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:43:34 | Started refreshing 28 application (/) commands.
+[INFO] 17:43:34 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:43:34 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:43:34 | Preparing to connect to the gateway...
+[DEBUG] 17:43:35 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:43:35 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 997
+[DEBUG] 17:43:35 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:43:35 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:43:35 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.49419290842011154; waiting 20385ms
+[DEBUG] 17:43:35 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:43:35 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:43:35 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:43:35 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[ERROR] 17:43:41 | ReferenceError: error is not defined
+[DEBUG] 17:43:55 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 17:43:55 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 17:44:37 | [WS => Shard 0] Heartbeat acknowledged, latency of 142ms.
+[DEBUG] 17:45:18 | [WS => Shard 0] Heartbeat acknowledged, latency of 142ms.
+[DEBUG] 17:45:59 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 17:46:40 | [WS => Shard 0] Heartbeat acknowledged, latency of 147ms.
+[WARNING] 17:47:02 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:47:02 | Started refreshing 28 application (/) commands.
+[INFO] 17:47:03 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:47:03 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:47:03 | Preparing to connect to the gateway...
+[DEBUG] 17:47:03 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:47:03 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 996
+[DEBUG] 17:47:03 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:47:03 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:47:03 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.864398526800576; waiting 35656ms
+[DEBUG] 17:47:03 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:47:03 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:47:03 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:47:04 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[ERROR] 17:47:22 | ReferenceError: error is not defined
+[DEBUG] 17:47:39 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 17:47:39 | [WS => Shard 0] Heartbeat acknowledged, latency of 143ms.
+[WARNING] 17:47:49 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:47:49 | Started refreshing 28 application (/) commands.
+[INFO] 17:47:49 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:47:49 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:47:49 | Preparing to connect to the gateway...
+[DEBUG] 17:47:50 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:47:50 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 995
+[DEBUG] 17:47:50 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:47:50 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:47:50 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.04899997503009157; waiting 2021ms
+[DEBUG] 17:47:50 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:47:50 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:47:50 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:47:50 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 17:47:52 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 17:47:52 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[ERROR] 17:48:01 | ReferenceError: error is not defined
+[DEBUG] 17:48:33 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[DEBUG] 17:49:14 | [WS => Shard 0] Heartbeat acknowledged, latency of 133ms.
+[ERROR] 17:49:19 | ReferenceError: error is not defined
+[DEBUG] 17:49:56 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[WARNING] 17:50:09 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:50:09 | Started refreshing 28 application (/) commands.
+[INFO] 17:50:09 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:50:09 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:50:09 | Preparing to connect to the gateway...
+[DEBUG] 17:50:10 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:50:10 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 994
+[DEBUG] 17:50:10 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:50:10 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:50:10 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.8246313119767621; waiting 34016ms
+[DEBUG] 17:50:10 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:50:10 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:50:10 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:50:11 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 17:50:44 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 17:50:44 | [WS => Shard 0] Heartbeat acknowledged, latency of 147ms.
+[WARNING] 17:50:50 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:50:50 | Started refreshing 28 application (/) commands.
+[INFO] 17:50:50 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:50:51 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:50:51 | Preparing to connect to the gateway...
+[DEBUG] 17:50:51 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:50:51 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 993
+[DEBUG] 17:50:51 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:50:51 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:50:51 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.23568420002042823; waiting 9721ms
+[DEBUG] 17:50:51 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:50:51 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:50:51 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:50:52 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 17:51:01 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 17:51:01 | [WS => Shard 0] Heartbeat acknowledged, latency of 142ms.
+[WARNING] 17:51:08 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:51:08 | Started refreshing 28 application (/) commands.
+[INFO] 17:51:09 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:51:09 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:51:09 | Preparing to connect to the gateway...
+[DEBUG] 17:51:09 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:51:09 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 992
+[DEBUG] 17:51:09 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:51:09 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:51:10 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.8386322350320712; waiting 34593ms
+[DEBUG] 17:51:10 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:51:10 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:51:10 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:51:10 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[ERROR] 17:51:32 | ReferenceError: error is not defined
+[DEBUG] 17:51:44 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 17:51:44 | [WS => Shard 0] Heartbeat acknowledged, latency of 124ms.
+[WARNING] 17:52:08 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:52:08 | Started refreshing 28 application (/) commands.
+[INFO] 17:52:08 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:52:09 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:52:09 | Preparing to connect to the gateway...
+[DEBUG] 17:52:09 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:52:09 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 991
+[DEBUG] 17:52:09 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:52:09 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:52:09 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.35309630609991816; waiting 14565ms
+[DEBUG] 17:52:09 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:52:09 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:52:09 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:52:10 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[ERROR] 17:52:21 | ReferenceError: error is not defined
+[DEBUG] 17:52:24 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 17:52:24 | [WS => Shard 0] Heartbeat acknowledged, latency of 136ms.
+[DEBUG] 17:53:05 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 17:53:46 | [WS => Shard 0] Heartbeat acknowledged, latency of 144ms.
+[DEBUG] 17:54:28 | [WS => Shard 0] Heartbeat acknowledged, latency of 161ms.
+[DEBUG] 17:55:09 | [WS => Shard 0] Heartbeat acknowledged, latency of 154ms.
+[WARNING] 17:55:21 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:55:21 | Started refreshing 28 application (/) commands.
+[INFO] 17:55:22 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:55:22 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:55:22 | Preparing to connect to the gateway...
+[DEBUG] 17:55:22 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:55:22 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 990
+[DEBUG] 17:55:22 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:55:22 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:55:22 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.6343196225163463; waiting 26165ms
+[DEBUG] 17:55:22 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:55:22 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:55:22 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:55:23 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 17:55:49 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 17:55:49 | [WS => Shard 0] Heartbeat acknowledged, latency of 148ms.
+[DEBUG] 17:56:30 | [WS => Shard 0] Heartbeat acknowledged, latency of 149ms.
+[DEBUG] 17:57:11 | [WS => Shard 0] Heartbeat acknowledged, latency of 142ms.
+[WARNING] 17:57:41 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 17:57:42 | Started refreshing 28 application (/) commands.
+[INFO] 17:57:42 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 17:57:42 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 17:57:42 | Preparing to connect to the gateway...
+[DEBUG] 17:57:42 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 17:57:42 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 989
+[DEBUG] 17:57:42 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 17:57:42 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 17:57:43 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.009347569250975685; waiting 385ms
+[DEBUG] 17:57:43 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 17:57:43 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 17:57:43 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 17:57:43 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 17:57:43 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 17:57:43 | [WS => Shard 0] Heartbeat acknowledged, latency of 134ms.
+[WARNING] 18:04:13 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:04:13 | Started refreshing 28 application (/) commands.
+[INFO] 18:04:13 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 18:04:14 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 18:04:14 | Preparing to connect to the gateway...
+[DEBUG] 18:04:14 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:04:14 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 988
+[DEBUG] 18:04:14 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:04:14 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:04:14 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.13712520517333382; waiting 5656ms
+[DEBUG] 18:04:14 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:04:14 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 18:04:14 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:04:15 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:04:20 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:04:20 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[ERROR] 18:04:28 | ReferenceError: D is not defined
+[DEBUG] 18:05:01 | [WS => Shard 0] Heartbeat acknowledged, latency of 139ms.
+[WARNING] 18:05:07 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:05:07 | Started refreshing 28 application (/) commands.
+[INFO] 18:05:07 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 18:05:07 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 18:05:07 | Preparing to connect to the gateway...
+[DEBUG] 18:05:08 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:05:08 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 987
+[DEBUG] 18:05:08 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:05:08 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:05:08 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.33969176136351886; waiting 14012ms
+[DEBUG] 18:05:08 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:05:08 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 18:05:08 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:05:08 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:05:22 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:05:22 | [WS => Shard 0] Heartbeat acknowledged, latency of 123ms.
+[WARNING] 18:05:48 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:05:48 | Started refreshing 28 application (/) commands.
+[INFO] 18:05:48 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 18:05:48 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 18:05:48 | Preparing to connect to the gateway...
+[DEBUG] 18:05:49 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:05:49 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 986
+[DEBUG] 18:05:49 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:05:49 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:05:49 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.8812121538847528; waiting 36350ms
+[DEBUG] 18:05:49 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:05:49 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 18:05:49 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:05:49 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[ERROR] 18:06:03 | ReferenceError: D is not defined
+[DEBUG] 18:06:25 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:06:25 | [WS => Shard 0] Heartbeat acknowledged, latency of 152ms.
+[WARNING] 18:06:51 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:06:51 | Started refreshing 28 application (/) commands.
+[INFO] 18:06:52 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 18:06:52 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 18:06:52 | Preparing to connect to the gateway...
+[DEBUG] 18:06:52 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:06:52 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 985
+[DEBUG] 18:06:52 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:06:52 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:06:53 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.7743088901953485; waiting 31940ms
+[DEBUG] 18:06:53 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:06:53 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 18:06:53 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:06:53 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[ERROR] 18:07:17 | ReferenceError: logFilePath is not defined
+[WARNING] 18:07:22 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:07:22 | Started refreshing 28 application (/) commands.
+[INFO] 18:07:23 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 18:07:23 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 18:07:23 | Preparing to connect to the gateway...
+[DEBUG] 18:07:23 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:07:23 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 984
+[DEBUG] 18:07:23 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:07:23 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:07:24 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.8628375806943998; waiting 35592ms
+[DEBUG] 18:07:24 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:07:24 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 18:07:24 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:07:24 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:07:59 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:07:59 | [WS => Shard 0] Heartbeat acknowledged, latency of 140ms.
+[DEBUG] 18:08:41 | [WS => Shard 0] Heartbeat acknowledged, latency of 140ms.
+[DEBUG] 18:09:22 | [WS => Shard 0] Heartbeat acknowledged, latency of 140ms.
+[WARNING] 18:09:38 | The command at C:\Users\richa\Documents\GitHub\northern-lights-development-bot\commands\guild\tickets.js is missing a required "data" or "execute" property.
+[INFO] 18:09:38 | Started refreshing 28 application (/) commands.
+[INFO] 18:09:38 | Successfully reloaded 28 application (/) commands.
+[DEBUG] 18:09:38 | Provided token: MTA4NTYxMjkzOTc3MzQ4NTE5MA.GZ0lsI.**************************************
+[DEBUG] 18:09:38 | Preparing to connect to the gateway...
+[DEBUG] 18:09:39 | [WS => Manager] Fetched Gateway Information
+    URL: wss://gateway.discord.gg
+    Recommended Shards: 1
+[DEBUG] 18:09:39 | [WS => Manager] Session Limit Information
+    Total: 1000
+    Remaining: 983
+[DEBUG] 18:09:39 | [WS => Shard 0] Connecting to wss://gateway.discord.gg?v=10&encoding=json
+[DEBUG] 18:09:39 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:09:39 | [WS => Shard 0] Preparing first heartbeat of the connection with a jitter of 0.05069461326550484; waiting 2091ms
+[DEBUG] 18:09:39 | [WS => Shard 0] Waiting for identify throttle
+[DEBUG] 18:09:39 | [WS => Shard 0] Identifying
+	shard id: 0
+	shard count: 1
+	intents: 33283
+	compression: none
+[DEBUG] 18:09:39 | [WS => Shard 0] Waiting for event ready for 15000ms
+[DEBUG] 18:09:39 | [WS => Shard 0] Shard received all its guilds. Marking as fully ready.
+[DEBUG] 18:09:41 | [WS => Shard 0] First heartbeat sent, starting to beat every 41250ms
+[DEBUG] 18:09:41 | [WS => Shard 0] Heartbeat acknowledged, latency of 135ms.
+[DEBUG] 18:10:22 | [WS => Shard 0] Heartbeat acknowledged, latency of 147ms.
+[DEBUG] 18:11:04 | [WS => Shard 0] Heartbeat acknowledged, latency of 150ms.
+[DEBUG] 18:11:45 | [WS => Shard 0] Heartbeat acknowledged, latency of 165ms.
+[DEBUG] 18:12:26 | [WS => Shard 0] Heartbeat acknowledged, latency of 149ms.
+[DEBUG] 18:13:07 | [WS => Shard 0] Heartbeat acknowledged, latency of 173ms.
+[DEBUG] 18:13:49 | [WS => Shard 0] Heartbeat acknowledged, latency of 163ms.
+[DEBUG] 18:14:30 | [WS => Shard 0] Heartbeat acknowledged, latency of 156ms.
+[DEBUG] 18:15:11 | [WS => Shard 0] Heartbeat acknowledged, latency of 155ms.
+[DEBUG] 18:15:52 | [WS => Shard 0] Heartbeat acknowledged, latency of 145ms.
+[DEBUG] 18:16:34 | [WS => Shard 0] Heartbeat acknowledged, latency of 419ms.
+[DEBUG] 18:17:15 | [WS => Shard 0] Heartbeat acknowledged, latency of 137ms.
+[DEBUG] 18:18:25 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:25 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:25 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:25 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:25 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:25 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:25 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:25 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:25 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:26 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:26 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:26 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:26 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:26 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:26 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:26 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:26 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:26 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:26 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:26 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:26 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:27 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:27 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:27 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:27 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:27 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:27 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:27 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:27 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:27 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:27 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:27 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:27 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:28 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:28 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:28 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:28 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:28 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:28 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:29 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:29 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:29 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:29 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:29 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:29 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:29 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:29 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:29 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:29 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:29 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:29 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:30 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:30 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:30 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:30 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:30 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:30 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:30 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:30 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:30 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:30 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:30 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:30 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:32 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:32 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:32 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:32 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:32 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:32 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:33 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:33 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:33 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:33 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:33 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:33 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:33 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:33 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:33 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:33 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:33 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:33 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:34 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:34 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:34 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:34 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:34 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:34 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:34 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:34 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:34 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:34 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:34 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:34 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:35 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:35 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:35 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:35 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:35 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:35 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:35 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:35 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:35 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:35 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:35 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:35 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:36 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:36 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:36 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:36 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:36 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:36 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:36 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:36 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:36 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:36 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:36 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:36 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:37 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:37 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:37 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:37 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:37 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:37 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:37 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:37 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:37 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:37 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:37 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:37 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:38 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:38 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:38 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:38 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:38 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:38 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:38 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:38 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:38 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:38 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:38 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:38 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:39 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:39 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:39 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:39 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:39 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:39 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:39 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:39 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:39 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:39 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:39 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:39 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:40 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:40 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:40 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:40 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:40 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:40 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:40 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:40 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:40 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:40 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:40 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:40 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:41 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:41 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:41 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:41 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:41 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:41 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:41 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:41 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:41 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:41 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:41 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:41 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:42 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:42 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:42 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:42 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:42 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:42 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:42 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:42 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:42 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:42 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:42 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:42 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:43 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:43 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:43 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:43 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:43 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:43 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:43 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:43 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:43 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:43 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:43 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:43 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:44 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:44 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:44 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:44 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:44 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:44 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:44 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:44 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:44 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:44 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:44 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:44 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:45 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:45 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:45 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:45 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:45 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:45 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:45 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:45 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:45 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:45 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:45 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:45 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:46 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:46 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:46 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:46 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:46 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:46 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:46 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:46 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:46 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:46 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:46 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:46 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:47 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:47 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:47 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:47 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:47 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:47 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:47 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:47 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:47 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:47 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:47 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:47 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:48 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:48 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:48 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:48 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:48 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:48 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:48 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:48 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:48 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:48 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:48 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:48 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:49 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:49 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:49 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:49 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:49 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:49 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:49 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:49 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:49 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:49 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:49 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:49 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:50 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:50 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:50 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:50 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:50 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:50 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:50 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:50 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:50 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:50 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:50 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:50 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:51 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:51 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:51 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:51 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:51 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:51 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:51 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:51 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:51 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:51 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:51 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:51 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:52 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:52 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:52 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:52 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:52 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:52 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:52 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:52 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:52 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:52 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:52 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:52 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:53 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:53 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:53 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:53 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:53 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:53 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:53 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:53 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:53 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:53 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:53 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:53 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:54 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:54 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:54 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:54 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:54 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:54 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:54 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:54 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:54 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:54 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:54 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:54 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:55 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:55 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:55 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:55 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:55 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:55 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:55 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:55 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:55 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:55 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:55 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:55 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:56 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:56 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:56 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:56 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:56 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:56 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:56 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:56 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:56 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:56 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:56 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:56 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:57 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:57 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:57 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:57 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:57 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:57 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:57 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:57 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:57 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:57 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:57 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:57 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:58 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:58 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:58 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:58 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:58 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:58 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:58 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:58 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:58 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:58 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:58 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:58 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:59 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:59 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:59 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:59 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:59 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:59 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:18:59 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:18:59 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:18:59 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:18:59 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:18:59 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:18:59 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:00 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:00 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:00 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:00 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:00 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:00 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:00 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:00 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:00 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:00 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:00 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:00 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:01 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:01 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:01 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:01 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:01 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:01 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:01 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:01 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:01 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:01 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:01 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:01 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:02 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:02 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:02 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:02 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:02 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:02 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:02 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:02 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:02 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:02 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:02 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:02 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:03 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:03 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:03 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:03 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:03 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:03 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:03 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:03 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:03 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:03 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:03 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:03 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:04 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:04 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:04 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:04 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:04 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:04 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:04 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:04 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:04 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:04 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:04 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:04 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:05 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:05 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:05 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:05 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:05 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:05 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:05 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:05 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:05 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:05 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:05 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:05 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:06 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:06 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:06 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:06 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:06 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:06 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:06 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:06 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:06 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:06 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:06 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:06 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:07 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:07 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:07 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:07 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:07 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:07 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:07 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:07 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:07 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:07 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:07 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:07 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:08 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:08 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:08 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:08 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:08 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:08 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:08 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:08 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:08 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:08 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:08 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:08 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:09 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:09 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:09 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:09 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:09 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:09 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:09 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:09 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:09 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:09 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:09 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:09 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:10 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:10 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:10 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:10 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:10 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:10 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:10 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:10 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:10 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:10 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:10 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:10 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:11 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:11 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:11 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:11 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:11 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:11 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:11 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:11 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:11 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:11 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:11 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:11 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:12 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:12 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:12 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:12 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:12 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:12 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:12 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:12 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:12 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:12 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:12 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:12 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:13 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:13 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:13 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:13 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:13 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:13 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:13 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:13 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:13 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:13 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:13 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:13 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:14 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:14 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:14 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:14 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:14 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:14 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:14 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:14 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:14 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:14 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:14 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:14 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:15 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:15 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:15 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:15 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:15 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:15 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:15 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:15 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:15 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:15 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:15 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:15 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:16 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:16 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:16 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:16 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:16 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:16 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:16 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:16 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:16 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:16 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:16 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:16 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:17 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:17 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:17 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:17 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:17 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:17 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:17 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:17 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:17 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:17 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:17 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:17 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:18 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:18 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:18 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:18 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:18 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:18 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:18 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:18 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:18 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:18 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:18 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:18 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:19 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:19 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:19 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:19 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:19 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:19 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:19 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:19 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:19 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:19 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:19 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:19 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:20 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:20 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:20 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:20 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:20 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:20 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:20 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:20 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:20 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:20 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:20 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:20 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:21 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:21 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:21 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:21 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:21 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:21 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:21 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:21 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:21 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:21 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:21 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:21 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:22 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:22 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:22 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:22 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:22 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:22 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:22 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:22 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:22 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:22 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:22 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:22 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:23 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:23 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:23 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:23 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:23 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:23 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:23 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:23 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:23 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:23 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:23 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:23 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:24 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:24 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:24 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:24 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:24 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:24 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:24 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:24 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:24 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:24 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:24 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:24 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:25 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:25 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:25 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:25 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:25 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:25 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:25 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:25 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:25 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:25 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:25 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:25 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:26 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:26 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:26 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:26 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:26 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:26 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:26 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:26 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:26 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:26 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:26 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:26 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:27 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:27 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:27 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:27 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:27 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:27 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:27 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:27 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:27 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:27 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:27 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:27 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:28 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:28 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:28 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:28 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:28 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:28 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:28 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:28 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:28 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:28 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:28 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:28 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:29 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:29 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:29 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:29 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:29 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:29 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:29 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:29 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:29 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:29 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:29 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:29 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:30 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:30 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:30 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:30 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:30 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:30 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:30 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:30 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:30 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:30 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:30 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:30 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:31 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:31 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:31 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:31 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:31 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:31 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:31 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:31 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:31 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:31 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:31 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:31 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:32 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:32 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:32 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:32 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:32 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:32 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:32 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:32 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:32 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:32 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:32 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:32 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:33 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:33 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:33 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:33 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:33 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:33 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:33 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:33 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:33 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:33 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:33 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:33 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:34 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:34 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:34 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:34 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:34 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:34 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:34 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:34 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:34 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:34 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:34 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:34 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:35 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:35 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:35 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:35 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:35 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:35 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:35 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:35 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:35 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:35 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:35 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:35 | [WS => Shard 0] Tried to destroy a shard that was idle
+[DEBUG] 18:19:36 | [WS => Shard 0] Connecting to wss://gateway-us-east1-d.discord.gg?v=10&encoding=json
+[DEBUG] 18:19:36 | [WS => Shard 0] Waiting for event hello for 60000ms
+[DEBUG] 18:19:36 | [WS => Shard 0] The gateway closed with an unexpected code 1006, attempting to resume.
+[DEBUG] 18:19:36 | [WS => Shard 0] Destroying shard
+	Reason: none
+	Code: 1006
+	Recover: Resume
+[DEBUG] 18:19:36 | [WS => Shard 0] Connection status during destroy
+	Needs closing: false
+	Ready state: 3
+[DEBUG] 18:19:36 | [WS => Shard 0] Tried to destroy a shard that was idle

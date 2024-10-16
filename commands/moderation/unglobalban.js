@@ -93,7 +93,6 @@ module.exports = {
                     }
                 });
 
-                // Remove the ban from the global_ban table
                 await pool.query(`DELETE FROM global_ban WHERE id = '${user.id}'`);
             } else if (!user && banId) {
                 if (!banId.startsWith('NETG-')) {
@@ -143,7 +142,6 @@ module.exports = {
                     }
                 });
 
-                // Remove the ban from the global_ban table
                 await pool.query(`DELETE FROM global_ban WHERE ban_id = '${banId}'`);
             }
 

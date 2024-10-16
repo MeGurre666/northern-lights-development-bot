@@ -49,8 +49,6 @@ module.exports = {
             const memberToKick = await interaction.guild.members.fetch(user.id);
             const memberKicking = await interaction.guild.members.fetch(interaction.user.id);
             const guildId = interaction.guild.id;
-
-            // Check if the command executor's highest role is higher than the target user's highest role
             if (memberToKick.roles.highest.position >= memberKicking.roles.highest.position) {
                 const embed = new EmbedBuilder()
                     .setTitle('You cannot kick this user')
